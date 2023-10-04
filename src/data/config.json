@@ -1,0 +1,31 @@
+{
+    "data": {
+        "pageMeta": {
+            "top": {
+                "title":"トップ | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書道家の角田亮爾(かくた りょうじ)のオフィシャルサイトです。プロフィール作品、活動内容をご覧いただけます。"
+            },
+            "profile": {
+                "title":"プロフィール | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書家  角田亮爾 公式サイト | Ryoji Kakuta | 角田亮爾のプロフィールのご紹介です。"
+            },
+            "gallery": {
+                "title":"ギャラリー | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書家  角田亮爾 公式サイト | Ryoji Kakuta | 角田亮爾の作品のご紹介です。"
+            },
+            "contact": {
+                "title":"お問合せ | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書家  角田亮爾 公式サイト | Ryoji Kakuta | お問合せページのご案内です。"
+            },
+            "policy": {
+                "title":"プライバシーポリシー | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書家  角田亮爾 公式サイト | Ryoji Kakuta | プライバシーポリシー"
+            },
+            "price": {
+                "title":"料金について | 書家  角田亮爾 公式サイト | Ryoji Kakuta",
+                "description":"書家  角田亮爾 公式サイト | Ryoji Kakuta | 料金のご案内です。"
+            }
+            
+        }
+    }
+}
