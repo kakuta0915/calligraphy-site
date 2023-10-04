@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../dist/images/favicon.ico">
+
+    <!--- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/css/normalize.css">
+    <link rel="stylesheet" href="../../dist/css/colorbox.css">
+    <link rel="stylesheet" href="../../dist/css/common.css">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../dist/js/jquery-3.6.1.min.js"></script>
+    <script src="../../dist/js/modernizr.custom.min.js"></script>
+    <script src="../../dist/js/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="../../dist/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../dist/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../../dist/js/masonry.pkgd.min.js"></script>
+    <script src="../../dist/js/jquery.colorbox-min.js"></script>
+    <script src="../../dist/js/jquery.smooth-scroll.min.js"></script>
+    <script src="../../dist/js/main.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7815e67acc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="bar"></div>
+    <div class="top-content top-content-contact page-load">
+        <h1 class="title">お問い合わせ</h1>
+    </div>
+    <!-- Header -->
+<header class="page-header">
+        <div class="inner">     
+            <h1 class="header-title">
+                田中 彩音 / Ayane Tanaka
+            </h1>
+            <div class="open-btn"><span></span><span></span><span></span></div>
+            <div class="page-header-content">
+                <nav>
+                    <ul class="header-nav" id="nav"> 
+                        <li><a href="index.html">トップページ<span>top</span></a></li>
+                        <li><a href="profile.html">プロフィール<span>profile</span></a></li>
+                        <li><a href="gallery.html">ギャラリー<span>gallery</span></a></li>
+                        <li><a href="news.html">お知らせ<span>news</span></a></li>
+                        <li><a href="price.html">料金<span>price</span></a></li>
+                        <li><a href="contact.html">お問合せ<span>contact</span></a></li>
+                    </ul>
+                </nav>
+                <ul class="header-link">
+                    <li><a class="twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+            
+            </div>   
+        </div>
+</header>
+    <div class="wrapper bg-img3">
+        <div class="content scroll-fadeup">
+            <div class="page-title">    
+                <h2>お問い合わせ</h2>
+                <span>contact</span>
+            </div> 
+            <div class="contact-text">
+                <p>
+                    注文、お問い合わせ、質問等など受け付けております。 <br>
+                    下記の応募フォームに全てご記入の上、送信してください。<br>
+                    ご記入いただいた個人情報につきましては、細心の注意を払って管理・保護しております。
+                </p>
+                <a href="policy.html">→ プライバシーポリシーについて</a>
+            </div>  
+            <p class="small-text">
+                ※お問い合わせ内容によっては、お返事を差し上げるまでにお時間をいただく場合もございます。あらかじめご了承ください。
+            </p>_
+            <form>
+                <table class="contact-table">
+                    <tr>
+                        <th>お問い合わせ項目 <span class="must">*</span></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>書作品について</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>商品・販売について</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>その他</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="name">お名前 <span class="must">*</span></label></th>
+                        <td><input type="text" placeholder="例: 角田 健留" id="name" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="furigana">ふりがな <span class="must">*</span></label></th>
+                        <td><input type="text" placeholder="例: かくた たける" id="furigana" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="company">会社名</label></th>
+                        <td><input type="text" placeholder="例: ◯◯株式会社" id="companuy" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">メールアドレス <span class="must">*</span></label></th>
+                        <td><input type="email" placeholder="kakuta0915@gmail.com" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="tel">電話番号(ハイフン無し) <span class="must">*</span></label></th>
+                        <td><input type="tel" placeholder="090◯◯◯◯1234" id="tel" required></td>
+                    </tr>
+                    <tr>
+                        <th>郵便番号: <span class="must">*</span></th>
+                        <td>〒 <input type="text" name="postcode1" id="postcode1" maxlength="3" required> -
+                               <input type="text" name="postcode2" id="postcode2" maxlength="4" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>都道府県: <span class="must">*</span></th>
+                        <td>
+                            <select class="select-box" name="prefecture" id="address1">
+                                <option selected="selected" value="">【選択して下さい】</option>
+                                <optgroup label="北海道・東北地方">
+                                    <option value="北海道">北海道</option>
+                                    <option value="青森県">青森県</option>
+                                    <option value="岩手県">岩手県</option>
+                                    <option value="秋田県">秋田県</option>
+                                    <option value="宮城県">宮城県</option>
+                                    <option value="山形県">山形県</option>
+                                    <option value="福島県">福島県</option>
+                                </optgroup>
+                                <optgroup label="関東地方">
+                                    <option value="栃木県">栃木県</option>
+                                    <option value="群馬県">群馬県</option>
+                                    <option value="茨城県">茨城県</option>
+                                    <option value="埼玉県">埼玉県</option>
+                                    <option value="東京都">東京都</option>
+                                    <option value="千葉県">千葉県</option>
+                                    <option value="神奈川県">神奈川県</option>
+                                </optgroup>
+                                <optgroup label="中部地方">
+                                    <option value="山梨県">山梨県</option>
+                                    <option value="長野県">長野県</option>
+                                    <option value="新潟県">新潟県</option>
+                                    <option value="富山県">富山県</option>
+                                    <option value="石川県">石川県</option>
+                                    <option value="福井県">福井県</option>
+                                    <option value="静岡県">静岡県</option>
+                                    <option value="岐阜県">岐阜県</option>
+                                    <option value="愛知県">愛知県</option>
+                                </optgroup>
+                                <optgroup label="近畿地方">
+                                    <option value="三重県">三重県</option>
+                                    <option value="滋賀県">滋賀県</option>
+                                    <option value="京都府">京都府</option>
+                                    <option value="大阪府">大阪府</option>
+                                    <option value="兵庫県">兵庫県</option>
+                                    <option value="奈良県">奈良県</option>
+                                    <option value="和歌山県">和歌山県</option>
+                                </optgroup>
+                                <optgroup label="四国地方">
+                                    <option value="徳島県">徳島県</option>
+                                    <option value="香川県">香川県</option>
+                                    <option value="愛媛県">愛媛県</option>
+                                    <option value="高知県">高知県</option>
+                                </optgroup>
+                                <optgroup label="中国地方">
+                                    <option value="鳥取県">鳥取県</option>
+                                    <option value="島根県">島根県</option>
+                                    <option value="岡山県">岡山県</option>
+                                    <option value="広島県">広島県</option>
+                                    <option value="山口県">山口県</option>
+                                </optgroup>
+                                <optgroup label="九州・沖縄地方">
+                                    <option value="福岡県">福岡県</option>
+                                    <option value="佐賀県">佐賀県</option>
+                                    <option value="長崎県">長崎県</option>
+                                    <option value="大分県">大分県</option>
+                                    <option value="熊本県">熊本県</option>
+                                    <option value="宮崎県">宮崎県</option>
+                                    <option value="鹿児島県">鹿児島県</option>
+                                    <option value="沖縄県">沖縄県</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>市町村区: <span class="must">*</span></th>
+                        <td><input type="text" name="citytown" id="address2" required></td>
+                    </tr>
+                    <tr>
+                        <th>番地など: <span class="must">*</span></th>
+                        <td><input type="text" name="addnumber" id="address3" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="textarea">ご用件 <span class="must">*</span></label></th>
+                        <td><textarea placeholder="注文、お問い合わせ、質問等受け付けております。" id="textarea" required></textarea></td>
+                    </tr>
+                </table>
+                <input type="submit" class="btn btn-reset" value="リセット">
+                <input type="submit" class="btn btn-send" value="確認する">
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer>
+    <p class="footer-policy" id="policy"><a href="policy.html">プライバシーポリシー</a></p>
+    <div class="wrapper">
+        <nav>
+            <ul class="footer-nav" id="nav"> 
+                <li><a href="index.html">トップページ<span>top</span></a></li>
+                    <li><a href="profile.html">プロフィール<span>profile</span></a></li>
+                    <li><a href="gallery.html">ギャラリー<span>gallery</span></a></li>
+                    <li><a href="news.html">お知らせ<span>news</span></a></li>
+                    <li><a href="price.html">料金<span>price</span></a></li>
+                    <li><a href="contact.html">お問合せ<span>contact</span></a></li>
+            </ul>
+        </nav>
+        <ul class="footer-link">
+            <li><a class="twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+        <p class="copy">&copy;2022 Kakuta / All Rights Reserved. <br>
+            全ての画像•文章の無断転載•コピーなどをお断りします。
+            </p>
+    </div>
+</footer>   
+</body>
+</html>
