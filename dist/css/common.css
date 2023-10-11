@@ -877,8 +877,13 @@ p {
 
 .slide1 {
   background: #d9a7c7;
-  background: -webkit-gradient
-    (linear, left top, right top, from(#fffcdc), to(#d9a7c7));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fffcdc),
+    to(#d9a7c7)
+  );
   background: -webkit-linear-gradient(left, #fffcdc, #d9a7c7);
   background: -o-linear-gradient(left, #fffcdc, #d9a7c7);
   background: linear-gradient(to right, #fffcdc, #d9a7c7);
@@ -886,8 +891,13 @@ p {
 
 .slide2 {
   background: #ffe259;
-  background: -webkit-gradient
-    (linear, left top, right top, from(#ffa751), to(#ffe259));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffa751),
+    to(#ffe259)
+  );
   background: -webkit-linear-gradient(left, #ffa751, #ffe259);
   background: -o-linear-gradient(left, #ffa751, #ffe259);
   background: linear-gradient(to right, #ffa751, #ffe259);
@@ -895,8 +905,13 @@ p {
 
 .slide3 {
   background: #b79891;
-  background: -webkit-gradient
-    (linear, left top, right top, from(#94716b), to(#b79891));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#94716b),
+    to(#b79891)
+  );
   background: -webkit-linear-gradient(left, #94716b, #b79891);
   background: -o-linear-gradient(left, #94716b, #b79891);
   background: linear-gradient(to right, #94716b, #b79891);
@@ -904,8 +919,13 @@ p {
 
 .slide4 {
   background: #ffefba;
-  background: -webkit-gradient
-    (linear, left top, right top, from(#ffffff), to(#ffefba));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#ffefba)
+  );
   background: -webkit-linear-gradient(left, #ffffff, #ffefba);
   background: -o-linear-gradient(left, #ffffff, #ffefba);
   background: linear-gradient(to right, #ffffff, #ffefba);
@@ -988,8 +1008,6 @@ p {
 
 /* トップギャラリー */
 .grid {
-  -ms-grid-columns: (26vw) [3];
-  -ms-grid-rows: (26vw) [3];
   display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(3, 26vw);
