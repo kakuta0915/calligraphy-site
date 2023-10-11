@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-// カラー変数宣言 /////////////////////////////////
+// カラー変数宣言
 $black: #000;
 $gray: #696969;
 $lightGray: #bbb;
@@ -10,56 +10,128 @@ $white: #fff;
 $red: #ff0000;
 $red2: #b22222;
 
-// フォント共通 ///////////////////////////////////
+// スペース (余白・間隔)
+$space_10-15px: clamp(10px, 2vw, 15px); // 10-15px
+$space_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
+$space_20-30px: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); // 20-30px
+$space_30-45px: calc($space_20-30px * 1.5); // 30-45px
+$space_40-60px: calc($space_20-30px * 2); // 40-60px
+$space_60_90px: calc($space_20-30px * 3); // 60-90px
+$space_80_120px: calc($space_20-30px * 4); // 80-120px
+
+// フォントサイズ
+$font_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
+$font_18-20px: calc($font_16-18px * 1.1); // 17.6-19.8px
+$font_19-22px: calc($font_16-18px * 1.2); // 19.2-21.6px
+$font_24-27px: calc($font_16-18px * 1.5); // 24-27px
+$font_32-64px: clamp(2rem, 1.3rem + 3vw, 4rem); // 32-64px
+$font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
+
+// フォント共通
 @mixin notoSerf {
   font-family: "Noto Serif JP", sans-serif;
 }
 
-///////////////////////////////////////////////
-
-/* GENERAL STYLING */
+/* 共通のレイアウト */
 * {
   padding: 0;
   margin: 0;
 }
+
 html {
   font-size: 100%;
   height: 100%;
 }
+
 body {
   height: 100%;
   @include notoSerf;
   color: $black;
   background-color: $whiteSmoke;
 }
+
 .wrapper {
   margin: 0 auto;
-  padding: 2rem 3rem;
+  padding: $space_20-30px $space_30-45px;
 }
+
 p {
   line-height: 1.7;
 }
+
 .btn {
+  width: auto;
   display: inline-block;
-  font-size: 1.5rem;
-  padding: 1rem 3rem;
+  font-size: $font_24-27px;
+  padding: $space_16-18px $space_40-60px;
   text: {
-    align: center;
     decoration: none;
   }
-  width: auto;
 }
+
 .content {
   max-width: 1000px;
-  padding: 5rem;
+  padding: $space_60_90px;
   background-color: $white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: 6rem auto;
+  margin: $space_80_120px auto;
 }
+
 .section {
   position: relative;
-  padding: 5rem 0 2rem;
+  padding: $space_60_90px 0 $space_30-45px;
 }
+
+.content-title {
+  font-size: $space_20-30px;
+  margin-bottom: $space_60_90px;
+  text-align: center;
+  p {
+    margin-top: $space_10-15px;
+  }
+}
+
+/* .wrapperの背景画像 */
+.bg {
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+.img1 {
+  background: {
+    image: url("../../dist/images/bg1.jpeg");
+  }
+}
+
+.img2 {
+  background: {
+    image: url("../../dist/images/bg2.jpeg");
+  }
+}
+
+.img3 {
+  background: {
+    image: url("../../dist/images/bg3.jpeg");
+  }
+}
+
+.img4 {
+  background: {
+    image: url("../../dist/images/bg4.jpeg");
+  }
+}
+
+/////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ////////////////////////////////////////////////
+/// /////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+
 .top-page-title {
   text-align: center;
   display: inline-block;
@@ -68,44 +140,6 @@ p {
   & h2 {
     font-size: 2rem;
     margin: 1rem 0 0.5rem;
-  }
-}
-.page-title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* 背景画像 */
-.bg-img1 {
-  background: {
-    image: url("../../dist/images/bg1.jpeg");
-    position: center center;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img2 {
-  background: {
-    image: url("../../dist/images/bg2.jpeg");
-    position: center center;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img3 {
-  background: {
-    image: url("../../dist/images/bg3.jpeg");
-    position: top;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img4 {
-  background: {
-    image: url("../../dist/images/bg4.jpeg");
-    position: top;
-    repeat: no-repeat;
-    size: contain;
   }
 }
 
@@ -194,6 +228,7 @@ p {
   transform: translate(0, -50px);
   transition-timing-function: ease-in-out;
 }
+
 .load-downed {
   transform: translate(0, 0);
   opacity: 1;
@@ -1172,11 +1207,7 @@ p {
 .price-text {
   margin-bottom: 2rem;
 }
-.content-title {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 4rem;
-}
+
 .price-design-title {
   font-weight: bold;
 }
