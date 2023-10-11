@@ -1,25 +1,25 @@
 <% const gallery = 'gallery' %>
 <!DOCTYPE html>
 <html class="no-js" lang="ja">
-    <%- include('./_partial/head', {meta: config.data.pageMeta[gallery]}); %>
-<body>
+  <%- include('./_partial/head', {meta: config.data.pageMeta[gallery]}); %>
+  <body>
     <div class="line"></div>
     <div class="top"></div>
     <div class="bottom"></div>
     <div class="bar"></div>
     <div class="top-content top-content-gallery page-load">
-        <h1 class="title">ギャラリー</h1>
+      <h1 class="title">ギャラリー</h1>
     </div>
     <%- include('./_partial/header') %>
-    <div class="wrapper bg-img3">  
-        <div class="gallery-main fadein">
-            <p class="gallery-text">
-                書道作品や企業理念、サイトロゴ、座右の銘などお客様のご要望に合わせて制作いたします。<br>
-                これまで積み上げてきたスキルや経験を活かし、お客様にご満足いただけるよう一文字一文字、心を込めて丁寧に書いております。
-            </p>
-            <ul class="gallery" id="gallery"></ul>
-        </div>
+    <div class="wrapper bg-img3">
+      <div class="gallery-main fadein">
+        <p class="gallery-text">
+          書道作品や企業理念、サイトロゴ、座右の銘などお客様のご要望に合わせて制作いたします。<br />
+          これまで積み上げてきたスキルや経験を活かし、お客様にご満足いただけるよう一文字一文字、心を込めて丁寧に書いております。
+        </p>
+        <ul class="gallery" id="gallery"></ul>
+      </div>
     </div>
     <%- include('./_partial/footer') %>
-</body>
+  </body>
 </html>
