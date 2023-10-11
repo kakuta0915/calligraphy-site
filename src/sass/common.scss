@@ -91,6 +91,39 @@ p {
   }
 }
 
+/* .wrapperの背景画像 */
+.bg {
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+.img1 {
+  background: {
+    image: url("../../dist/images/bg1.jpeg");
+  }
+}
+
+.img2 {
+  background: {
+    image: url("../../dist/images/bg2.jpeg");
+  }
+}
+
+.img3 {
+  background: {
+    image: url("../../dist/images/bg3.jpeg");
+  }
+}
+
+.img4 {
+  background: {
+    image: url("../../dist/images/bg4.jpeg");
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -107,40 +140,6 @@ p {
   & h2 {
     font-size: 2rem;
     margin: 1rem 0 0.5rem;
-  }
-}
-
-/* 背景画像 */
-.bg-img1 {
-  background: {
-    image: url("../../dist/images/bg1.jpeg");
-    position: center center;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img2 {
-  background: {
-    image: url("../../dist/images/bg2.jpeg");
-    position: center center;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img3 {
-  background: {
-    image: url("../../dist/images/bg3.jpeg");
-    position: top;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-.bg-img4 {
-  background: {
-    image: url("../../dist/images/bg4.jpeg");
-    position: top;
-    repeat: no-repeat;
-    size: contain;
   }
 }
 
