@@ -12,7 +12,7 @@ $red2: #b22222;
 
 // フォント共通 ///////////////////////////////////
 @mixin notoSerf {
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 ///////////////////////////////////////////////
@@ -53,7 +53,7 @@ p {
   max-width: 1000px;
   padding: 5rem;
   background-color: $white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   margin: 6rem auto;
 }
 .section {
@@ -67,7 +67,7 @@ p {
   color: $white;
   & h2 {
     font-size: 2rem;
-    margin: 1rem 0 .5rem;
+    margin: 1rem 0 0.5rem;
   }
 }
 .page-title {
@@ -78,7 +78,7 @@ p {
 /* 背景画像 */
 .bg-img1 {
   background: {
-    image: url('../../dist/images/bg1.jpeg');
+    image: url("../../dist/images/bg1.jpeg");
     position: center center;
     repeat: no-repeat;
     size: cover;
@@ -86,15 +86,15 @@ p {
 }
 .bg-img2 {
   background: {
-    image: url('../../dist/images/bg2.jpeg');
+    image: url("../../dist/images/bg2.jpeg");
     position: center center;
     repeat: no-repeat;
-    size: cover;  
+    size: cover;
   }
 }
 .bg-img3 {
   background: {
-    image: url('../../dist/images/bg3.jpeg');
+    image: url("../../dist/images/bg3.jpeg");
     position: top;
     repeat: no-repeat;
     size: cover;
@@ -102,13 +102,12 @@ p {
 }
 .bg-img4 {
   background: {
-    image: url('../../dist/images/bg4.jpeg');
+    image: url("../../dist/images/bg4.jpeg");
     position: top;
     repeat: no-repeat;
     size: contain;
   }
 }
-
 
 /* トップ 各コンテンツの前の画像 */
 .top-bg {
@@ -125,19 +124,19 @@ p {
   position: absolute;
   top: -14rem;
   left: 6rem;
-  background-color: #0B3B0B;
+  background-color: #0b3b0b;
 }
 .gallery-title-box {
   position: absolute;
   top: -12rem;
   right: 8rem;
-  background-color: #610B0B;
+  background-color: #610b0b;
 }
 .job-title-box {
   position: absolute;
   top: -12rem;
   left: 8rem;
-  background-color: #0B0B61;
+  background-color: #0b0b61;
 }
 
 /* スクロール時のフェード機能 JSで制御 ===================*/
@@ -192,7 +191,7 @@ p {
 /* 上からのアニメーション */
 .load-down {
   opacity: 0;
-  transform: translate(0, -50px); 
+  transform: translate(0, -50px);
   transition-timing-function: ease-in-out;
 }
 .load-downed {
@@ -225,7 +224,7 @@ p {
   position: relative;
   background-color: $black;
   text-align: center;
-  padding:  .5rem;
+  padding: 0.5rem;
   & > .inner {
     display: flex;
     justify-content: space-between;
@@ -251,18 +250,18 @@ p {
       list-style: none;
       width: 100%;
       box-sizing: border-box;
-      margin: .1rem 15rem 0 0;
+      margin: 0.1rem 15rem 0 0;
       & li {
         list-style-type: none;
         & a {
-          font-size: .8rem;
+          font-size: 0.8rem;
           display: block;
           padding: 1rem 1.5rem;
           text-decoration: none;
           color: $white;
           & span {
             display: block;
-            margin-top: .25rem;
+            margin-top: 0.25rem;
             color: $gray;
           }
         }
@@ -271,25 +270,25 @@ p {
   }
 
   /* ヘッダーリンク */
-& .header-link {
-  display: flex;
-  text-align: right;
-  padding-right: 1.5rem;
-  & li {
-    list-style-type: none;
-    & a {
-      display: block;
-      border-radius: 10%;
-      width: 3rem;
-      height: 3rem;
-      margin: .5rem;
-      color: $white;
-      position: relative;
-      & .fab {
-        position: absolute;
-        top: .5rem;
-        left: .6rem;
-        font-size: 2rem;
+  & .header-link {
+    display: flex;
+    text-align: right;
+    padding-right: 1.5rem;
+    & li {
+      list-style-type: none;
+      & a {
+        display: block;
+        border-radius: 10%;
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+        color: $white;
+        position: relative;
+        & .fab {
+          position: absolute;
+          top: 0.5rem;
+          left: 0.6rem;
+          font-size: 2rem;
         }
       }
     }
@@ -300,7 +299,7 @@ p {
 .page-header-clone {
   text-align: center;
   background-color: $black;
-  padding: .7rem;
+  padding: 0.7rem;
   position: fixed;
   top: -130px;
   width: 100%;
@@ -310,7 +309,7 @@ p {
   & > .inner {
     display: flex;
     justify-content: space-between;
-    padding: .5rem;
+    padding: 0.5rem;
     & .header-title {
       color: $white;
       font-size: 1.5rem;
@@ -328,7 +327,7 @@ p {
       & a {
         text-decoration: none;
         padding: 1rem 2rem;
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: $white;
         & span {
           display: none;
@@ -398,11 +397,11 @@ p {
 .page-loaded {
   animation-name: fadein;
   animation-duration: 4s;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
-@keyframes fadein{
+@keyframes fadein {
   0% {
     opacity: 0;
   }
@@ -420,53 +419,53 @@ p {
   position: relative;
 }
 .top-content-profile {
-  background:  {
-    image: url('../../dist/images/img2.jpeg');
+  background: {
+    image: url("../../dist/images/img2.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
 }
 .top-content-gallery {
-  background:  {
-    image: url('../../dist/images/img15.jpeg');
+  background: {
+    image: url("../../dist/images/img15.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
 }
 .top-content-news {
-  background:  {
-    image: url('../../dist/images/img21.jpeg');
+  background: {
+    image: url("../../dist/images/img21.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
 }
 .top-content-price {
-  background:  {
-    image: url('../../dist/images/img14.jpeg');
+  background: {
+    image: url("../../dist/images/img14.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
 }
 .top-content-contact {
-  background:  {
-    image: url('../../dist/images/img13.jpeg');
+  background: {
+    image: url("../../dist/images/img13.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
 }
 .top-content-policy {
-  background:  {
-    image: url('../../dist/images/img11.jpeg');
+  background: {
+    image: url("../../dist/images/img11.jpeg");
     position: center center;
     size: cover;
     repeat: no-repeat;
   }
-} 
+}
 
 /* トップ スライダー */
 .top-content-slider {
@@ -483,19 +482,19 @@ p {
     animation: anime 50s infinite;
   }
   & li:nth-child(1) {
-    background-image: url('../../dist/images/img12.jpeg');
+    background-image: url("../../dist/images/img12.jpeg");
     animation-delay: 0s;
   }
   & li:nth-child(2) {
-    background-image: url('../../dist/images/img13.jpeg');
+    background-image: url("../../dist/images/img13.jpeg");
     animation-delay: 10s;
   }
   & li:nth-child(3) {
-    background-image: url('../../dist/images/img14.jpeg');
+    background-image: url("../../dist/images/img14.jpeg");
     animation-delay: 20s;
   }
   & li:nth-child(4) {
-    background-image: url('../../dist/images/img15.jpeg');
+    background-image: url("../../dist/images/img15.jpeg");
     animation-delay: 30s;
   }
 }
@@ -540,7 +539,7 @@ p {
     background-color: rgba(255, 255, 255, 0);
   }
   100% {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 .top-title {
@@ -567,7 +566,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 /* スクロールダウンのボタン JSで制御 */
@@ -581,7 +580,7 @@ p {
   border-radius: 10px;
   z-index: 2;
   animation: bounce 2s infinite 2s;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   transform: scale(1);
   &::before {
     position: absolute;
@@ -626,9 +625,9 @@ p {
   border: 1px solid #333;
   display: inline-block;
   outline: none;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   &:hover {
-    background-color: #610B0B;
+    background-color: #610b0b;
     color: $white;
     border-color: transparent;
   }
@@ -639,7 +638,7 @@ p {
     border: solid $gray;
     width: 10px;
     height: 10px;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   &::before {
     top: -6px;
@@ -655,7 +654,7 @@ p {
   &:hover::after {
     width: calc(100% + 11px);
     height: calc(100% + 11px);
-    border-color: #610B0B;
+    border-color: #610b0b;
   }
 }
 
@@ -666,7 +665,7 @@ p {
   position: relative;
   max-width: 1000px;
   height: 100%;
-  margin:  3rem auto 0;
+  margin: 3rem auto 0;
   & h2 {
     font-size: 2.5rem;
   }
@@ -685,7 +684,7 @@ p {
       position: absolute;
       left: 50%;
       width: 50%;
-      height:100%;
+      height: 100%;
       margin-left: -500px;
       object-fit: cover;
     }
@@ -722,12 +721,12 @@ p {
   background: linear-gradient(to right, #ffa751, #ffe259);
 }
 .slide3 {
-  background: #B79891;
-  background: linear-gradient(to right, #94716B, #B79891);
+  background: #b79891;
+  background: linear-gradient(to right, #94716b, #b79891);
 }
 .slide4 {
-  background: #FFEFBA;
-  background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+  background: #ffefba;
+  background: linear-gradient(to right, #ffffff, #ffefba);
 }
 .slide-img1 {
   object-position: 0 0;
@@ -743,7 +742,7 @@ p {
 }
 .slideshow-nav a::before,
 .slideshow-indicator a::before {
-  content: url('../../dist/images/sprites.png');
+  content: url("../../dist/images/sprites.png");
   display: inline-block;
   font-size: 0;
   line-height: 0;
@@ -810,13 +809,13 @@ p {
   grid-template-columns: repeat(3, 26vw); /* (80 - 2) / 3 */
   grid-template-rows: repeat(3, 26vw);
   margin: 7rem auto;
-} 
+}
 .grid-gallery {
   margin: auto;
   position: relative;
   width: 70%;
-  transition: .4s; 
-  transition-timing-function: ease-in-out; 
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
   & img {
     display: block;
     object-fit: cover;
@@ -827,7 +826,7 @@ p {
     }
   }
   &:hover {
-    cursor: pointer; 
+    cursor: pointer;
     transform: scale(1.1, 1.1);
     z-index: 10;
     & .top-gallery-text {
@@ -842,7 +841,7 @@ p {
   top: 0;
   width: 350px;
   height: 350px;
-  background-color: rgb(0, 0, 0, .5);
+  background-color: rgb(0, 0, 0, 0.5);
   opacity: 0;
 }
 .top-gallery-text {
@@ -875,26 +874,26 @@ p {
   display: block;
   text-align: center;
   font-size: 1.2rem;
-  padding: .7rem;
+  padding: 0.7rem;
   opacity: 0;
 }
 
 .grid-gallery:hover {
   & .gallery-text-title {
-    animation: style-top .5s;
-    animation-delay: .5s;
+    animation: style-top 0.5s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   }
   & .gallery-text-size {
-    animation: style-top .5s; 
-    animation-delay: .6s;
+    animation: style-top 0.5s;
+    animation-delay: 0.6s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   }
   & .gallery-text-data {
-    animation: style-bottom .5s;
-    animation-delay: .7s;
+    animation: style-bottom 0.5s;
+    animation-delay: 0.7s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   }
@@ -921,9 +920,7 @@ p {
   }
 }
 
-
 /* トッププロフィール */
-
 
 /* トップ 料金 */
 .top-price1 {
@@ -931,7 +928,7 @@ p {
   height: 100%;
   width: 70vw;
   margin: 4rem auto;
-} 
+}
 .top-price-content {
   display: flex;
   flex-flow: column;
@@ -943,13 +940,13 @@ p {
     width: 100%;
     height: 305px;
     object-fit: cover;
-  } 
+  }
 }
 .top-price-text {
   background-color: $black;
   color: $white;
   margin: 0 auto;
-  padding: 3rem 1rem; 
+  padding: 3rem 1rem;
   text-align: left;
   width: 91%;
   height: 210px;
@@ -962,7 +959,7 @@ p {
     margin: 0 auto;
     padding-top: 1rem;
     line-height: 1.9;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 .order1 {
@@ -995,7 +992,7 @@ p {
     height: 30vh;
     width: 20vw;
     object-fit: cover;
-  } 
+  }
 }
 .top-price-plan {
   background-color: $white;
@@ -1033,7 +1030,7 @@ p {
 .profile-text {
   padding: 5rem 3rem 3rem;
   width: 30vw;
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.4);
   & span {
     font-size: 1.25rem;
   }
@@ -1043,7 +1040,7 @@ p {
 }
 .profile-title {
   font-size: 2rem;
-  margin: .5rem 0 3rem;
+  margin: 0.5rem 0 3rem;
 }
 
 /* メッセージ */
@@ -1060,7 +1057,7 @@ p {
   margin-bottom: 1rem;
 }
 .message-text {
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 3rem;
 
   width: 30vw;
@@ -1072,14 +1069,13 @@ p {
   }
 }
 
-
 /* history */
 .history {
   position: relative;
   margin: 5rem auto;
 }
 .history-title {
-  background-color: #0B0B61;
+  background-color: #0b0b61;
   color: $white;
   padding: 4.5rem 2.5rem;
   position: absolute;
@@ -1117,8 +1113,8 @@ p {
 .gallery-item {
   list-style: none;
   margin-top: 2rem;
-  transition: .4s; 
-  transition-timing-function: ease-in-out; 
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
   & a {
     display: block;
   }
@@ -1147,11 +1143,12 @@ p {
   display: flex;
   padding: 2rem;
   margin: 4rem auto;
-  border: 1px solid $lightGray;box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
-  transition: background-color .5s;
+  border: 1px solid $lightGray;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.5s;
   & img {
     object-fit: cover;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
   &:hover {
     background-color: $smorke;
@@ -1204,8 +1201,8 @@ p {
     & li {
       background-color: $gray;
       color: $white;
-      margin: .5rem 0;
-      padding: .5rem 1rem;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
       border-radius: 30px;
     }
   }
@@ -1229,23 +1226,24 @@ p {
   text-indent: -1rem;
 }
 .price-table {
-width: 100%;
-margin-bottom: 1rem;
-border-collapse: collapse;
-border: 1px solid $lightGray;
-& th {
-  background-color: $whiteSmoke;
-}
-& th, td {
-  width: 35vw;
-  padding: 1rem 2rem;
-  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
   border: 1px solid $lightGray;
-}
-& td:first-child {
-  text-align: left;
-  background-color: $whiteSmoke;
-}
+  & th {
+    background-color: $whiteSmoke;
+  }
+  & th,
+  td {
+    width: 35vw;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 1px solid $lightGray;
+  }
+  & td:first-child {
+    text-align: left;
+    background-color: $whiteSmoke;
+  }
 }
 .price-table2 {
   @extend .price-table;
@@ -1298,29 +1296,29 @@ border: 1px solid $lightGray;
   text-align: center;
   /* Font Awesome */
   font: {
-    family: 'Font Awesome 5 Free';
+    family: "Font Awesome 5 Free";
     size: 1.7rem;
     weight: 900;
-    }
+  }
   line-height: 1.5;
   color: $black;
-  padding: .8rem .5rem 0 .5rem;
+  padding: 0.8rem 0.5rem 0 0.5rem;
   border-radius: 10px;
 }
 .icon-file::before {
-  content: '\f044';
+  content: "\f044";
 }
 .icon-meeting::before {
-  content: '\f086';
+  content: "\f086";
 }
 .icon-payment::before {
-  content: '\f157';
+  content: "\f157";
 }
 .icon-production::before {
-  content: '\f1fc';
+  content: "\f1fc";
 }
 .icon-complete::before {
-  content: '\f4df';
+  content: "\f4df";
 }
 .price-btn {
   background-color: $red2;
@@ -1330,10 +1328,10 @@ border: 1px solid $lightGray;
 
 /* CONTACT ================================= */
 .contact-text p {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 .small-text {
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-bottom: 2rem;
 }
 
@@ -1343,7 +1341,7 @@ border: 1px solid $lightGray;
   width: 100%;
   border: 1px solid $lightGray;
   margin-bottom: 2rem;
-  & th, 
+  & th,
   td {
     display: table-cell;
     padding: 1.3rem;
@@ -1375,7 +1373,7 @@ textarea {
   width: 100%;
   border: 1px solid $lightGray;
   background-color: $white;
-  padding: .5rem 0 .5rem .5rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
@@ -1393,7 +1391,7 @@ textarea {
 .select-box {
   width: 50%;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 .btn-send {
   color: $white;
@@ -1401,10 +1399,10 @@ textarea {
 }
 
 /* チェックボックスの非表示 */
-input[type='checkbox'] {
+input[type="checkbox"] {
   display: none;
 
-/* チェックボックスを変更 */
+  /* チェックボックスを変更 */
   & + span::before {
     display: inline-block;
     content: "";
@@ -1413,25 +1411,25 @@ input[type='checkbox'] {
     border: 1px solid $lightGray;
     background-color: $white;
     vertical-align: middle;
-    margin: -.25rem .5rem 0 1.85rem;
-    padding: 0 0 .25rem .5rem;
-   /* Font Awesome */
+    margin: -0.25rem 0.5rem 0 1.85rem;
+    padding: 0 0 0.25rem 0.5rem;
+    /* Font Awesome */
     font: {
-    family: 'Font Awesome 5 Free';
-    size: 1.5rem;
-    weight: 900;
+      family: "Font Awesome 5 Free";
+      size: 1.5rem;
+      weight: 900;
     }
     line-height: 1.5;
   }
 }
-input[type='checkbox']:checked + span::before {
-  content: '\f00c';
+input[type="checkbox"]:checked + span::before {
+  content: "\f00c";
 }
 
 /* POLICY =========================================== */
-.policy-text  {
+.policy-text {
   & p {
-    margin: .5rem  0 3rem;
+    margin: 0.5rem 0 3rem;
   }
   & h3 {
     font: {
@@ -1439,12 +1437,12 @@ input[type='checkbox']:checked + span::before {
       weight: 900;
     }
     margin: 0;
-  } 
+  }
 }
 
 /* FOOTER =========================================== */
 footer {
-  text-align: center; 
+  text-align: center;
   background-color: $black;
   color: $white;
 }
@@ -1500,11 +1498,11 @@ footer {
     text-decoration: none;
     &::before {
       font: {
-        family: 'Font Awesome 5 Free';
+        family: "Font Awesome 5 Free";
         weight: 900;
         size: 3rem;
       }
-      content: '\f102';
+      content: "\f102";
       color: #3f98ef;
       position: absolute;
       width: 25px;
@@ -1517,8 +1515,8 @@ footer {
       text-align: center;
     }
     &::after {
-      content: 'PAGE TOP';
-      font-size: .9rem;
+      content: "PAGE TOP";
+      font-size: 0.9rem;
       color: $white;
       position: absolute;
       top: 55px;
@@ -1546,7 +1544,7 @@ footer {
     color: $white;
     & span {
       display: block;
-      margin-top: .25rem;
+      margin-top: 0.25rem;
       color: $gray;
     }
   }
@@ -1564,7 +1562,7 @@ footer {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }  
+  }
   .page-header-clone,
   .scroll-down-btn,
   .footer-nav,
@@ -1591,7 +1589,7 @@ footer {
         border-radius: 5px;
         & span {
           display: inline-block;
-          transition: all .5s;
+          transition: all 0.5s;
           position: absolute;
           left: 15px;
           height: 5px;
@@ -1633,7 +1631,7 @@ footer {
         top: 75.59px;
         right: 0;
         overflow: hidden;
-        transition: .5s;
+        transition: 0.5s;
         &.open-menu {
           width: 100%;
         }
@@ -1654,11 +1652,7 @@ footer {
       position: fixed;
       top: 0;
       width: 100%;
-      opacity: .8;
+      opacity: 0.8;
     }
   }
-
 }
-
-
-
