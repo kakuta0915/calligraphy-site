@@ -32,7 +32,7 @@ $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
   font-family: "Noto Serif JP", sans-serif;
 }
 
-/* 共通のレイアウト */
+/* 各ページ共通のレイアウト */
 * {
   padding: 0;
   margin: 0;
@@ -50,9 +50,114 @@ body {
   background-color: $whiteSmoke;
 }
 
+/* トップコンテンツ (一番上の画像) */
+.top-content {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: {
+    position: relative;
+    position: center center;
+    size: cover;
+    repeat: no-repeat;
+  }
+}
+
+.top-content-profile {
+  background: {
+    image: url("../../dist/images/img2.jpeg");
+  }
+}
+
+.top-content-gallery {
+  background: {
+    image: url("../../dist/images/img15.jpeg");
+  }
+}
+
+.top-content-news {
+  background: {
+    image: url("../../dist/images/img21.jpeg");
+  }
+}
+
+.top-content-price {
+  background: {
+    image: url("../../dist/images/img14.jpeg");
+  }
+}
+
+.top-content-contact {
+  background: {
+    image: url("../../dist/images/img13.jpeg");
+  }
+}
+
+.top-content-policy {
+  background: {
+    image: url("../../dist/images/img11.jpeg");
+  }
+}
+
+/* ページロード後にフェードイン機能追加 JSで制御 */
+.page-load {
+  opacity: 0;
+}
+
+.page-loaded {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .wrapper {
   margin: 0 auto;
   padding: $space_20-30px $space_30-45px;
+}
+
+/* .wrapperの背景画像 */
+.bg {
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+.img1 {
+  background: {
+    image: url("../../dist/images/bg1.jpeg");
+  }
+}
+
+.img2 {
+  background: {
+    image: url("../../dist/images/bg2.jpeg");
+  }
+}
+
+.img3 {
+  background: {
+    image: url("../../dist/images/bg3.jpeg");
+  }
+}
+
+.img4 {
+  background: {
+    image: url("../../dist/images/bg4.jpeg");
+  }
 }
 
 p {
@@ -88,39 +193,6 @@ p {
   text-align: center;
   p {
     margin-top: $space_10-15px;
-  }
-}
-
-/* .wrapperの背景画像 */
-.bg {
-  background: {
-    position: center center;
-    repeat: no-repeat;
-    size: cover;
-  }
-}
-
-.img1 {
-  background: {
-    image: url("../../dist/images/bg1.jpeg");
-  }
-}
-
-.img2 {
-  background: {
-    image: url("../../dist/images/bg2.jpeg");
-  }
-}
-
-.img3 {
-  background: {
-    image: url("../../dist/images/bg3.jpeg");
-  }
-}
-
-.img4 {
-  background: {
-    image: url("../../dist/images/bg4.jpeg");
   }
 }
 
@@ -423,83 +495,6 @@ p {
 }
 .bar {
   display: none;
-}
-
-/* ページロード後にフェードイン機能追加 JSで制御 */
-.page-load {
-  opacity: 0;
-}
-.page-loaded {
-  animation-name: fadein;
-  animation-duration: 4s;
-  animation-delay: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* トップコンテンツ (一番上の画像) */
-.top-content {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-.top-content-profile {
-  background: {
-    image: url("../../dist/images/img2.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-.top-content-gallery {
-  background: {
-    image: url("../../dist/images/img15.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-.top-content-news {
-  background: {
-    image: url("../../dist/images/img21.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-.top-content-price {
-  background: {
-    image: url("../../dist/images/img14.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-.top-content-contact {
-  background: {
-    image: url("../../dist/images/img13.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-.top-content-policy {
-  background: {
-    image: url("../../dist/images/img11.jpeg");
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
 }
 
 /* トップ スライダー */
