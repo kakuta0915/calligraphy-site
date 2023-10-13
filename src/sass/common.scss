@@ -328,19 +328,16 @@ p {
 // メニュ- 共通//
 
 .page-header {
-  position: relative;
   background-color: $black;
-  text-align: center;
-  padding: 0.5rem;
+  padding: $space_10-15px;
   & > .inner {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     & .header-title {
       color: $white;
-      padding: 1rem 0 0 1rem;
-      margin: 0;
       font: {
-        size: 1.5rem;
+        size: $font_18-20px;
         weight: 900;
       }
     }
@@ -368,6 +365,7 @@ p {
           color: $white;
           & span {
             display: block;
+            text-align: center;
             margin-top: 0.25rem;
             color: $gray;
           }
