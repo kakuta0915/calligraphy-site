@@ -330,24 +330,23 @@ p {
 .page-header {
   background-color: $black;
   padding: $space_10-15px;
-  & .header-title {
-    color: $white;
-    font: {
-      size: $font_18-20px;
-      weight: 900;
-    }
-  }
   & .page-header-content {
     display: flex;
-    justify-content: space-between;
+    & .header-title {
+      display: flex;
+      align-items: center;
+      color: $white;
+      font: {
+        size: $font_18-20px;
+        weight: 900;
+      }
+    }
   }
   & .header-nav {
     display: flex;
     justify-content: flex-start;
     list-style: none;
     width: 100%;
-    box-sizing: border-box;
-    margin: 0.1rem 15rem 0 0;
     & li {
       list-style-type: none;
       & a {
@@ -364,7 +363,6 @@ p {
         }
       }
     }
-    // }
   }
 
   /* ヘッダーリンク */
