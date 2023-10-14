@@ -354,9 +354,6 @@ p {
   font-weight: 900;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
-.page-header > .inner .open-btn {
-  display: none !important;
-}
 .page-header > .inner .page-header-content {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
