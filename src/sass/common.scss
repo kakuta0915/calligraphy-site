@@ -330,46 +330,41 @@ p {
 .page-header {
   background-color: $black;
   padding: $space_10-15px;
-  & > .inner {
+  & .header-title {
+    color: $white;
+    font: {
+      size: $font_18-20px;
+      weight: 900;
+    }
+  }
+  & .page-header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    & .header-title {
-      color: $white;
-      font: {
-        size: $font_18-20px;
-        weight: 900;
-      }
-    }
-
-    & .page-header-content {
-      display: flex;
-      justify-content: space-between;
-    }
-    & .header-nav {
-      display: flex;
-      justify-content: flex-start;
-      list-style: none;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 0.1rem 15rem 0 0;
-      & li {
-        list-style-type: none;
-        & a {
-          font-size: 0.8rem;
+  }
+  & .header-nav {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.1rem 15rem 0 0;
+    & li {
+      list-style-type: none;
+      & a {
+        font-size: 0.8rem;
+        display: block;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        color: $white;
+        & span {
           display: block;
-          padding: 1rem 1.5rem;
-          text-decoration: none;
-          color: $white;
-          & span {
-            display: block;
-            text-align: center;
-            margin-top: 0.25rem;
-            color: $gray;
-          }
+          text-align: center;
+          margin-top: 0.25rem;
+          color: $gray;
         }
       }
     }
+    // }
   }
 
   /* ヘッダーリンク */
