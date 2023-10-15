@@ -335,13 +335,17 @@ p {
   background-color: #000;
   /* ヘッダーリンク */
 }
-.page-header .page-header-content {
+.page-header .page-header-contents {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+          justify-content: space-between;
 }
-.page-header .page-header-content .header-title {
+.page-header .page-header-contents .header-title {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -354,26 +358,39 @@ p {
   font-weight: 900;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
-.page-header .header-nav {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
+.page-header .page-header-contents .header-nav-contents {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-          justify-content: flex-start;
-  width: 100%;
-  list-style: none;
+          flex-direction: row;
+          justify-content: space-between;
+}
+.page-header .header-nav {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+          align-items: center;
 }
 .page-header .header-nav li {
   list-style-type: none;
 }
 .page-header .header-nav li a {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: clamp(10px, 2vw, 15px);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
   text-decoration: none;
 }
 .page-header .header-nav li a span {

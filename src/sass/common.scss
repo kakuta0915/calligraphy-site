@@ -20,6 +20,7 @@ $space_60_90px: calc($space_20-30px * 3); // 60-90px
 $space_80_120px: calc($space_20-30px * 4); // 80-120px
 
 // フォントサイズ
+$font_11-13px: calc($space_16-18px * 0.7); // 11.2-12.6px
 $font_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
 $font_18-20px: calc($font_16-18px * 1.1); // 17.6-19.8px
 $font_19-22px: calc($font_16-18px * 1.2); // 19.2-21.6px
@@ -330,8 +331,9 @@ p {
 .page-header {
   background-color: $black;
   padding: $space_10-15px;
-  & .page-header-content {
+  & .page-header-contents {
     display: flex;
+    justify-content: space-between;
     & .header-title {
       display: flex;
       align-items: center;
@@ -341,18 +343,21 @@ p {
         weight: 900;
       }
     }
+    & .header-nav-contents {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
   & .header-nav {
     display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    width: 100%;
+    align-items: center;
     & li {
       list-style-type: none;
       & a {
-        font-size: 0.8rem;
         display: block;
-        padding: 1rem 1.5rem;
+        font-size: $font_11-13px;
+        padding: $space_10-15px;
         text-decoration: none;
         color: $white;
         & span {
