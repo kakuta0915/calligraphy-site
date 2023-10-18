@@ -51,6 +51,14 @@ body {
   background-color: $whiteSmoke;
 }
 
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* トップコンテンツ (一番上の画像) */
 .top-content {
   width: 100%;
@@ -350,12 +358,10 @@ p {
     }
     & .header-nav {
       & li {
-        list-style-type: none;
         & a {
           display: block;
           font-size: $font_11-13px;
           padding: $space_10-15px;
-          text-decoration: none;
           color: $white;
           & span {
             display: block;
@@ -369,7 +375,6 @@ p {
 
     /* ヘッダーリンク */
     & .header-link {
-      text-align: right;
       margin: 0 $space_16-18px;
       & li {
         list-style-type: none;

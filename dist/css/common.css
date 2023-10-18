@@ -17,6 +17,14 @@ body {
   font-family: "Noto Serif JP", sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* トップコンテンツ (一番上の画像) */
 .top-content {
   width: 100%;
@@ -367,15 +375,11 @@ p {
           flex-direction: row;
           justify-content: space-between;
 }
-.page-header .page-header-contents .header-nav li {
-  list-style-type: none;
-}
 .page-header .page-header-contents .header-nav li a {
   display: block;
   padding: clamp(10px, 2vw, 15px);
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
-  text-decoration: none;
 }
 .page-header .page-header-contents .header-nav li a span {
   display: block;
@@ -385,7 +389,6 @@ p {
 }
 .page-header .page-header-contents .header-link {
   margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-  text-align: right;
 }
 .page-header .page-header-contents .header-link li {
   list-style-type: none;
