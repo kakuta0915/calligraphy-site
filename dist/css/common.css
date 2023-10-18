@@ -333,19 +333,8 @@ p {
 .page-header {
   padding: clamp(10px, 2vw, 15px);
   background-color: #000;
-  /* ヘッダーリンク */
 }
-.page-header .page-header-contents {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-          justify-content: space-between;
-}
-.page-header .page-header-contents .header-title {
+.page-header * {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -354,6 +343,15 @@ p {
   display: -ms-flexbox;
   display: flex;
           align-items: center;
+}
+.page-header .page-header-contents {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* ヘッダーリンク */
+}
+.page-header .page-header-contents .header-title {
   color: #fff;
   font-weight: 900;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
@@ -366,51 +364,33 @@ p {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
           flex-direction: row;
           justify-content: space-between;
 }
-.page-header .header-nav {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-          align-items: center;
-}
-.page-header .header-nav li {
+.page-header .page-header-contents .header-nav li {
   list-style-type: none;
 }
-.page-header .header-nav li a {
+.page-header .page-header-contents .header-nav li a {
   display: block;
   padding: clamp(10px, 2vw, 15px);
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
   text-decoration: none;
 }
-.page-header .header-nav li a span {
+.page-header .page-header-contents .header-nav li a span {
   display: block;
   margin-top: 0.25rem;
   color: #696969;
   text-align: center;
 }
-.page-header .header-link {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 1.5rem;
+.page-header .page-header-contents .header-link {
+  margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   text-align: right;
 }
-.page-header .header-link li {
+.page-header .page-header-contents .header-link li {
   list-style-type: none;
 }
-.page-header .header-link li a {
+.page-header .page-header-contents .header-link li a {
   display: block;
   position: relative;
   width: 3rem;
@@ -419,7 +399,7 @@ p {
   border-radius: 10%;
   color: #fff;
 }
-.page-header .header-link li a .fab {
+.page-header .page-header-contents .header-link li a .fab {
   position: absolute;
   top: 0.5rem;
   left: 0.6rem;

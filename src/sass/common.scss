@@ -331,12 +331,13 @@ p {
 .page-header {
   background-color: $black;
   padding: $space_10-15px;
-  & .page-header-contents {
+  & * {
     display: flex;
+    align-items: center;
+  }
+  & .page-header-contents {
     justify-content: space-between;
     & .header-title {
-      display: flex;
-      align-items: center;
       color: $white;
       font: {
         size: $font_18-20px;
@@ -344,52 +345,48 @@ p {
       }
     }
     & .header-nav-contents {
-      display: flex;
       justify-content: space-between;
       flex-direction: row;
     }
-  }
-  & .header-nav {
-    display: flex;
-    align-items: center;
-    & li {
-      list-style-type: none;
-      & a {
-        display: block;
-        font-size: $font_11-13px;
-        padding: $space_10-15px;
-        text-decoration: none;
-        color: $white;
-        & span {
+    & .header-nav {
+      & li {
+        list-style-type: none;
+        & a {
           display: block;
-          text-align: center;
-          margin-top: 0.25rem;
-          color: $gray;
+          font-size: $font_11-13px;
+          padding: $space_10-15px;
+          text-decoration: none;
+          color: $white;
+          & span {
+            display: block;
+            text-align: center;
+            margin-top: 0.25rem;
+            color: $gray;
+          }
         }
       }
     }
-  }
 
-  /* ヘッダーリンク */
-  & .header-link {
-    display: flex;
-    text-align: right;
-    padding-right: 1.5rem;
-    & li {
-      list-style-type: none;
-      & a {
-        display: block;
-        border-radius: 10%;
-        width: 3rem;
-        height: 3rem;
-        margin: 0.5rem;
-        color: $white;
-        position: relative;
-        & .fab {
-          position: absolute;
-          top: 0.5rem;
-          left: 0.6rem;
-          font-size: 2rem;
+    /* ヘッダーリンク */
+    & .header-link {
+      text-align: right;
+      margin: 0 $space_16-18px;
+      & li {
+        list-style-type: none;
+        & a {
+          display: block;
+          border-radius: 10%;
+          width: 3rem;
+          height: 3rem;
+          margin: 0.5rem;
+          color: $white;
+          position: relative;
+          & .fab {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.6rem;
+            font-size: 2rem;
+          }
         }
       }
     }
