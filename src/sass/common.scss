@@ -336,14 +336,14 @@ p {
 /* HEADER ================================= */
 // メニュ- 共通
 
-.page-header {
+header {
   background-color: $black;
   padding: $space_10-15px;
   & * {
     display: flex;
     align-items: center;
   }
-  & .page-header-contents {
+  & .header-contents {
     justify-content: space-between;
     & .header-title {
       color: $white;
