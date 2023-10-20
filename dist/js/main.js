@@ -273,11 +273,11 @@ $(function () {
    * Sticky header =====================================================================
    */
 
-  $(".page-header").each(function () {
+  $("header").each(function () {
     var $window = $(window),
       $header = $(this),
       $headerClone = $header.contents().clone(),
-      $headerCloneContainer = $('<div class="page-header-clone"></div>'),
+      $headerCloneContainer = $('<div class="header-clone"></div>'),
       threshold = $header.offset().top + $header.outerHeight();
 
     $headerCloneContainer.append($headerClone);
@@ -298,7 +298,7 @@ $(function () {
   /*
    * hoverしたときの設定
    */
-  $(".page-header-clone a").on("mouseover", function () {
+  $(".header-clone a").on("mouseover", function () {
     $(this).stop(true).animate(
       {
         backgroundColor: "#610B0B",

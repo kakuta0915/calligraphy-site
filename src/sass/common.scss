@@ -354,44 +354,40 @@ header {
       }
     }
     & .header-nav-contents {
-      justify-content: space-between;
-      flex-direction: row;
-    }
-    & .header-nav {
-      & li {
-        & a {
-          display: block;
-          font-size: $font_11-13px;
-          padding: $space_10-15px;
-          color: $white;
-          & span {
+      & .header-nav {
+        & li {
+          & a {
             display: block;
-            text-align: center;
-            margin-top: 0.25rem;
-            color: $gray;
+            font-size: $font_11-13px;
+            padding: $space_10-15px;
+            color: $white;
+            & span {
+              display: block;
+              text-align: center;
+              margin-top: 0.25rem;
+              color: $gray;
+            }
           }
         }
       }
-    }
-
-    /* ヘッダーリンク */
-    & .header-link {
-      margin: 0 $space_16-18px;
-      & li {
-        list-style-type: none;
-        & a {
-          display: block;
-          border-radius: 10%;
-          width: 3rem;
-          height: 3rem;
-          margin: 0.5rem;
-          color: $white;
-          position: relative;
-          & .fab {
-            position: absolute;
-            top: 0.5rem;
-            left: 0.6rem;
-            font-size: 2rem;
+      /* ヘッダーリンク */
+      & .header-link {
+        margin: 0 $space_16-18px;
+        & li {
+          & a {
+            display: block;
+            border-radius: 10%;
+            width: 3rem;
+            height: 3rem;
+            margin: 0.5rem;
+            color: $white;
+            position: relative;
+            & .fab {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.6rem;
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -400,41 +396,55 @@ header {
 }
 
 /* Sticky header(clone) */
-.page-header-clone {
-  text-align: center;
+.header-clone {
   background-color: $black;
-  padding: 0.7rem;
+  padding: 0.5rem;
   position: fixed;
   top: -130px;
   width: 100%;
   z-index: 30;
   transition: top 0.25s;
   opacity: 0.9;
-  & > .inner {
+  & * {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
-    & .header-title {
-      color: $white;
-      font-size: 1.5rem;
-      margin: 0;
-      padding-left: 1rem;
-    }
+    align-items: center;
   }
-  & .header-nav {
-    position: absolute;
-    left: 21rem;
-    top: 1.5rem;
-    display: flex;
-    & li {
-      list-style-type: none;
-      & a {
-        text-decoration: none;
-        padding: 1rem 2rem;
-        font-size: 0.8rem;
-        color: $white;
-        & span {
-          display: none;
+  & > .header-contents {
+    & .header-title {
+      margin: 0 $space_16-18px;
+      color: $white;
+      font: {
+        size: $font_19-22px;
+        weight: 900;
+      }
+    }
+    & .header-nav-contents {
+      & .header-nav {
+        & li {
+          & a {
+            display: block;
+            font-size: $font_11-13px;
+            padding: $space_10-15px;
+            color: $white;
+            & span {
+              display: none;
+            }
+          }
+        }
+      }
+
+      & .header-link {
+        margin: 0 $space_16-18px;
+        & li {
+          & a {
+            padding: 1rem 1.5rem;
+            & .fab {
+              color: $white;
+              top: 1rem;
+              font-size: 1.5rem;
+            }
+          }
         }
       }
     }
@@ -442,24 +452,6 @@ header {
   /* JSで制御 */
   &.visible {
     top: 0;
-  }
-  & .header-link {
-    display: flex;
-    position: absolute;
-    right: 3rem;
-    top: 1.2rem;
-    margin: 0;
-    & li {
-      list-style-type: none;
-      & a {
-        padding: 1rem 1.5rem;
-        & .fab {
-          color: $white;
-          top: 1rem;
-          font-size: 1.5rem;
-        }
-      }
-    }
   }
 }
 
