@@ -411,78 +411,58 @@ header .header-contents .header-link li a .fab {
 }
 
 /* Sticky header(clone) */
-.page-header-clone {
+.header-clone {
   -webkit-transition: top 0.25s;
   -o-transition: top 0.25s;
   z-index: 30;
   position: fixed;
   top: -130px;
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.5rem;
   background-color: #000;
-  text-align: center;
   opacity: 0.9;
   transition: top 0.25s;
   /* JSで制御 */
 }
-.page-header-clone > .inner {
+.header-clone * {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+          align-items: center;
           justify-content: space-between;
-  padding: 0.5rem;
 }
-.page-header-clone > .inner .header-title {
-  margin: 0;
-  padding-left: 1rem;
+.header-clone > .header-contents .header-title {
+  margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   color: #fff;
-  font-size: 1.5rem;
+  font-weight: 900;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
-.page-header-clone .header-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 1.5rem;
-  left: 21rem;
-}
-.page-header-clone .header-nav li {
-  list-style-type: none;
-}
-.page-header-clone .header-nav li a {
-  padding: 1rem 2rem;
+.header-clone .header-nav-contents .header-nav li a {
+  display: block;
+  padding: clamp(10px, 2vw, 15px);
   color: #fff;
-  font-size: 0.8rem;
-  text-decoration: none;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
 }
-.page-header-clone .header-nav li a span {
+.header-clone .header-nav-contents .header-nav li a span {
   display: none;
 }
-.page-header-clone.visible {
+.header-clone.visible {
   top: 0;
 }
-.page-header-clone .header-link {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 1.2rem;
-  right: 3rem;
-  margin: 0;
+.header-clone .header-link {
+  margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
-.page-header-clone .header-link li {
-  list-style-type: none;
-}
-.page-header-clone .header-link li a {
+.header-clone .header-link li a {
   padding: 1rem 1.5rem;
 }
-.page-header-clone .header-link li a .fab {
+.header-clone .header-link li a .fab {
   top: 1rem;
   color: #fff;
   font-size: 1.5rem;
