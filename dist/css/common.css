@@ -360,9 +360,10 @@ header .header-contents {
   /* ヘッダーリンク */
 }
 header .header-contents .header-title {
+  margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   color: #fff;
   font-weight: 900;
-  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
 header .header-contents .header-nav-contents {
   -webkit-box-pack: justify;

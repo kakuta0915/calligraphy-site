@@ -346,9 +346,10 @@ header {
   & .header-contents {
     justify-content: space-between;
     & .header-title {
+      margin: 0 $space_16-18px;
       color: $white;
       font: {
-        size: $font_18-20px;
+        size: $font_19-22px;
         weight: 900;
       }
     }
