@@ -205,6 +205,128 @@ p {
   }
 }
 
+/* HEADER ================================= */
+// メニュ- 共通
+
+header {
+  background-color: $black;
+  padding: $space_10-15px;
+  & * {
+    display: flex;
+    align-items: center;
+  }
+  & .header-contents {
+    justify-content: space-between;
+    & .header-title {
+      margin: 0 $space_16-18px;
+      color: $white;
+      font: {
+        size: $font_19-22px;
+        weight: 900;
+      }
+    }
+    & .header-nav-contents {
+      & .header-nav {
+        & li {
+          & a {
+            display: block;
+            font-size: $font_11-13px;
+            padding: $space_10-15px;
+            color: $white;
+            & span {
+              display: block;
+              text-align: center;
+              margin-top: 0.25rem;
+              color: $gray;
+            }
+          }
+        }
+      }
+      /* ヘッダーリンク */
+      & .header-link {
+        margin: 0 $space_16-18px;
+        & li {
+          & a {
+            display: block;
+            border-radius: 10%;
+            width: 3rem;
+            height: 3rem;
+            margin: 0.5rem;
+            color: $white;
+            position: relative;
+            & .fab {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.6rem;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Sticky header(clone) */
+.header-clone {
+  background-color: $black;
+  padding: 0.5rem;
+  position: fixed;
+  top: -130px;
+  width: 100%;
+  z-index: 30;
+  transition: top 0.25s;
+  opacity: 0.9;
+  & * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & > .header-contents {
+    & .header-title {
+      margin: 0 $space_16-18px;
+      color: $white;
+      font: {
+        size: $font_19-22px;
+        weight: 900;
+      }
+    }
+    & .header-nav-contents {
+      & .header-nav {
+        & li {
+          & a {
+            display: block;
+            font-size: $font_11-13px;
+            padding: $space_10-15px;
+            color: $white;
+            & span {
+              display: none;
+            }
+          }
+        }
+      }
+
+      & .header-link {
+        margin: 0 $space_16-18px;
+        & li {
+          & a {
+            padding: 1rem 1.5rem;
+            & .fab {
+              color: $white;
+              top: 1rem;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* JSで制御 */
+  &.visible {
+    top: 0;
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -331,128 +453,6 @@ p {
   transition: all 800ms;
   transition-delay: 200ms;
   transition-timing-function: ease-in-out;
-}
-
-/* HEADER ================================= */
-// メニュ- 共通
-
-header {
-  background-color: $black;
-  padding: $space_10-15px;
-  & * {
-    display: flex;
-    align-items: center;
-  }
-  & .header-contents {
-    justify-content: space-between;
-    & .header-title {
-      margin: 0 $space_16-18px;
-      color: $white;
-      font: {
-        size: $font_19-22px;
-        weight: 900;
-      }
-    }
-    & .header-nav-contents {
-      & .header-nav {
-        & li {
-          & a {
-            display: block;
-            font-size: $font_11-13px;
-            padding: $space_10-15px;
-            color: $white;
-            & span {
-              display: block;
-              text-align: center;
-              margin-top: 0.25rem;
-              color: $gray;
-            }
-          }
-        }
-      }
-      /* ヘッダーリンク */
-      & .header-link {
-        margin: 0 $space_16-18px;
-        & li {
-          & a {
-            display: block;
-            border-radius: 10%;
-            width: 3rem;
-            height: 3rem;
-            margin: 0.5rem;
-            color: $white;
-            position: relative;
-            & .fab {
-              position: absolute;
-              top: 0.5rem;
-              left: 0.6rem;
-              font-size: 2rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Sticky header(clone) */
-.header-clone {
-  background-color: $black;
-  padding: 0.5rem;
-  position: fixed;
-  top: -130px;
-  width: 100%;
-  z-index: 30;
-  transition: top 0.25s;
-  opacity: 0.9;
-  & * {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  & > .header-contents {
-    & .header-title {
-      margin: 0 $space_16-18px;
-      color: $white;
-      font: {
-        size: $font_19-22px;
-        weight: 900;
-      }
-    }
-    & .header-nav-contents {
-      & .header-nav {
-        & li {
-          & a {
-            display: block;
-            font-size: $font_11-13px;
-            padding: $space_10-15px;
-            color: $white;
-            & span {
-              display: none;
-            }
-          }
-        }
-      }
-
-      & .header-link {
-        margin: 0 $space_16-18px;
-        & li {
-          & a {
-            padding: 1rem 1.5rem;
-            & .fab {
-              color: $white;
-              top: 1rem;
-              font-size: 1.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-  /* JSで制御 */
-  &.visible {
-    top: 0;
-  }
 }
 
 /* TOP ====================================== */
