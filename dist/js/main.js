@@ -15,7 +15,7 @@ $(function () {
     $(".line").animate({ width: "0%" }, 500, function () {
       $(".top").animate({ height: "0%" });
       $(".bottom").animate({ height: "0%" }, 500, function () {
-        $(".top-text").addClass("top-text-animation"),
+        $(".index-top-text").addClass("animation"),
           $(".page-load").addClass("page-loaded"),
           $(".load-down").addClass("load-downed"),
           $(".load-up").addClass("load-uped");
