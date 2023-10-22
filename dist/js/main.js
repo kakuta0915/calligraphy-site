@@ -189,65 +189,6 @@ $(function () {
   });
 
   /*
-   * nav ==============================================================================
-   */
-  var duration = 300;
-  $("#nav a").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#610B0B",
-        color: "#fff",
-      },
-      duration
-    );
-    $(this).children().stop(true).animate(
-      {
-        backgroundColor: "#610B0B",
-        color: "#BDBDBD",
-      },
-      duration
-    );
-  });
-  $("#nav a").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-        color: "#fff",
-      },
-      duration
-    );
-    $(this).children().stop(true).animate(
-      {
-        backgroundColor: "#000",
-        color: "#696969",
-      },
-      duration
-    );
-  });
-
-  /*
-    header-link ホバー時のエフェクト
-    */
-  $(".header-link a").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#610B0B",
-        color: "#fff",
-      },
-      duration
-    );
-  });
-  $(".header-link a").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-        color: "#fff",
-      },
-      duration
-    );
-  });
-
-  /*
     footer-link ホバー時のエフェクト
     */
   $(".footer-link a").on("mouseover", function () {
