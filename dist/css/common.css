@@ -190,10 +190,13 @@ header .header-contents .header-nav-contents {
   /* ヘッダーリンク */
 }
 header .header-contents .header-nav-contents .header-nav li a {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   display: block;
   padding: clamp(10px, 2vw, 15px);
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
+  transition: 400ms;
 }
 header .header-contents .header-nav-contents .header-nav li a span {
   display: block;
@@ -201,10 +204,19 @@ header .header-contents .header-nav-contents .header-nav li a span {
   color: #696969;
   text-align: center;
 }
+header .header-contents .header-nav-contents .header-nav li a:hover {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  background-color: #610b0b;
+  color: #fff;
+  transition: 400ms;
+}
 header .header-contents .header-nav-contents .header-link {
   margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 header .header-contents .header-nav-contents .header-link li a {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   display: block;
   position: relative;
   width: 3rem;
@@ -212,12 +224,20 @@ header .header-contents .header-nav-contents .header-link li a {
   margin: 0.5rem;
   border-radius: 10%;
   color: #fff;
+  transition: 400ms;
 }
 header .header-contents .header-nav-contents .header-link li a .fab {
   position: absolute;
   top: 0.5rem;
   left: 0.6rem;
   font-size: 2rem;
+}
+header .header-contents .header-nav-contents .header-link li a:hover {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  background-color: #610b0b;
+  color: #fff;
+  transition: 400ms;
 }
 
 /* Sticky header(clone) */
