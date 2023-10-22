@@ -503,7 +503,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 /* TOP ====================================== */
 /* トップページ読み込み時のアニメーション JSで制御 */
 /* トップ スライダー */
-.top-content-slider li {
+.index-top-slider li {
   -webkit-animation: anime 50s infinite;
   position: absolute;
   top: 0;
@@ -516,22 +516,22 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           animation: anime 50s infinite;
   opacity: 0;
 }
-.top-content-slider li:nth-child(1) {
+.index-top-slider li:nth-child(1) {
   -webkit-animation-delay: 0s;
   background-image: url("../../dist/images/img12.jpeg");
           animation-delay: 0s;
 }
-.top-content-slider li:nth-child(2) {
+.index-top-slider li:nth-child(2) {
   -webkit-animation-delay: 10s;
   background-image: url("../../dist/images/img13.jpeg");
           animation-delay: 10s;
 }
-.top-content-slider li:nth-child(3) {
+.index-top-slider li:nth-child(3) {
   -webkit-animation-delay: 20s;
   background-image: url("../../dist/images/img14.jpeg");
           animation-delay: 20s;
 }
-.top-content-slider li:nth-child(4) {
+.index-top-slider li:nth-child(4) {
   -webkit-animation-delay: 30s;
   background-image: url("../../dist/images/img15.jpeg");
           animation-delay: 30s;
@@ -573,7 +573,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   }
 }
 /* トップスライダーのテキスト */
-.top-text {
+.index-top-text {
   display: inline-block;
   position: absolute;
   right: 3rem;
@@ -584,8 +584,17 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background: rgba(255, 255, 255, 0);
   text-align: center;
 }
+.index-top-text h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+.index-top-text .sub-title {
+  margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
 
-.top-text-animation {
+.animation {
   -webkit-animation-name: bgchange;
   -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: ease;
@@ -613,17 +622,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     background-color: rgba(255, 255, 255, 0.9);
   }
 }
-.top-title {
-  font-weight: 900;
-  font-size: 3.5rem;
-}
-
-.top-sub-title {
-  margin-bottom: 1rem;
-  font-weight: 900;
-  font-size: 1.2rem;
-}
-
 /* タイトル */
 .title {
   -webkit-writing-mode: vertical-rl;

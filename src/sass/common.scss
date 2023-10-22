@@ -516,7 +516,7 @@ header {
 // }
 
 /* トップ スライダー */
-.top-content-slider {
+.index-top-slider {
   & li {
     position: absolute;
     top: 0;
@@ -565,7 +565,7 @@ header {
 }
 
 /* トップスライダーのテキスト */
-.top-text {
+.index-top-text {
   background: rgba(255, 255, 255, 0);
   display: inline-block;
   width: 30%;
@@ -575,8 +575,23 @@ header {
   margin: 2.5rem auto;
   position: absolute;
   right: 3rem;
+  & h1 {
+    font: {
+      size: 3.5rem;
+      weight: 900;
+    }
+  }
+  & .sub-title {
+    font: {
+      size: 1.2rem;
+      weight: 900;
+    }
+    margin-bottom: 1rem;
+  }
 }
-.top-text-animation {
+
+// JSで制御
+.animation {
   animation-name: bgchange;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -589,19 +604,6 @@ header {
   100% {
     background-color: rgba(255, 255, 255, 0.9);
   }
-}
-.top-title {
-  font: {
-    size: 3.5rem;
-    weight: 900;
-  }
-}
-.top-sub-title {
-  font: {
-    size: 1.2rem;
-    weight: 900;
-  }
-  margin-bottom: 1rem;
 }
 
 /* タイトル */
