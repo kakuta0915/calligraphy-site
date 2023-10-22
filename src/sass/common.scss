@@ -312,8 +312,14 @@ header {
             font-size: $font_11-13px;
             padding: $space_10-15px;
             color: $white;
+            transition: 400ms;
             & span {
               display: none;
+            }
+            &:hover {
+              background-color: $red3;
+              color: $white;
+              transition: 400ms;
             }
           }
         }
@@ -323,11 +329,23 @@ header {
         margin: 0 $space_16-18px;
         & li {
           & a {
-            padding: 1rem 1.5rem;
+            border-radius: 10%;
+            width: 3rem;
+            height: 3rem;
+            margin: 0.5rem;
+            transition: 400ms;
+            position: relative;
             & .fab {
               color: $white;
-              top: 1rem;
+              position: absolute;
+              top: 0.6rem;
+              left: 0.8rem;
               font-size: 1.5rem;
+            }
+            &:hover {
+              background-color: $red3;
+              color: $white;
+              transition: 400ms;
             }
           }
         }

@@ -275,24 +275,50 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
 .header-clone > .header-contents .header-nav-contents .header-nav li a {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   display: block;
   padding: clamp(10px, 2vw, 15px);
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
+  transition: 400ms;
 }
 .header-clone > .header-contents .header-nav-contents .header-nav li a span {
   display: none;
+}
+.header-clone > .header-contents .header-nav-contents .header-nav li a:hover {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  background-color: #610b0b;
+  color: #fff;
+  transition: 400ms;
 }
 .header-clone > .header-contents .header-nav-contents .header-link {
   margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 .header-clone > .header-contents .header-nav-contents .header-link li a {
-  padding: 1rem 1.5rem;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem;
+  border-radius: 10%;
+  transition: 400ms;
 }
 .header-clone > .header-contents .header-nav-contents .header-link li a .fab {
-  top: 1rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
   color: #fff;
   font-size: 1.5rem;
+}
+.header-clone > .header-contents .header-nav-contents .header-link li a:hover {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  background-color: #610b0b;
+  color: #fff;
+  transition: 400ms;
 }
 .header-clone.visible {
   top: 0;
