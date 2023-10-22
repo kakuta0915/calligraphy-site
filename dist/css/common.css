@@ -322,15 +322,19 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: 0;
 }
 
-.top-page-title {
+/* TOP Page 【index.ejs】 */
+.index-section-title {
   display: inline-block;
-  padding: 4.5rem 2.5rem;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2.5) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
   color: #fff;
   text-align: center;
 }
-.top-page-title h2 {
-  margin: 1rem 0 0.5rem;
-  font-size: 2rem;
+.index-section-title h2 {
+  margin: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) 0 0.7rem;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+}
+.index-section-title span {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 /* トップ 各コンテンツの前の画像 */

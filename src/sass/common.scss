@@ -356,6 +356,21 @@ header {
   }
 }
 
+/* TOP Page 【index.ejs】 */
+.index-section-title {
+  text-align: center;
+  display: inline-block;
+  padding: calc($space_20-30px * 2.5) $space_40-60px;
+  color: $white;
+  & h2 {
+    font-size: $font_24-27px;
+    margin: $font_16-18px 0 0.7rem;
+  }
+  & span {
+    font-size: $font_16-18px;
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -364,16 +379,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-.top-page-title {
-  text-align: center;
-  display: inline-block;
-  padding: 4.5rem 2.5rem;
-  color: $white;
-  & h2 {
-    font-size: 2rem;
-    margin: 1rem 0 0.5rem;
-  }
-}
 
 /* トップ 各コンテンツの前の画像 */
 .top-bg {
