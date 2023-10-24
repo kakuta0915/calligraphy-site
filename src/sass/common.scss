@@ -356,7 +356,103 @@ header {
   }
 }
 
-/* TOP Page 【index.ejs】 */
+/* TOP Page 【index.ejs】============================== */
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// トップ スライダー
+.index-top-slider {
+  & li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    animation: anime 50s infinite;
+  }
+  & li:nth-child(1) {
+    background-image: url("../../dist/images/img12.jpeg");
+    animation-delay: 0s;
+  }
+  & li:nth-child(2) {
+    background-image: url("../../dist/images/img13.jpeg");
+    animation-delay: 10s;
+  }
+  & li:nth-child(3) {
+    background-image: url("../../dist/images/img14.jpeg");
+    animation-delay: 20s;
+  }
+  & li:nth-child(4) {
+    background-image: url("../../dist/images/img15.jpeg");
+    animation-delay: 30s;
+  }
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// トップスライダーのテキスト
+.index-top-text {
+  background: rgba(255, 255, 255, 0);
+  display: inline-block;
+  width: 30vw;
+  height: 70vh;
+  text-align: center;
+  padding: $space_16-18px $space_40-60px $space_40-60px;
+  position: absolute;
+  top: $space_40-60px;
+  right: $space_40-60px;
+  & h1 {
+    font: {
+      size: calc($font_32-64px * 0.8);
+    }
+  }
+  & .sub-title {
+    font: {
+      size: $font_18-20px;
+      weight: 900;
+    }
+    margin-bottom: $space_16-18px;
+  }
+}
+
+// ページロード後に背景色が変わるアニメーション【JSで制御】
+.index-top-text-bg {
+  animation-name: bgChange;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes bgChange {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+// ~~~~~~~~~~~~~~~~~~ここまで作業中~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .index-section-title {
   text-align: center;
   display: inline-block;
@@ -519,97 +615,6 @@ header {
 // .bar {
 //   display: none;
 // }
-
-/* トップ スライダー */
-.index-top-slider {
-  & li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
-    animation: anime 50s infinite;
-  }
-  & li:nth-child(1) {
-    background-image: url("../../dist/images/img12.jpeg");
-    animation-delay: 0s;
-  }
-  & li:nth-child(2) {
-    background-image: url("../../dist/images/img13.jpeg");
-    animation-delay: 10s;
-  }
-  & li:nth-child(3) {
-    background-image: url("../../dist/images/img14.jpeg");
-    animation-delay: 20s;
-  }
-  & li:nth-child(4) {
-    background-image: url("../../dist/images/img15.jpeg");
-    animation-delay: 30s;
-  }
-}
-@keyframes anime {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* トップスライダーのテキスト */
-.index-top-text {
-  background: rgba(255, 255, 255, 0);
-  display: inline-block;
-  width: 30%;
-  height: 70vh;
-  text-align: center;
-  padding: 1rem 4rem 4rem;
-  margin: 2.5rem auto;
-  position: absolute;
-  right: 3rem;
-  & h1 {
-    font: {
-      size: 3.5rem;
-      weight: 900;
-    }
-  }
-  & .sub-title {
-    font: {
-      size: 1.2rem;
-      weight: 900;
-    }
-    margin-bottom: 1rem;
-  }
-}
-
-// JSで制御
-.animation {
-  animation-name: bgchange;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes bgchange {
-  0% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-}
 
 /* タイトル */
 .title {
