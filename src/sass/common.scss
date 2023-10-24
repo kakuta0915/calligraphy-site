@@ -451,6 +451,51 @@ header {
   }
 }
 
+// スクロールダウンのボタン JSで制御
+.index-top-btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: calc($space_30-45px * 0.8);
+  padding: $space_20-30px $space_80_120px;
+  border: 2px solid $gray;
+  border-radius: 10px;
+  z-index: 2;
+  animation: bounce 2s infinite 2s;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+
+  // 矢印のレイアウト
+  &::before {
+    position: absolute;
+    top: calc(50% - 18px);
+    left: calc(50% - 14px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border: 2px solid $gray;
+    border-width: 0 0 2px 2px;
+  }
+}
+
+// ボタンのアニメーション
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 // ~~~~~~~~~~~~~~~~~~ここまで作業中~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .index-section-title {
@@ -627,48 +672,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-/* スクロールダウンのボタン JSで制御 */
-.scroll-down-btn {
-  position: absolute;
-  bottom: 50px;
-  left: 25%;
-  //display: block;
-  padding: 2rem 8rem;
-  border: 2px solid $gray;
-  border-radius: 10px;
-  z-index: 2;
-  animation: bounce 2s infinite 2s;
-  transition: all 0.2s ease-in;
-  transform: scale(1);
-  &::before {
-    position: absolute;
-    top: calc(50% - 18px);
-    left: calc(50% - 14px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 20px;
-    height: 20px;
-    content: "";
-    border: 2px solid $gray;
-    border-width: 0 0 2px 2px;
-  }
-}
-@keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
 }
 
 /* トップ詳細ボタン */

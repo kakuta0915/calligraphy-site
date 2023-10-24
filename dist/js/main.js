@@ -28,7 +28,7 @@ $(function () {
    */
 
   $(function () {
-    $(".scroll-down-btn").click(function () {
+    $(".index-top-btn").click(function () {
       $("html, body").animate(
         { scrollTop: $(".slideshow").offset().top },
         "slow"
