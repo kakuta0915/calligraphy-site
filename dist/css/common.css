@@ -392,6 +392,62 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     opacity: 0;
   }
 }
+/* ページロード時のアニメーション 【JSで制御】 */
+.load-down {
+  -webkit-transform: translate(0, -50px);
+      -ms-transform: translate(0, -50px);
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transform: translate(0, -50px);
+  opacity: 0;
+          transition-timing-function: ease-in-out;
+}
+
+.load-downed {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+  -webkit-transition: all 800ms;
+  -o-transition: all 800ms;
+  -webkit-transition-delay: 200ms;
+       -o-transition-delay: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transform: translate(0, 0);
+  opacity: 1;
+  transition: all 800ms;
+          transition-delay: 200ms;
+          transition-timing-function: ease-in-out;
+}
+
+.load-up {
+  -webkit-transform: translate(0, 50px);
+      -ms-transform: translate(0, 50px);
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transform: translate(0, 50px);
+  opacity: 0;
+          transition-timing-function: ease-in-out;
+}
+
+.load-uped {
+  -webkit-transform: translate(0, 0px);
+      -ms-transform: translate(0, 0px);
+  -webkit-transform: translate(0 0);
+      -ms-transform: translate(0 0);
+  -webkit-transition: all 800ms;
+  -o-transition: all 800ms;
+  -webkit-transition-delay: 200ms;
+       -o-transition-delay: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transform: translate(0, 0px);
+          transform: translate(0 0);
+  opacity: 1;
+  transition: all 800ms;
+          transition-delay: 200ms;
+          transition-timing-function: ease-in-out;
+}
+
 .index-top-text {
   display: inline-block;
   position: absolute;
@@ -623,63 +679,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-}
-
-/* 上からのアニメーション */
-.load-down {
-  -webkit-transform: translate(0, -50px);
-      -ms-transform: translate(0, -50px);
-  -webkit-transition-timing-function: ease-in-out;
-       -o-transition-timing-function: ease-in-out;
-          transform: translate(0, -50px);
-  opacity: 0;
-          transition-timing-function: ease-in-out;
-}
-
-.load-downed {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-  -webkit-transition: all 800ms;
-  -o-transition: all 800ms;
-  -webkit-transition-delay: 200ms;
-       -o-transition-delay: 200ms;
-  -webkit-transition-timing-function: ease-in-out;
-       -o-transition-timing-function: ease-in-out;
-          transform: translate(0, 0);
-  opacity: 1;
-  transition: all 800ms;
-          transition-delay: 200ms;
-          transition-timing-function: ease-in-out;
-}
-
-/* 下からのアニメーション */
-.load-up {
-  -webkit-transform: translate(0, 50px);
-      -ms-transform: translate(0, 50px);
-  -webkit-transition-timing-function: ease-in-out;
-       -o-transition-timing-function: ease-in-out;
-          transform: translate(0, 50px);
-  opacity: 0;
-          transition-timing-function: ease-in-out;
-}
-
-.load-uped {
-  -webkit-transform: translate(0, 0px);
-      -ms-transform: translate(0, 0px);
-  -webkit-transform: translate(0 0);
-      -ms-transform: translate(0 0);
-  -webkit-transition: all 800ms;
-  -o-transition: all 800ms;
-  -webkit-transition-delay: 200ms;
-       -o-transition-delay: 200ms;
-  -webkit-transition-timing-function: ease-in-out;
-       -o-transition-timing-function: ease-in-out;
-          transform: translate(0, 0px);
-          transform: translate(0 0);
-  opacity: 1;
-  transition: all 800ms;
-          transition-delay: 200ms;
-          transition-timing-function: ease-in-out;
 }
 
 /* TOP ====================================== */
