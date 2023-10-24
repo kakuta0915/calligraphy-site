@@ -15,7 +15,7 @@ $(function () {
     $(".line").animate({ width: "0%" }, 500, function () {
       $(".top").animate({ height: "0%" });
       $(".bottom").animate({ height: "0%" }, 500, function () {
-        $(".index-top-text").addClass("animation"),
+        $(".index-top-text").addClass("index-top-text-bg"),
           $(".page-load").addClass("page-loaded"),
           $(".load-down").addClass("load-downed"),
           $(".load-up").addClass("load-uped");
@@ -28,7 +28,7 @@ $(function () {
    */
 
   $(function () {
-    $(".scroll-down-btn").click(function () {
+    $(".index-top-btn").click(function () {
       $("html, body").animate(
         { scrollTop: $(".slideshow").offset().top },
         "slow"
