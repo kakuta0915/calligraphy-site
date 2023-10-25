@@ -1220,10 +1220,9 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 /* Profile ================================== */
-.profile-main {
-  margin-bottom: 5rem;
-  padding: 4rem 2rem;
-  background: #d9a7c7;
+.profile-content {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   background: -webkit-gradient(linear, left top, right top, from(#fffcdc), to(#d9a7c7));
   background: -webkit-linear-gradient(left, #fffcdc, #d9a7c7);
   background: -o-linear-gradient(left, #fffcdc, #d9a7c7);
@@ -1243,7 +1242,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: flex;
           flex-direction: row-reverse;
           justify-content: space-around;
-  padding-top: 1rem;
+  margin-top: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
 .profile img {
   -o-object-fit: cover;
@@ -1256,10 +1255,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   padding: 5rem 3rem 3rem;
   background-color: rgba(255, 255, 255, 0.4);
 }
-.profile-text span {
+.profile-text > span {
   font-size: 1.25rem;
 }
-.profile-text p {
+.profile-text > p {
   margin-bottom: 1rem;
 }
 

@@ -1074,20 +1074,15 @@ header {
 }
 
 /* Profile ================================== */
-// Profile共通 //
-@mixin profile {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
-}
-.profile-main {
-  margin-bottom: 5rem;
-  padding: 4rem 2rem;
-  background: #d9a7c7;
+.profile-content {
+  margin-bottom: $space_60_90px;
+  padding: $space_40-60px $space_20-30px;
   background: linear-gradient(to right, #fffcdc, #d9a7c7);
 }
 .profile {
-  @include profile;
+  display: flex;
+  justify-content: space-around;
+  margin-top: $space_20-30px;
   & img {
     object-fit: cover;
     width: 30vw;
@@ -1098,10 +1093,10 @@ header {
   padding: 5rem 3rem 3rem;
   width: 30vw;
   background-color: rgba(255, 255, 255, 0.4);
-  & span {
+  & > span {
     font-size: 1.25rem;
   }
-  & p {
+  & > p {
     margin-bottom: 1rem;
   }
 }
@@ -1112,7 +1107,9 @@ header {
 
 /* メッセージ */
 .message {
-  @include profile;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
   margin-top: 3rem;
   & img {
     object-fit: cover;
