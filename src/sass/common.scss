@@ -4,12 +4,14 @@
 $black: #000;
 $gray: #696969;
 $lightGray: #bbb;
-$smorke: #dcdcdc;
+$smoke: #dcdcdc;
 $whiteSmoke: #f5f5f5;
 $white: #fff;
 $red: #ff0000;
 $red2: #b22222;
 $red3: #610b0b; // aタグのホバーに指定
+$green: #0b3b0b;
+$blue: #0b0b61;
 
 // スペース (余白・間隔)
 $space_10-15px: clamp(10px, 2vw, 15px); // 10-15px
@@ -528,6 +530,66 @@ header {
   }
 }
 
+/* スクロール時のフェード機能【JSで制御】*/
+// 下から
+.scroll-fadeUp {
+  display: block;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 1500ms;
+}
+.scroll-fadeUp.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 上から
+.scroll-fadeDown {
+  display: block;
+  opacity: 0;
+  transform: translate(0, -80px);
+  transition: all 1500ms;
+}
+.scroll-fadeDown.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 左から
+.scroll-fadeLeft {
+  display: block;
+  opacity: 0;
+  transform: translate(-80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeLeft.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 右から
+.scroll-fadeRight {
+  display: block;
+  opacity: 0;
+  transform: translate(80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeRight.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 各sectionの背景画像
+.section-bg {
+  margin: 4rem 0;
+  & img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+// TOPページの「section title」のレイアウト
 .index-section-title {
   text-align: center;
   display: inline-block;
@@ -542,6 +604,27 @@ header {
   }
 }
 
+.index-profile-title {
+  position: absolute;
+  top: -14rem;
+  left: 6rem;
+  background-color: $green;
+}
+
+.index-gallery-title {
+  position: absolute;
+  top: -12rem;
+  right: 8rem;
+  background-color: $red3;
+}
+
+.index-job-title {
+  position: absolute;
+  top: -12rem;
+  left: 8rem;
+  background-color: $blue;
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -550,85 +633,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* トップ 各コンテンツの前の画像 */
-.top-bg {
-  margin: 4rem 0;
-  & img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-  }
-}
-
-/* トップタイトル h2 */
-.profile-title-box {
-  position: absolute;
-  top: -14rem;
-  left: 6rem;
-  background-color: #0b3b0b;
-}
-.gallery-title-box {
-  position: absolute;
-  top: -12rem;
-  right: 8rem;
-  background-color: #610b0b;
-}
-.job-title-box {
-  position: absolute;
-  top: -12rem;
-  left: 8rem;
-  background-color: #0b0b61;
-}
-
-/* スクロール時のフェード機能 JSで制御 ===================*/
-/* 下から */
-.scroll-fadeup {
-  display: block;
-  opacity: 0;
-  transform: translate(0, 80px);
-  transition: all 1500ms;
-}
-.scroll-fadeup.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 上から */
-.scroll-fadedown {
-  display: block;
-  opacity: 0;
-  transform: translate(0, -80px);
-  transition: all 1500ms;
-}
-.scroll-fadedown.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 左から */
-.scroll-fadeleft {
-  display: block;
-  opacity: 0;
-  transform: translate(-80px, 0);
-  transition: all 1500ms;
-}
-.scroll-fadeleft.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 右から */
-.scroll-faderight {
-  display: block;
-  opacity: 0;
-  transform: translate(80px, 0);
-  transition: all 1500ms;
-}
-.scroll-faderight.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
 
 /* TOP ====================================== */
 
@@ -1070,20 +1074,15 @@ header {
 }
 
 /* Profile ================================== */
-// Profile共通 //
-@mixin profile {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
-}
-.profile-main {
-  margin-bottom: 5rem;
-  padding: 4rem 2rem;
-  background: #d9a7c7;
+.profile-content {
+  margin-bottom: $space_60_90px;
+  padding: $space_40-60px $space_20-30px;
   background: linear-gradient(to right, #fffcdc, #d9a7c7);
 }
 .profile {
-  @include profile;
+  display: flex;
+  justify-content: space-around;
+  margin-top: $space_20-30px;
   & img {
     object-fit: cover;
     width: 30vw;
@@ -1094,10 +1093,10 @@ header {
   padding: 5rem 3rem 3rem;
   width: 30vw;
   background-color: rgba(255, 255, 255, 0.4);
-  & span {
+  & > span {
     font-size: 1.25rem;
   }
-  & p {
+  & > p {
     margin-bottom: 1rem;
   }
 }
@@ -1108,7 +1107,9 @@ header {
 
 /* メッセージ */
 .message {
-  @include profile;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
   margin-top: 3rem;
   & img {
     object-fit: cover;
@@ -1214,7 +1215,7 @@ header {
     transition: transform 0.5s;
   }
   &:hover {
-    background-color: $smorke;
+    background-color: $smoke;
     & img {
       transform: scale(1.1);
     }
@@ -1414,7 +1415,7 @@ header {
     width: 76%;
   }
   & tr:nth-child(odd) {
-    background: $smorke;
+    background: $smoke;
   }
   & tr:nth-child(even) {
     background: $white;

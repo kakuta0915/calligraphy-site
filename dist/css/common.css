@@ -557,6 +557,89 @@ header .header-contents .header-nav-contents .header-link li a:hover {
             transform: translateY(-5px);
   }
 }
+/* スクロール時のフェード機能【JSで制御】*/
+.scroll-fadeUp {
+  -webkit-transform: translate(0, 80px);
+      -ms-transform: translate(0, 80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, 80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeUp.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeDown {
+  -webkit-transform: translate(0, -80px);
+      -ms-transform: translate(0, -80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, -80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeDown.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeLeft {
+  -webkit-transform: translate(-80px, 0);
+      -ms-transform: translate(-80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(-80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeLeft.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeRight {
+  -webkit-transform: translate(80px, 0);
+      -ms-transform: translate(80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeRight.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.section-bg {
+  margin: 4rem 0;
+}
+.section-bg img {
+  -o-object-fit: cover;
+  width: 100%;
+  height: 450px;
+     object-fit: cover;
+}
+
 .index-section-title {
   display: inline-block;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2.5) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
@@ -571,114 +654,25 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
-/* トップ 各コンテンツの前の画像 */
-.top-bg {
-  margin: 4rem 0;
-}
-.top-bg img {
-  -o-object-fit: cover;
-  width: 100%;
-  height: 450px;
-     object-fit: cover;
-}
-
-/* トップタイトル h2 */
-.profile-title-box {
+.index-profile-title {
   position: absolute;
   top: -14rem;
   left: 6rem;
   background-color: #0b3b0b;
 }
 
-.gallery-title-box {
+.index-gallery-title {
   position: absolute;
   top: -12rem;
   right: 8rem;
   background-color: #610b0b;
 }
 
-.job-title-box {
+.index-job-title {
   position: absolute;
   top: -12rem;
   left: 8rem;
   background-color: #0b0b61;
-}
-
-/* スクロール時のフェード機能 JSで制御 ===================*/
-/* 下から */
-.scroll-fadeup {
-  -webkit-transform: translate(0, 80px);
-      -ms-transform: translate(0, 80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, 80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeup.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 上から */
-.scroll-fadedown {
-  -webkit-transform: translate(0, -80px);
-      -ms-transform: translate(0, -80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, -80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadedown.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 左から */
-.scroll-fadeleft {
-  -webkit-transform: translate(-80px, 0);
-      -ms-transform: translate(-80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(-80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeleft.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 右から */
-.scroll-faderight {
-  -webkit-transform: translate(80px, 0);
-      -ms-transform: translate(80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-faderight.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
 }
 
 /* TOP ====================================== */
@@ -1226,10 +1220,9 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 /* Profile ================================== */
-.profile-main {
-  margin-bottom: 5rem;
-  padding: 4rem 2rem;
-  background: #d9a7c7;
+.profile-content {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   background: -webkit-gradient(linear, left top, right top, from(#fffcdc), to(#d9a7c7));
   background: -webkit-linear-gradient(left, #fffcdc, #d9a7c7);
   background: -o-linear-gradient(left, #fffcdc, #d9a7c7);
@@ -1249,7 +1242,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: flex;
           flex-direction: row-reverse;
           justify-content: space-around;
-  padding-top: 1rem;
+  margin-top: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
 .profile img {
   -o-object-fit: cover;
@@ -1262,10 +1255,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   padding: 5rem 3rem 3rem;
   background-color: rgba(255, 255, 255, 0.4);
 }
-.profile-text span {
+.profile-text > span {
   font-size: 1.25rem;
 }
-.profile-text p {
+.profile-text > p {
   margin-bottom: 1rem;
 }
 
