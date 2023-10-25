@@ -557,6 +557,16 @@ header .header-contents .header-nav-contents .header-link li a:hover {
             transform: translateY(-5px);
   }
 }
+.index-section-bg {
+  margin: 4rem 0;
+}
+.index-section-bg img {
+  -o-object-fit: cover;
+  width: 100%;
+  height: 450px;
+     object-fit: cover;
+}
+
 .index-section-title {
   display: inline-block;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2.5) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
@@ -571,33 +581,21 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
-/* トップ 各コンテンツの前の画像 */
-.top-bg {
-  margin: 4rem 0;
-}
-.top-bg img {
-  -o-object-fit: cover;
-  width: 100%;
-  height: 450px;
-     object-fit: cover;
-}
-
-/* トップタイトル h2 */
-.profile-title-box {
+.index-profile-title {
   position: absolute;
   top: -14rem;
   left: 6rem;
   background-color: #0b3b0b;
 }
 
-.gallery-title-box {
+.index-gallery-title {
   position: absolute;
   top: -12rem;
   right: 8rem;
   background-color: #610b0b;
 }
 
-.job-title-box {
+.index-job-title {
   position: absolute;
   top: -12rem;
   left: 8rem;
