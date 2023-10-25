@@ -557,6 +557,79 @@ header .header-contents .header-nav-contents .header-link li a:hover {
             transform: translateY(-5px);
   }
 }
+/* スクロール時のフェード機能【JSで制御】*/
+.scroll-fadeUp {
+  -webkit-transform: translate(0, 80px);
+      -ms-transform: translate(0, 80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, 80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeUp.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeDown {
+  -webkit-transform: translate(0, -80px);
+      -ms-transform: translate(0, -80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, -80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeDown.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeLeft {
+  -webkit-transform: translate(-80px, 0);
+      -ms-transform: translate(-80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(-80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeLeft.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeRight {
+  -webkit-transform: translate(80px, 0);
+      -ms-transform: translate(80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeRight.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
 .index-section-bg {
   margin: 4rem 0;
 }
@@ -600,83 +673,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: -12rem;
   left: 8rem;
   background-color: #0b0b61;
-}
-
-/* スクロール時のフェード機能 JSで制御 ===================*/
-/* 下から */
-.scroll-fadeup {
-  -webkit-transform: translate(0, 80px);
-      -ms-transform: translate(0, 80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, 80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeup.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 上から */
-.scroll-fadedown {
-  -webkit-transform: translate(0, -80px);
-      -ms-transform: translate(0, -80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, -80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadedown.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 左から */
-.scroll-fadeleft {
-  -webkit-transform: translate(-80px, 0);
-      -ms-transform: translate(-80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(-80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeleft.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* 右から */
-.scroll-faderight {
-  -webkit-transform: translate(80px, 0);
-      -ms-transform: translate(80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-faderight.scrollin {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
 }
 
 /* TOP ====================================== */

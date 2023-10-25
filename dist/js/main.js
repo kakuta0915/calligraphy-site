@@ -262,46 +262,46 @@ $(function () {
    * スクロール時のフェード機能 ===============================================================
    */
   $(window).scroll(function () {
-    $(".scroll-fadeup").each(function () {
+    $(".scroll-fadeUp").each(function () {
       var elementOffsetTop = $(this).offset().top,
         scroll = $(window).scrollTop(),
         windowHeight = $(window).height();
 
       if (scroll > elementOffsetTop - windowHeight + 80) {
-        $(this).addClass("scrollin");
+        $(this).addClass("scrollIn");
       }
     });
   });
   $(window).scroll(function () {
-    $(".scroll-fadedown").each(function () {
+    $(".scroll-fadeDown").each(function () {
       var elementOffsetTop = $(this).offset().top,
         scroll = $(window).scrollTop(),
         windowHeight = $(window).height();
 
       if (scroll > elementOffsetTop - windowHeight + 80) {
-        $(this).addClass("scrollin");
+        $(this).addClass("scrollIn");
       }
     });
   });
   $(window).scroll(function () {
-    $(".scroll-fadeleft").each(function () {
+    $(".scroll-fadeLeft").each(function () {
       var elementOffsetTop = $(this).offset().top,
         scroll = $(window).scrollTop(),
         windowHeight = $(window).height();
 
       if (scroll > elementOffsetTop - windowHeight + 80) {
-        $(this).addClass("scrollin");
+        $(this).addClass("scrollIn");
       }
     });
   });
   $(window).scroll(function () {
-    $(".scroll-faderight").each(function () {
+    $(".scroll-fadeRight").each(function () {
       var elementOffsetTop = $(this).offset().top,
         scroll = $(window).scrollTop(),
         windowHeight = $(window).height();
 
       if (scroll > elementOffsetTop - windowHeight + 80) {
-        $(this).addClass("scrollin");
+        $(this).addClass("scrollIn");
       }
     });
   });

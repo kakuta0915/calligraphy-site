@@ -530,6 +530,55 @@ header {
   }
 }
 
+/* スクロール時のフェード機能【JSで制御】*/
+// 下から
+.scroll-fadeUp {
+  display: block;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 1500ms;
+}
+.scroll-fadeUp.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 上から
+.scroll-fadeDown {
+  display: block;
+  opacity: 0;
+  transform: translate(0, -80px);
+  transition: all 1500ms;
+}
+.scroll-fadeDown.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 左から
+.scroll-fadeLeft {
+  display: block;
+  opacity: 0;
+  transform: translate(-80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeLeft.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 右から
+.scroll-fadeRight {
+  display: block;
+  opacity: 0;
+  transform: translate(80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeRight.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 // 各sectionの背景画像
 .index-section-bg {
   margin: 4rem 0;
@@ -584,55 +633,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* スクロール時のフェード機能 JSで制御 ===================*/
-/* 下から */
-.scroll-fadeup {
-  display: block;
-  opacity: 0;
-  transform: translate(0, 80px);
-  transition: all 1500ms;
-}
-.scroll-fadeup.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 上から */
-.scroll-fadedown {
-  display: block;
-  opacity: 0;
-  transform: translate(0, -80px);
-  transition: all 1500ms;
-}
-.scroll-fadedown.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 左から */
-.scroll-fadeleft {
-  display: block;
-  opacity: 0;
-  transform: translate(-80px, 0);
-  transition: all 1500ms;
-}
-.scroll-fadeleft.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* 右から */
-.scroll-faderight {
-  display: block;
-  opacity: 0;
-  transform: translate(80px, 0);
-  transition: all 1500ms;
-}
-.scroll-faderight.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
 
 /* TOP ====================================== */
 
