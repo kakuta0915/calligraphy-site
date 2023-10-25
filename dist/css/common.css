@@ -630,10 +630,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   opacity: 1;
 }
 
-.index-section-bg {
+.section-bg {
   margin: 4rem 0;
 }
-.index-section-bg img {
+.section-bg img {
   -o-object-fit: cover;
   width: 100%;
   height: 450px;
