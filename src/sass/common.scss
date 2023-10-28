@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-// カラー変数宣言
+/* カラー変数宣言 ============================================== */
 $black: #000;
 $gray: #696969;
 $lightGray: #bbb;
@@ -9,11 +9,11 @@ $whiteSmoke: #f5f5f5;
 $white: #fff;
 $red: #ff0000;
 $red2: #b22222;
-$red3: #610b0b; // aタグのホバーに指定
+$red3: #610b0b;
 $green: #0b3b0b;
 $blue: #0b0b61;
 
-// スペース (余白・間隔)
+/* スペース (余白・間隔) ========================================= */
 $space_10-15px: clamp(10px, 2vw, 15px); // 10-15px
 $space_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
 $space_20-30px: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); // 20-30px
@@ -22,7 +22,7 @@ $space_40-60px: calc($space_20-30px * 2); // 40-60px
 $space_60_90px: calc($space_20-30px * 3); // 60-90px
 $space_80_120px: calc($space_20-30px * 4); // 80-120px
 
-// フォントサイズ
+/* フォントサイズ =============================================== */
 $font_11-13px: calc($space_16-18px * 0.7); // 11.2-12.6px
 $font_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
 $font_18-20px: calc($font_16-18px * 1.1); // 17.6-19.8px
@@ -31,12 +31,12 @@ $font_24-27px: calc($font_16-18px * 1.5); // 24-27px
 $font_32-64px: clamp(2rem, 1.3rem + 3vw, 4rem); // 32-64px
 $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
 
-// フォント共通
+/* フォント共通 */
 @mixin notoSerf {
   font-family: "Noto Serif JP", sans-serif;
 }
 
-/* 各ページ共通のレイアウト */
+/* 各ページ共通のレイアウト ====================================== */
 * {
   padding: 0;
   margin: 0;
@@ -54,6 +54,10 @@ body {
   background-color: $whiteSmoke;
 }
 
+p {
+  line-height: 1.7;
+}
+
 li {
   list-style-type: none;
 }
@@ -62,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-/* トップコンテンツ (一番上の画像) */
+// トップコンテンツ (一番上の画像)
 .page-top-content {
   width: 100%;
   height: 100%;
@@ -110,7 +114,7 @@ a {
   }
 }
 
-/* ページロード後にフェードイン機能追加 JSで制御 */
+// .page-top-contentのフェードイン機能 【JSで制御】
 .page-load {
   opacity: 0;
 }
@@ -132,12 +136,13 @@ a {
   }
 }
 
+// TOPページ(index)以外の、.page-top-content以下に指定
 .wrapper {
   margin: 0 auto;
   padding: $space_20-30px $space_30-45px;
 }
 
-/* .wrapperの背景画像 */
+// .wrapperの背景画像
 .bg {
   background: {
     position: center center;
@@ -170,10 +175,7 @@ a {
   }
 }
 
-p {
-  line-height: 1.7;
-}
-
+// お問い合わせのみ使用中（いらないかも）
 .btn {
   width: auto;
   display: inline-block;
@@ -184,30 +186,75 @@ p {
   }
 }
 
+//「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
 .content {
   max-width: 1000px;
   padding: $space_60_90px;
   background-color: $white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   margin: $space_80_120px auto;
-}
-
-.section {
-  position: relative;
-  padding: $space_60_90px 0 $space_30-45px;
-}
-
-.content-title {
-  font-size: $space_20-30px;
-  margin-bottom: $space_60_90px;
-  text-align: center;
-  p {
-    margin-top: $space_10-15px;
+  & .content-title {
+    text-align: center;
+    margin-bottom: $space_60_90px;
+    & h2 {
+      font-size: $space_20-30px;
+    }
+    & p {
+      margin-top: calc($space_10-15px * 0.8);
+    }
   }
 }
 
-/* HEADER ================================= */
-// メニュ- 共通
+/* スクロール時のフェード機能 【JSで制御】 =============================*/
+// 下から
+.scroll-fadeUp {
+  display: block;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 1500ms;
+}
+.scroll-fadeUp.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 上から
+.scroll-fadeDown {
+  display: block;
+  opacity: 0;
+  transform: translate(0, -80px);
+  transition: all 1500ms;
+}
+.scroll-fadeDown.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 左から
+.scroll-fadeLeft {
+  display: block;
+  opacity: 0;
+  transform: translate(-80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeLeft.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 右から
+.scroll-fadeRight {
+  display: block;
+  opacity: 0;
+  transform: translate(80px, 0);
+  transition: all 1500ms;
+}
+.scroll-fadeRight.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* HEADER ==================================================== */
 
 header {
   background-color: $black;
@@ -249,7 +296,6 @@ header {
           }
         }
       }
-      /* ヘッダーリンク */
       & .header-link {
         margin: 0 $space_16-18px;
         & li {
@@ -280,7 +326,7 @@ header {
   }
 }
 
-/* Sticky header(clone) */
+// HEADER CLONE 【JSで制御】
 .header-clone {
   background-color: $black;
   padding: 0.5rem;
@@ -324,7 +370,6 @@ header {
           }
         }
       }
-
       & .header-link {
         margin: 0 $space_16-18px;
         & li {
@@ -352,17 +397,15 @@ header {
       }
     }
   }
-  /* JSで制御 */
+  // cloneの表示
   &.visible {
     top: 0;
   }
 }
 
-/* TOP Page 【index.ejs】============================== */
+/* TOPページ 【index】======================================== */
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// トップ スライダー
+// トップスライダー
 .index-top-slider {
   & li {
     position: absolute;
@@ -412,7 +455,7 @@ header {
   }
 }
 
-/* ページロード時のアニメーション 【JSで制御】 */
+// ページロード時のアニメーション(.index-top-textに指定) 【JSで制御】
 // 上からのアニメーション
 .load-down {
   opacity: 0;
@@ -469,7 +512,7 @@ header {
   }
 }
 
-// ページロード後に背景色が変わるアニメーション【JSで制御】
+// ページロード後に背景色が変わるアニメーション 【JSで制御】
 .index-top-text-bg {
   animation-name: bgChange;
   animation-duration: 1s;
@@ -485,7 +528,7 @@ header {
   }
 }
 
-// スクロールダウンのボタン【JSで制御】
+// スクロールダウンのボタン 【JSで制御】
 .index-top-btn {
   display: inline-block;
   text-align: center;
@@ -513,7 +556,6 @@ header {
   }
 }
 
-// ボタンのアニメーション
 @keyframes bounce {
   0%,
   100%,
@@ -530,58 +572,15 @@ header {
   }
 }
 
-/* スクロール時のフェード機能【JSで制御】*/
-// 下から
-.scroll-fadeUp {
-  display: block;
-  opacity: 0;
-  transform: translate(0, 80px);
-  transition: all 1500ms;
-}
-.scroll-fadeUp.scrollIn {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-// 上から
-.scroll-fadeDown {
-  display: block;
-  opacity: 0;
-  transform: translate(0, -80px);
-  transition: all 1500ms;
-}
-.scroll-fadeDown.scrollIn {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-// 左から
-.scroll-fadeLeft {
-  display: block;
-  opacity: 0;
-  transform: translate(-80px, 0);
-  transition: all 1500ms;
-}
-.scroll-fadeLeft.scrollIn {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-// 右から
-.scroll-fadeRight {
-  display: block;
-  opacity: 0;
-  transform: translate(80px, 0);
-  transition: all 1500ms;
-}
-.scroll-fadeRight.scrollIn {
-  opacity: 1;
-  transform: translate(0, 0);
+// TOPページ(index)の各コンテンツに指定
+.section {
+  position: relative;
+  padding: $space_60_90px 0 $space_30-45px;
 }
 
 // 各sectionの背景画像
 .section-bg {
-  margin: 4rem 0;
+  margin: calc($space_40-60px * 1.5) 0;
   & img {
     width: 100%;
     height: 450px;
@@ -625,7 +624,7 @@ header {
   background-color: $blue;
 }
 
-/* Profile ================================== */
+/* Profile ================================================== */
 .profile-content {
   margin-bottom: $space_60_90px;
   padding: $space_40-60px $space_20-30px;
@@ -637,6 +636,10 @@ header {
   & img {
     object-fit: cover;
     width: 35vw;
+  }
+  & p {
+    margin-bottom: $space_16-18px;
+    font-size: $font_16-18px;
   }
 }
 
@@ -654,14 +657,9 @@ header {
       font-size: calc($font_32-64px * 0.6);
       margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
     }
-    & p {
-      margin-bottom: $space_16-18px;
-      font-size: $font_16-18px;
-    }
   }
 }
 
-/* メッセージ */
 .message {
   margin-top: $space_60_90px;
   .message-text {
@@ -672,33 +670,27 @@ header {
       font-size: $font_24-27px;
       margin-bottom: $space_16-18px;
     }
-    & p {
-      margin-bottom: $space_16-18px;
-    }
   }
 }
 
-// Achievements
 .achievements {
   position: relative;
   margin: $space_60_90px auto;
-}
-
-.achievements-title {
-  background-color: $blue;
-  position: absolute;
-  top: -18rem;
-}
-
-.achievements-content {
-  margin-left: $space_40-60px;
-  padding: $space_20-30px 0 $space_30-45px;
-  & h3 {
-    font-size: $font_19-22px;
-    margin-bottom: $space_16-18px;
+  & .achievements-title {
+    background-color: $blue;
+    position: absolute;
+    top: -18rem;
   }
-  & li {
-    line-height: 2;
+  .achievements-content {
+    margin-left: $space_40-60px;
+    padding: $space_20-30px 0 $space_30-45px;
+    & h3 {
+      font-size: $font_19-22px;
+      margin-bottom: $space_16-18px;
+    }
+    & li {
+      line-height: 2;
+    }
   }
 }
 
