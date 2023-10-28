@@ -590,14 +590,14 @@ header {
 }
 
 // TOPページの「section title」のレイアウト
-.index-section-title {
+.section-title {
   text-align: center;
   display: inline-block;
   padding: calc($space_20-30px * 2.5) $space_40-60px;
   color: $white;
   & h2 {
     font-size: $font_24-27px;
-    margin: $font_16-18px 0 0.7rem;
+    margin: $space_16-18px 0 0.7rem;
   }
   & span {
     font-size: $font_16-18px;
@@ -623,6 +623,83 @@ header {
   top: -12rem;
   left: 8rem;
   background-color: $blue;
+}
+
+/* Profile ================================== */
+.profile-content {
+  margin-bottom: $space_60_90px;
+  padding: $space_40-60px $space_20-30px;
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  & > * {
+    display: flex;
+    justify-content: space-around;
+  }
+  & img {
+    object-fit: cover;
+    width: 35vw;
+  }
+}
+
+.profile {
+  flex-direction: row-reverse;
+  margin-top: $space_20-30px;
+  & .profile-text {
+    padding: $space_60_90px $space_30-45px $space_30-45px;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    & span {
+      font-size: $font_19-22px;
+    }
+    & h2 {
+      font-size: calc($font_32-64px * 0.6);
+      margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
+    }
+    & p {
+      margin-bottom: $space_16-18px;
+      font-size: $font_16-18px;
+    }
+  }
+}
+
+/* メッセージ */
+.message {
+  margin-top: $space_60_90px;
+  .message-text {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: $space_30-45px;
+    width: 35vw;
+    & .message-title {
+      font-size: $font_24-27px;
+      margin-bottom: $space_16-18px;
+    }
+    & p {
+      margin-bottom: $space_16-18px;
+    }
+  }
+}
+
+// Achievements
+.achievements {
+  position: relative;
+  margin: $space_60_90px auto;
+}
+
+.achievements-title {
+  background-color: $blue;
+  position: absolute;
+  top: -18rem;
+}
+
+.achievements-content {
+  margin-left: $space_40-60px;
+  padding: $space_20-30px 0 $space_30-45px;
+  & h3 {
+    font-size: $font_19-22px;
+    margin-bottom: $space_16-18px;
+  }
+  & li {
+    line-height: 2;
+  }
 }
 
 /////////////////////////////////////////////////
@@ -1071,92 +1148,6 @@ header {
   & h3 {
     margin: 1.5rem auto;
   }
-}
-
-/* Profile ================================== */
-.profile-content {
-  margin-bottom: $space_60_90px;
-  padding: $space_40-60px $space_20-30px;
-  background: linear-gradient(to right, #fffcdc, #d9a7c7);
-}
-.profile {
-  display: flex;
-  justify-content: space-around;
-  margin-top: $space_20-30px;
-  & img {
-    object-fit: cover;
-    width: 30vw;
-  }
-  flex-direction: row-reverse;
-}
-.profile-text {
-  padding: 5rem 3rem 3rem;
-  width: 30vw;
-  background-color: rgba(255, 255, 255, 0.4);
-  & > span {
-    font-size: 1.25rem;
-  }
-  & > p {
-    margin-bottom: 1rem;
-  }
-}
-.profile-title {
-  font-size: 2rem;
-  margin: 0.5rem 0 3rem;
-}
-
-/* メッセージ */
-.message {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
-  margin-top: 3rem;
-  & img {
-    object-fit: cover;
-    width: 30vw;
-  }
-}
-.message-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.message-text {
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 3rem;
-
-  width: 30vw;
-  & span {
-    font-size: 1.25rem;
-  }
-  & p {
-    margin-bottom: 1rem;
-  }
-}
-
-/* history */
-.history {
-  position: relative;
-  margin: 5rem auto;
-}
-.history-title {
-  background-color: #0b0b61;
-  color: $white;
-  padding: 4.5rem 2.5rem;
-  position: absolute;
-  top: -18rem;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.history-content {
-  margin-left: 5rem;
-  padding: 2rem;
-  & li {
-    line-height: 2;
-  }
-}
-.history-content-title {
-  margin-bottom: 2rem;
 }
 
 /* GALLERY ================================= */
