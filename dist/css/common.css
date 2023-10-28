@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/* 各ページ共通のレイアウト */
+/* カラー変数宣言 ============================================== */
+/* スペース (余白・間隔) ========================================= */
+/* フォントサイズ =============================================== */
+/* フォント共通 */
+/* 各ページ共通のレイアウト ====================================== */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +21,10 @@ body {
   font-family: "Noto Serif JP", sans-serif;
 }
 
+p {
+  line-height: 1.7;
+}
+
 li {
   list-style-type: none;
 }
@@ -25,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-/* トップコンテンツ (一番上の画像) */
 .page-top-content {
   width: 100%;
   height: 100%;
@@ -59,7 +66,6 @@ a {
   background-image: url("../../dist/images/img11.jpeg");
 }
 
-/* ページロード後にフェードイン機能追加 JSで制御 */
 .page-load {
   opacity: 0;
 }
@@ -99,7 +105,6 @@ a {
   padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
 }
 
-/* .wrapperの背景画像 */
 .bg {
   background-position: center center;
   background-size: cover;
@@ -122,10 +127,6 @@ a {
   background-image: url("../../dist/images/bg4.jpeg");
 }
 
-p {
-  line-height: 1.7;
-}
-
 .btn {
   display: inline-block;
   width: auto;
@@ -142,22 +143,91 @@ p {
   background-color: #fff;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
-
-.section {
-  position: relative;
-  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-}
-
-.content-title {
+.content .content-title {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
-  font-size: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   text-align: center;
 }
-.content-title p {
-  margin-top: clamp(10px, 2vw, 15px);
+.content .content-title h2 {
+  font-size: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+}
+.content .content-title p {
+  margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
 }
 
-/* HEADER ================================= */
+/* スクロール時のフェード機能 【JSで制御】 =============================*/
+.scroll-fadeUp {
+  -webkit-transform: translate(0, 80px);
+      -ms-transform: translate(0, 80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, 80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeUp.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeDown {
+  -webkit-transform: translate(0, -80px);
+      -ms-transform: translate(0, -80px);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(0, -80px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeDown.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeLeft {
+  -webkit-transform: translate(-80px, 0);
+      -ms-transform: translate(-80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(-80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeLeft.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.scroll-fadeRight {
+  -webkit-transform: translate(80px, 0);
+      -ms-transform: translate(80px, 0);
+  -webkit-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  display: block;
+          transform: translate(80px, 0);
+  opacity: 0;
+  transition: all 1500ms;
+}
+
+.scroll-fadeRight.scrollIn {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* HEADER ==================================================== */
 header {
   padding: clamp(10px, 2vw, 15px);
   background-color: #000;
@@ -183,9 +253,6 @@ header .header-contents .header-title {
   color: #fff;
   font-weight: 900;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
-}
-header .header-contents .header-nav-contents {
-  /* ヘッダーリンク */
 }
 header .header-contents .header-nav-contents .header-nav li a {
   -webkit-transition: 400ms;
@@ -238,7 +305,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   transition: 400ms;
 }
 
-/* Sticky header(clone) */
 .header-clone {
   -webkit-transition: top 0.25s;
   -o-transition: top 0.25s;
@@ -250,7 +316,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #000;
   opacity: 0.9;
   transition: top 0.25s;
-  /* JSで制御 */
 }
 .header-clone * {
   -webkit-box-pack: justify;
@@ -322,7 +387,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: 0;
 }
 
-/* TOP Page 【index.ejs】============================== */
+/* TOPページ 【index】======================================== */
 .index-top-slider li {
   -webkit-animation: anime 50s infinite;
   position: absolute;
@@ -392,7 +457,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     opacity: 0;
   }
 }
-/* ページロード時のアニメーション 【JSで制御】 */
 .load-down {
   -webkit-transform: translate(0, -50px);
       -ms-transform: translate(0, -50px);
@@ -557,81 +621,13 @@ header .header-contents .header-nav-contents .header-link li a:hover {
             transform: translateY(-5px);
   }
 }
-/* スクロール時のフェード機能【JSで制御】*/
-.scroll-fadeUp {
-  -webkit-transform: translate(0, 80px);
-      -ms-transform: translate(0, 80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, 80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeUp.scrollIn {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-.scroll-fadeDown {
-  -webkit-transform: translate(0, -80px);
-      -ms-transform: translate(0, -80px);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(0, -80px);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeDown.scrollIn {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-.scroll-fadeLeft {
-  -webkit-transform: translate(-80px, 0);
-      -ms-transform: translate(-80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(-80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeLeft.scrollIn {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
-}
-
-.scroll-fadeRight {
-  -webkit-transform: translate(80px, 0);
-      -ms-transform: translate(80px, 0);
-  -webkit-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  display: block;
-          transform: translate(80px, 0);
-  opacity: 0;
-  transition: all 1500ms;
-}
-
-.scroll-fadeRight.scrollIn {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
+.section {
+  position: relative;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
 }
 
 .section-bg {
-  margin: 4rem 0;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2 * 1.5) 0;
 }
 .section-bg img {
   -o-object-fit: cover;
@@ -675,7 +671,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #0b0b61;
 }
 
-/* Profile ================================== */
+/* Profile ================================================== */
 .profile-content {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
@@ -698,6 +694,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   width: 35vw;
      object-fit: cover;
 }
+.profile-content p {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
 
 .profile {
   -webkit-box-orient: horizontal;
@@ -719,12 +719,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin: calc(clamp(10px, 2vw, 15px) * 0.5) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.6);
 }
-.profile .profile-text p {
-  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
 
-/* メッセージ */
 .message {
   margin-top: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
 }
@@ -737,30 +732,25 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
 }
-.message .message-text p {
-  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
 
 .achievements {
   position: relative;
   margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) auto;
 }
-
-.achievements-title {
+.achievements .achievements-title {
   position: absolute;
   top: -18rem;
   background-color: #0b0b61;
 }
-
-.achievements-content {
+.achievements .achievements-content {
   margin-left: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
   padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
 }
-.achievements-content h3 {
+.achievements .achievements-content h3 {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
-.achievements-content li {
+.achievements .achievements-content li {
   line-height: 2;
 }
 
