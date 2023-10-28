@@ -634,57 +634,47 @@ header {
     display: flex;
     justify-content: space-around;
   }
-}
-
-.profile {
-  flex-direction: row-reverse;
-  margin-top: $space_20-30px;
   & img {
     object-fit: cover;
     width: 35vw;
   }
 }
 
-.profile-text {
-  padding: $space_60_90px $space_30-45px $space_30-45px;
-  width: 35vw;
-  background-color: rgba(255, 255, 255, 0.4);
-  & span {
-    font-size: $font_19-22px;
-  }
-  & h2 {
-    font-size: calc($font_32-64px * 0.6);
-    margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
-  }
-  & p {
-    margin-bottom: $space_16-18px;
-    font-size: $font_16-18px;
+.profile {
+  flex-direction: row-reverse;
+  margin-top: $space_20-30px;
+  & .profile-text {
+    padding: $space_60_90px $space_30-45px $space_30-45px;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    & span {
+      font-size: $font_19-22px;
+    }
+    & h2 {
+      font-size: calc($font_32-64px * 0.6);
+      margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
+    }
+    & p {
+      margin-bottom: $space_16-18px;
+      font-size: $font_16-18px;
+    }
   }
 }
 
 /* メッセージ */
 .message {
-  padding-top: 1rem;
-  margin-top: 3rem;
-  & img {
-    object-fit: cover;
-    width: 30vw;
-  }
-}
-.message-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.message-text {
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 3rem;
-
-  width: 30vw;
-  & span {
-    font-size: 1.25rem;
-  }
-  & p {
-    margin-bottom: 1rem;
+  margin-top: $space_60_90px;
+  .message-text {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: $space_30-45px;
+    width: 35vw;
+    & .message-title {
+      font-size: $font_24-27px;
+      margin-bottom: $space_16-18px;
+    }
+    & p {
+      margin-bottom: $space_16-18px;
+    }
   }
 }
 
@@ -697,7 +687,7 @@ header {
 .achievements-title {
   background-color: $blue;
   position: absolute;
-  top: -16rem;
+  top: -18rem;
 }
 
 .achievements-content {

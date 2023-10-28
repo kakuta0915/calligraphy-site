@@ -693,6 +693,11 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: flex;
           justify-content: space-around;
 }
+.profile-content img {
+  -o-object-fit: cover;
+  width: 35vw;
+     object-fit: cover;
+}
 
 .profile {
   -webkit-box-orient: horizontal;
@@ -702,55 +707,38 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           flex-direction: row-reverse;
   margin-top: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
-.profile img {
-  -o-object-fit: cover;
-  width: 35vw;
-     object-fit: cover;
-}
-
-.profile-text {
+.profile .profile-text {
   width: 35vw;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: rgba(255, 255, 255, 0.4);
 }
-.profile-text span {
+.profile .profile-text span {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
-.profile-text h2 {
+.profile .profile-text h2 {
   margin: calc(clamp(10px, 2vw, 15px) * 0.5) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.6);
 }
-.profile-text p {
+.profile .profile-text p {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 /* メッセージ */
 .message {
-  margin-top: 3rem;
-  padding-top: 1rem;
+  margin-top: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
 }
-.message img {
-  -o-object-fit: cover;
-  width: 30vw;
-     object-fit: cover;
-}
-
-.message-title {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.message-text {
-  width: 30vw;
-  padding: 3rem;
+.message .message-text {
+  width: 35vw;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: rgba(255, 255, 255, 0.4);
 }
-.message-text span {
-  font-size: 1.25rem;
+.message .message-text .message-title {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
 }
-.message-text p {
-  margin-bottom: 1rem;
+.message .message-text p {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 .achievements {
@@ -760,7 +748,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 
 .achievements-title {
   position: absolute;
-  top: -16rem;
+  top: -18rem;
   background-color: #0b0b61;
 }
 
