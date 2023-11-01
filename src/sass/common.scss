@@ -64,6 +64,7 @@ li {
 
 a {
   text-decoration: none;
+  color: $black;
 }
 
 // トップコンテンツ (一番上の画像)
@@ -625,6 +626,33 @@ header {
 }
 
 /* TOP NEWS  ================================================ */
+.index-news-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: $space_16-18px;
+  & .index-news-item {
+    display: flex;
+    justify-content: space-around;
+    padding: $space_16-18px;
+    border: 1px solid $lightGray;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.5s;
+    & img {
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    & .index-news-text {
+      width: 50%;
+    }
+    &:hover {
+      background-color: $smoke;
+      & img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
 
 /* Profile ================================================== */
 .profile-content {
