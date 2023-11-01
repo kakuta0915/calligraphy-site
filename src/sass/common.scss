@@ -67,6 +67,10 @@ a {
   color: $black;
 }
 
+img {
+  object-fit: cover;
+}
+
 // トップコンテンツ (一番上の画像)
 .page-top-content {
   width: 100%;
@@ -627,28 +631,45 @@ header {
 
 /* TOP NEWS  ================================================ */
 .index-news-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: $space_16-18px;
-  & .index-news-item {
-    display: flex;
-    justify-content: space-around;
-    padding: $space_16-18px;
-    border: 1px solid $lightGray;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.5s;
-    & img {
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-    & .index-news-text {
-      width: 50%;
-    }
-    &:hover {
-      background-color: $smoke;
+  margin: $space_40-60px;
+  & h2 {
+    font-size: calc($font_24-27px * 1.5);
+    margin-bottom: $space_20-30px;
+  }
+  & .index-news-articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: $space_20-30px;
+    margin-bottom: $space_60_90px;
+    & .index-news-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: $space_16-18px;
+      border: 1px solid $lightGray;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.5s;
       & img {
-        transform: scale(1.1);
+        width: 50%;
+        transition: transform 0.5s;
+      }
+      & .index-news-text {
+        margin-left: $space_16-18px;
+        & h3 {
+          font-size: $font_18-20px;
+          margin-bottom: $space_10-15px;
+        }
+        & p {
+          font-size: calc($font_11-13px * 1.2);
+          margin-bottom: calc($space_10-15px * 0.5);
+        }
+      }
+      &:hover {
+        background-color: $smoke;
+        & img {
+          transform: scale(1.1);
+        }
       }
     }
   }
