@@ -837,6 +837,84 @@ header {
   }
 }
 
+/* TOP PRICE ======================================================== */
+.index-job-content {
+  width: 70%;
+  display: flex;
+  margin: $space_60_90px auto;
+  & .index-job-item {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    line-height: 0;
+    & img {
+      width: 100%;
+      height: 305px;
+    }
+    & .index-job-text {
+      background-color: $black;
+      color: $white;
+      padding: $space_30-45px $space_10-15px;
+      text-align: left;
+      height: 220px;
+      & .text1 {
+        text-align: center;
+        font-size: $font_18-20px;
+      }
+      & .text2 {
+        margin: $space_16-18px $space_10-15px 0;
+        font-size: calc($font_16-18px * 0.9);
+        line-height: 1.8;
+      }
+    }
+    & .number1 {
+      order: 1;
+    }
+    & .number2 {
+      order: 2;
+    }
+    & .number3 {
+      order: 4;
+    }
+    & .number4 {
+      order: 3;
+    }
+    & .number5 {
+      order: 5;
+    }
+    & .number6 {
+      order: 6;
+    }
+  }
+}
+
+.index-price-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: $space_40-60px 0;
+  & .index-price-item {
+    text-align: center;
+    width: 30%;
+    background-color: $white;
+    border: 1px solid $lightGray;
+    padding: $space_30-45px $space_16-18px;
+    margin: 0 $space_16-18px;
+    & img {
+      height: 30vh;
+      width: 23vw;
+    }
+    & h3 {
+      font-size: $font_19-22px;
+      margin: $space_10-15px auto calc($space_16-18px * 1.2);
+    }
+    & p {
+      font-size: $font_16-18px;
+    }
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -934,90 +1012,6 @@ header {
     width: calc(100% + 11px);
     height: calc(100% + 11px);
     border-color: #610b0b;
-  }
-}
-
-/* トップ 料金 */
-.top-price1 {
-  display: flex;
-  height: 100%;
-  width: 70vw;
-  margin: 4rem auto;
-}
-.top-price-content {
-  display: flex;
-  flex-flow: column;
-  line-height: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  & img {
-    width: 100%;
-    height: 305px;
-    object-fit: cover;
-  }
-}
-.top-price-text {
-  background-color: $black;
-  color: $white;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-  text-align: left;
-  width: 91%;
-  height: 210px;
-  & .text1 {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  & .text2 {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 1rem;
-    line-height: 1.9;
-    font-size: 0.9rem;
-  }
-}
-.order1 {
-  order: 1;
-}
-.order2 {
-  order: 2;
-}
-.order3 {
-  order: 4;
-}
-.order4 {
-  order: 3;
-}
-.order5 {
-  order: 5;
-}
-.order6 {
-  order: 6;
-}
-
-.top-price2 {
-  margin: 0 auto;
-  padding: 3rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  & img {
-    height: 30vh;
-    width: 20vw;
-    object-fit: cover;
-  }
-}
-.top-price-plan {
-  background-color: $white;
-  border: 1px solid $lightGray;
-  width: 30vw;
-  padding: 3rem 1rem;
-  text-align: center;
-  margin: 0 1rem;
-  & h3 {
-    margin: 1.5rem auto;
   }
 }
 
