@@ -889,26 +889,28 @@ header {
 }
 
 .index-price-content {
-  margin: 0 auto;
-  padding: 3rem;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: $space_40-60px 0;
   & .index-price-item {
+    text-align: center;
+    width: 30%;
     background-color: $white;
     border: 1px solid $lightGray;
-    width: 30vw;
-    padding: 3rem 1rem;
-    text-align: center;
-    margin: 0 1rem;
+    padding: $space_30-45px $space_16-18px;
+    margin: 0 $space_16-18px;
     & img {
       height: 30vh;
-      width: 20vw;
-      object-fit: cover;
+      width: 23vw;
     }
     & h3 {
-      margin: 1.5rem auto;
+      font-size: $font_19-22px;
+      margin: $space_10-15px auto calc($space_16-18px * 1.2);
+    }
+    & p {
+      font-size: $font_16-18px;
     }
   }
 }

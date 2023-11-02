@@ -1049,36 +1049,36 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 .index-price-content {
-  -webkit-box-sizing: border-box;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
           justify-content: space-between;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) 0;
 }
 .index-price-content .index-price-item {
-  width: 30vw;
-  margin: 0 1rem;
-  padding: 3rem 1rem;
+  width: 30%;
+  margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   border: 1px solid #bbb;
   background-color: #fff;
   text-align: center;
 }
 .index-price-content .index-price-item img {
-  -o-object-fit: cover;
-  width: 20vw;
+  width: 23vw;
   height: 30vh;
-     object-fit: cover;
 }
 .index-price-content .index-price-item h3 {
-  margin: 1.5rem auto;
+  margin: clamp(10px, 2vw, 15px) auto calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+}
+.index-price-content .index-price-item p {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 /* TOP ====================================== */
