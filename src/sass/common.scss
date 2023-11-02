@@ -675,7 +675,7 @@ header {
   }
 }
 
-/* Profile ================================================== */
+/* TOP Profile, Profile ========================================== */
 .profile-content {
   margin-bottom: $space_60_90px;
   padding: $space_40-60px $space_20-30px;
@@ -742,6 +742,98 @@ header {
     & li {
       line-height: 2;
     }
+  }
+}
+
+/* TOP GALLERY ================================================ */
+
+.index-gallery-content {
+  display: grid;
+  width: 80vw;
+  gap: 2.5vw;
+  grid-template-columns: repeat(3, 26vw);
+  grid-template-rows: repeat(3, 26vw);
+  margin: $space_80_120px auto;
+  & .index-gallery-item {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    & .index-gallery-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s;
+      opacity: 0;
+      & * {
+        display: block;
+        text-align: center;
+        font-size: $font_18-20px;
+        margin: $space_10-15px;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      z-index: 10;
+      & .index-gallery-text {
+        background-color: $white;
+        border-radius: 50%;
+        transition: 0.7s;
+        opacity: 0.8;
+        & .index-gallery-text1 {
+          animation: style-top 0.5s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+        }
+        & .index-gallery-text2 {
+          animation: style-top 0.5s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+        }
+        & .index-gallery-text3 {
+          animation: style-bottom 0.5s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+// 上から表示するアニメーション
+@keyframes style-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+// 下から表示するアニメーション
+@keyframes style-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
@@ -844,128 +936,6 @@ header {
     border-color: #610b0b;
   }
 }
-
-/* トップギャラリー */
-.grid {
-  height: 100%;
-  display: grid;
-  width: 86vw;
-  gap: 1vw;
-  grid-template-columns: repeat(3, 26vw); /* (80 - 2) / 3 */
-  grid-template-rows: repeat(3, 26vw);
-  margin: 7rem auto;
-}
-.grid-gallery {
-  margin: auto;
-  position: relative;
-  width: 70%;
-  transition: 0.4s;
-  transition-timing-function: ease-in-out;
-  & img {
-    display: block;
-    object-fit: cover;
-    width: 350px;
-    height: 350px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
-    z-index: 10;
-    & .top-gallery-text {
-      opacity: 1;
-    }
-  }
-}
-.opacity {
-  position: absolute;
-  display: block;
-  z-index: 0;
-  top: 0;
-  width: 350px;
-  height: 350px;
-  background-color: rgb(0, 0, 0, 0.5);
-  opacity: 0;
-}
-.top-gallery-text {
-  position: absolute;
-  top: 55%;
-  left: 65%;
-  margin: auto;
-  height: 300px;
-  width: 300px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  color: $white;
-}
-.gallery-text-title {
-  display: block;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 0;
-  opacity: 0;
-}
-.gallery-text-size {
-  display: block;
-  text-align: center;
-  font-size: 1.2rem;
-  padding-bottom: 6rem;
-  margin: 0;
-  opacity: 0;
-}
-.gallery-text-data {
-  display: block;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  opacity: 0;
-}
-
-.grid-gallery:hover {
-  & .gallery-text-title {
-    animation: style-top 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-  & .gallery-text-size {
-    animation: style-top 0.5s;
-    animation-delay: 0.6s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-  & .gallery-text-data {
-    animation: style-bottom 0.5s;
-    animation-delay: 0.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-}
-
-@keyframes style-top {
-  0% {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(50px);
-    opacity: 1;
-  }
-}
-@keyframes style-bottom {
-  0% {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-50px);
-    opacity: 1;
-  }
-}
-
-/* トッププロフィール */
 
 /* トップ 料金 */
 .top-price1 {
