@@ -903,21 +903,21 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  & img {
-    height: 30vh;
-    width: 20vw;
-    object-fit: cover;
-  }
-}
-.index-price-item {
-  background-color: $white;
-  border: 1px solid $lightGray;
-  width: 30vw;
-  padding: 3rem 1rem;
-  text-align: center;
-  margin: 0 1rem;
-  & h3 {
-    margin: 1.5rem auto;
+  & .index-price-item {
+    background-color: $white;
+    border: 1px solid $lightGray;
+    width: 30vw;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin: 0 1rem;
+    & img {
+      height: 30vh;
+      width: 20vw;
+      object-fit: cover;
+    }
+    & h3 {
+      margin: 1.5rem auto;
+    }
   }
 }
 

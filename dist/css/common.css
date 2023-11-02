@@ -1072,14 +1072,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin: 0 auto;
   padding: 3rem;
 }
-.index-price-content img {
-  -o-object-fit: cover;
-  width: 20vw;
-  height: 30vh;
-     object-fit: cover;
-}
-
-.index-price-item {
+.index-price-content .index-price-item {
   width: 30vw;
   margin: 0 1rem;
   padding: 3rem 1rem;
@@ -1087,7 +1080,13 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #fff;
   text-align: center;
 }
-.index-price-item h3 {
+.index-price-content .index-price-item img {
+  -o-object-fit: cover;
+  width: 20vw;
+  height: 30vh;
+     object-fit: cover;
+}
+.index-price-content .index-price-item h3 {
   margin: 1.5rem auto;
 }
 
