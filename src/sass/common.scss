@@ -839,40 +839,32 @@ header {
 
 /* TOP PRICE ======================================================== */
 .index-job-content {
+  width: 70%;
   display: flex;
-  height: 100%;
-  width: 70vw;
-  margin: 4rem auto;
+  margin: $space_60_90px auto;
   & .index-job-item {
     display: flex;
     flex-flow: column;
+    overflow: hidden;
     line-height: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
     & img {
       width: 100%;
       height: 305px;
-      object-fit: cover;
     }
     & .index-job-text {
       background-color: $black;
       color: $white;
-      margin: 0 auto;
-      padding: 3rem 1rem;
+      padding: $space_30-45px $space_10-15px;
       text-align: left;
-      width: 91%;
-      height: 210px;
+      height: 220px;
       & .text1 {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: $font_18-20px;
       }
       & .text2 {
-        width: 80%;
-        margin: 0 auto;
-        padding-top: 1rem;
-        line-height: 1.9;
-        font-size: 0.9rem;
+        margin: $space_16-18px $space_10-15px 0;
+        font-size: calc($font_16-18px * 0.9);
+        line-height: 1.8;
       }
     }
     & .number1 {

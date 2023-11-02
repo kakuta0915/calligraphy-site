@@ -975,9 +975,8 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 70vw;
-  height: 100%;
-  margin: 4rem auto;
+  width: 70%;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) auto;
 }
 .index-job-content .index-job-item {
   -webkit-box-orient: vertical;
@@ -989,36 +988,28 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: -ms-flexbox;
   display: flex;
           flex-flow: column;
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  overflow: hidden;
   line-height: 0;
 }
 .index-job-content .index-job-item img {
-  -o-object-fit: cover;
   width: 100%;
   height: 305px;
-     object-fit: cover;
 }
 .index-job-content .index-job-item .index-job-text {
-  width: 91%;
-  height: 210px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
+  height: 220px;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) clamp(10px, 2vw, 15px);
   background-color: #000;
   color: #fff;
   text-align: left;
 }
 .index-job-content .index-job-item .index-job-text .text1 {
-  font-size: 1.2rem;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
   text-align: center;
 }
 .index-job-content .index-job-item .index-job-text .text2 {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.9;
+  margin: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) clamp(10px, 2vw, 15px) 0;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.9);
+  line-height: 1.8;
 }
 .index-job-content .index-job-item .number1 {
   -webkit-box-ordinal-group: 2;
