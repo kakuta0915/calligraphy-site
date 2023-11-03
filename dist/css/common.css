@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/* カラー変数宣言 ============================================== */
-/* スペース (余白・間隔) ========================================= */
-/* フォントサイズ =============================================== */
+/* カラー変数宣言 ============================================= */
+/* スペース (余白・間隔) ======================================== */
+/* フォントサイズ ============================================= */
 /* フォント共通 */
-/* 各ページ共通のレイアウト ====================================== */
+/* 各ページ共通のレイアウト ======================================== */
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +46,22 @@ img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.page-top-content .page-title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  margin: 0 auto;
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: clamp(2rem, 1.3rem + 3vw, 4rem);
+  text-align: center;
+          writing-mode: vertical-rl;
 }
 
 .profile-bg {
@@ -160,7 +176,53 @@ img {
   margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
 }
 
-/* スクロール時のフェード機能 【JSで制御】 =============================*/
+/* TOPページのボタン */
+.index-btn {
+  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
+  text-align: center;
+}
+.index-btn a {
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  display: inline-block;
+  position: relative;
+  padding: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  border: 1px solid #696969;
+  color: #696969;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+  transition: all 0.4s ease-in-out;
+}
+.index-btn a::before, .index-btn a::after {
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid #696969;
+  content: "";
+  transition: all 0.4s ease-in-out;
+}
+.index-btn a::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+.index-btn a::after {
+  right: -6px;
+  bottom: -6px;
+  border-width: 0 1px 1px 0;
+}
+.index-btn a:hover {
+  background-color: #610b0b;
+  color: #fff;
+}
+.index-btn a:hover:hover::before, .index-btn a:hover:hover::after {
+  width: calc(100% + 11px);
+  height: calc(100% + 11px);
+  border-color: #610b0b;
+}
+
+/* スクロール時のフェード機能 【JSで制御】 =============================== */
 .scroll-fadeUp {
   -webkit-transform: translate(0, 80px);
       -ms-transform: translate(0, 80px);
@@ -233,7 +295,7 @@ img {
   opacity: 1;
 }
 
-/* HEADER ==================================================== */
+/* HEADER ============================================== */
 header {
   padding: clamp(10px, 2vw, 15px);
   background-color: #000;
@@ -393,7 +455,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: 0;
 }
 
-/* TOPページ 【index】======================================== */
+/* TOPページ 【index】======================================= */
 .index-top-slider li {
   -webkit-animation: anime 50s infinite;
   position: absolute;
@@ -677,7 +739,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #0b0b61;
 }
 
-/* TOP NEWS  ================================================ */
+/* TOP NEWS  =========================================== */
 .index-news-content {
   margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
@@ -743,7 +805,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           transform: scale(1.1);
 }
 
-/* TOP Profile, Profile ========================================== */
+/* TOP Profile, Profile ================================ */
 .profile-content {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
@@ -826,7 +888,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   line-height: 2;
 }
 
-/* TOP GALLERY ================================================ */
+/* TOP GALLERY ========================================= */
 .index-gallery-content {
   -ms-grid-columns: (26vw)[3];
   -ms-grid-rows: (26vw)[3];
@@ -969,7 +1031,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     opacity: 1;
   }
 }
-/* TOP PRICE ======================================================== */
+/* TOP PRICE =========================================== */
 .index-job-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1079,75 +1141,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 .index-price-content .index-price-item p {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
-
-/* TOP ====================================== */
-/* トップページ読み込み時のアニメーション JSで制御 */
-/* タイトル */
-.title {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-          transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-          writing-mode: vertical-rl;
-}
-
-/* トップ詳細ボタン */
-.top-btn {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.btn-primary {
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  display: inline-block;
-  position: relative;
-  padding: 1.5rem 2rem;
-  border: 1px solid #333;
-  outline: none;
-  color: #696969;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-}
-.btn-primary:hover {
-  border-color: transparent;
-  background-color: #610b0b;
-  color: #fff;
-}
-.btn-primary::before, .btn-primary::after {
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: solid #696969;
-  content: "";
-  transition: all 0.4s ease-in-out;
-}
-.btn-primary::before {
-  top: -6px;
-  left: -6px;
-  border-width: 1px 0 0 1px;
-}
-.btn-primary::after {
-  right: -6px;
-  bottom: -6px;
-  border-width: 0 1px 1px 0;
-}
-.btn-primary:hover::before, .btn-primary:hover::after {
-  width: calc(100% + 11px);
-  height: calc(100% + 11px);
-  border-color: #610b0b;
 }
 
 /* GALLERY ================================= */
