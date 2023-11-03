@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/* カラー変数宣言 ============================================== */
-/* スペース (余白・間隔) ========================================= */
-/* フォントサイズ =============================================== */
+/* カラー変数宣言 ============================================= */
+/* スペース (余白・間隔) ======================================== */
+/* フォントサイズ ============================================= */
 /* フォント共通 */
-/* 各ページ共通のレイアウト ====================================== */
+/* 各ページ共通のレイアウト ======================================== */
 * {
   margin: 0;
   padding: 0;
@@ -160,7 +160,7 @@ img {
   margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
 }
 
-/* スクロール時のフェード機能 【JSで制御】 =============================*/
+/* スクロール時のフェード機能 【JSで制御】 =============================== */
 .scroll-fadeUp {
   -webkit-transform: translate(0, 80px);
       -ms-transform: translate(0, 80px);
@@ -233,7 +233,7 @@ img {
   opacity: 1;
 }
 
-/* HEADER ==================================================== */
+/* HEADER ============================================== */
 header {
   padding: clamp(10px, 2vw, 15px);
   background-color: #000;
@@ -393,7 +393,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: 0;
 }
 
-/* TOPページ 【index】======================================== */
+/* TOPページ 【index】======================================= */
 .index-top-slider li {
   -webkit-animation: anime 50s infinite;
   position: absolute;
@@ -677,7 +677,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #0b0b61;
 }
 
-/* TOP NEWS  ================================================ */
+/* TOP NEWS  =========================================== */
 .index-news-content {
   margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
@@ -743,7 +743,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           transform: scale(1.1);
 }
 
-/* TOP Profile, Profile ========================================== */
+/* TOP Profile, Profile ================================ */
 .profile-content {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
@@ -826,7 +826,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   line-height: 2;
 }
 
-/* TOP GALLERY ================================================ */
+/* TOP GALLERY ========================================= */
 .index-gallery-content {
   -ms-grid-columns: (26vw)[3];
   -ms-grid-rows: (26vw)[3];
@@ -969,7 +969,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     opacity: 1;
   }
 }
-/* TOP PRICE ======================================================== */
+/* TOP PRICE =========================================== */
 .index-job-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1081,8 +1081,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
-/* TOP ====================================== */
-/* トップページ読み込み時のアニメーション JSで制御 */
 /* タイトル */
 .title {
   -webkit-writing-mode: vertical-rl;

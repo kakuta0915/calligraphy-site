@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* カラー変数宣言 ============================================== */
+/* カラー変数宣言 ============================================= */
 $black: #000;
 $gray: #696969;
 $lightGray: #bbb;
@@ -13,7 +13,7 @@ $red3: #610b0b;
 $green: #0b3b0b;
 $blue: #0b0b61;
 
-/* スペース (余白・間隔) ========================================= */
+/* スペース (余白・間隔) ======================================== */
 $space_10-15px: clamp(10px, 2vw, 15px); // 10-15px
 $space_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
 $space_20-30px: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); // 20-30px
@@ -22,7 +22,7 @@ $space_40-60px: calc($space_20-30px * 2); // 40-60px
 $space_60_90px: calc($space_20-30px * 3); // 60-90px
 $space_80_120px: calc($space_20-30px * 4); // 80-120px
 
-/* フォントサイズ =============================================== */
+/* フォントサイズ ============================================= */
 $font_11-13px: calc($space_16-18px * 0.7); // 11.2-12.6px
 $font_16-18px: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); // 16-18px
 $font_18-20px: calc($font_16-18px * 1.1); // 17.6-19.8px
@@ -36,7 +36,7 @@ $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
   font-family: "Noto Serif JP", sans-serif;
 }
 
-/* 各ページ共通のレイアウト ====================================== */
+/* 各ページ共通のレイアウト ======================================== */
 * {
   padding: 0;
   margin: 0;
@@ -210,7 +210,7 @@ img {
   }
 }
 
-/* スクロール時のフェード機能 【JSで制御】 =============================*/
+/* スクロール時のフェード機能 【JSで制御】 =============================== */
 // 下から
 .scroll-fadeUp {
   display: block;
@@ -259,7 +259,7 @@ img {
   transform: translate(0, 0);
 }
 
-/* HEADER ==================================================== */
+/* HEADER ============================================== */
 
 header {
   background-color: $black;
@@ -408,7 +408,36 @@ header {
   }
 }
 
-/* TOPページ 【index】======================================== */
+/* TOPページ 【index】======================================= */
+
+// トップページ読み込み時のアニメーション 【JSで制御】
+// .line {
+//   width: 0%;
+//   height: 2px;
+//   background-color: $black;
+//   position: fixed;
+//   top: 50%;
+//   z-index: 20;
+// }
+// .top {
+//   background-color: $white;
+//   height: 50%;
+//   width: 100%;
+//   position: fixed;
+//   z-index: 10;
+//   top: 0;
+// }
+// .bottom {
+//   background-color: $white;
+//   height: 50%;
+//   width: 100%;
+//   position: fixed;
+//   z-index: 10;
+//   bottom: 0;
+// }
+// .bar {
+//   display: none;
+// }
 
 // トップスライダー
 .index-top-slider {
@@ -629,7 +658,7 @@ header {
   background-color: $blue;
 }
 
-/* TOP NEWS  ================================================ */
+/* TOP NEWS  =========================================== */
 .index-news-content {
   margin: $space_40-60px;
   & h2 {
@@ -675,7 +704,7 @@ header {
   }
 }
 
-/* TOP Profile, Profile ========================================== */
+/* TOP Profile, Profile ================================ */
 .profile-content {
   margin-bottom: $space_60_90px;
   padding: $space_40-60px $space_20-30px;
@@ -745,7 +774,7 @@ header {
   }
 }
 
-/* TOP GALLERY ================================================ */
+/* TOP GALLERY ========================================= */
 
 .index-gallery-content {
   display: grid;
@@ -837,7 +866,7 @@ header {
   }
 }
 
-/* TOP PRICE ======================================================== */
+/* TOP PRICE =========================================== */
 .index-job-content {
   width: 70%;
   display: flex;
@@ -923,37 +952,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* TOP ====================================== */
-
-/* トップページ読み込み時のアニメーション JSで制御 */
-// .line {
-//   width: 0%;
-//   height: 2px;
-//   background-color: $black;
-//   position: fixed;
-//   top: 50%;
-//   z-index: 20;
-// }
-// .top {
-//   background-color: $white;
-//   height: 50%;
-//   width: 100%;
-//   position: fixed;
-//   z-index: 10;
-//   top: 0;
-// }
-// .bottom {
-//   background-color: $white;
-//   height: 50%;
-//   width: 100%;
-//   position: fixed;
-//   z-index: 10;
-//   bottom: 0;
-// }
-// .bar {
-//   display: none;
-// }
 
 /* タイトル */
 .title {
