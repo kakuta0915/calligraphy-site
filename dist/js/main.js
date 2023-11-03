@@ -30,7 +30,7 @@ $(function () {
   $(function () {
     $(".index-top-btn").click(function () {
       $("html, body").animate(
-        { scrollTop: $(".slideshow").offset().top },
+        { scrollTop: $(".wrapper").offset().top },
         "slow"
       );
       return false;
