@@ -47,6 +47,22 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.page-top-content .page-title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  margin: 0 auto;
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: clamp(2rem, 1.3rem + 3vw, 4rem);
+  text-align: center;
+          writing-mode: vertical-rl;
+}
 
 .profile-bg {
   background-image: url("../../dist/images/img2.jpeg");
@@ -1079,23 +1095,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 .index-price-content .index-price-item p {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
-
-/* タイトル */
-.title {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-          transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-          writing-mode: vertical-rl;
 }
 
 /* トップ詳細ボタン */

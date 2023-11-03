@@ -81,6 +81,18 @@ img {
     size: cover;
     repeat: no-repeat;
   }
+  & .page-title {
+    font-size: $font_32-64px;
+    color: $white;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .profile-bg {
@@ -952,19 +964,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* タイトル */
-.title {
-  color: $white;
-  font-size: 3rem;
-  margin: 0 auto;
-  text-align: center;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 /* トップ詳細ボタン */
 .top-btn {
