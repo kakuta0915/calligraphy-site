@@ -222,6 +222,50 @@ img {
   }
 }
 
+/* TOPページのボタン */
+.index-btn {
+  text-align: center;
+  margin: $space_20-30px auto;
+  & a {
+    position: relative;
+    font-size: $font_19-22px;
+    color: $gray;
+    display: inline-block;
+    padding: calc($space_16-18px * 1.5) $space_20-30px;
+    border: 1px solid $gray;
+    transition: all 0.4s ease-in-out;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: solid $gray;
+      transition: all 0.4s ease-in-out;
+    }
+    &::before {
+      top: -6px;
+      left: -6px;
+      border-width: 1px 0 0 1px;
+    }
+    &::after {
+      bottom: -6px;
+      right: -6px;
+      border-width: 0 1px 1px 0;
+    }
+    &:hover {
+      color: $white;
+      background-color: $red3;
+      &:hover::before,
+      &:hover::after {
+        width: calc(100% + 11px);
+        height: calc(100% + 11px);
+        border-color: $red3;
+      }
+    }
+  }
+}
+
 /* スクロール時のフェード機能 【JSで制御】 =============================== */
 // 下から
 .scroll-fadeUp {
@@ -964,53 +1008,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* トップ詳細ボタン */
-.top-btn {
-  text-align: center;
-  margin: 2rem auto;
-}
-.btn-primary {
-  padding: 1.5rem 2rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  position: relative;
-  color: $gray;
-  border: 1px solid #333;
-  display: inline-block;
-  outline: none;
-  transition: all 0.4s ease-in-out;
-  &:hover {
-    background-color: #610b0b;
-    color: $white;
-    border-color: transparent;
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    border: solid $gray;
-    width: 10px;
-    height: 10px;
-    transition: all 0.4s ease-in-out;
-  }
-  &::before {
-    top: -6px;
-    left: -6px;
-    border-width: 1px 0 0 1px;
-  }
-  &::after {
-    bottom: -6px;
-    right: -6px;
-    border-width: 0 1px 1px 0;
-  }
-  &:hover::before,
-  &:hover::after {
-    width: calc(100% + 11px);
-    height: calc(100% + 11px);
-    border-color: #610b0b;
-  }
-}
 
 /* GALLERY ================================= */
 .gallery-main {

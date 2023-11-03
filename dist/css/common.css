@@ -176,6 +176,52 @@ img {
   margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
 }
 
+/* TOPページのボタン */
+.index-btn {
+  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
+  text-align: center;
+}
+.index-btn a {
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  display: inline-block;
+  position: relative;
+  padding: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  border: 1px solid #696969;
+  color: #696969;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+  transition: all 0.4s ease-in-out;
+}
+.index-btn a::before, .index-btn a::after {
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid #696969;
+  content: "";
+  transition: all 0.4s ease-in-out;
+}
+.index-btn a::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+.index-btn a::after {
+  right: -6px;
+  bottom: -6px;
+  border-width: 0 1px 1px 0;
+}
+.index-btn a:hover {
+  background-color: #610b0b;
+  color: #fff;
+}
+.index-btn a:hover:hover::before, .index-btn a:hover:hover::after {
+  width: calc(100% + 11px);
+  height: calc(100% + 11px);
+  border-color: #610b0b;
+}
+
 /* スクロール時のフェード機能 【JSで制御】 =============================== */
 .scroll-fadeUp {
   -webkit-transform: translate(0, 80px);
@@ -1095,56 +1141,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 .index-price-content .index-price-item p {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
-
-/* トップ詳細ボタン */
-.top-btn {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.btn-primary {
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  display: inline-block;
-  position: relative;
-  padding: 1.5rem 2rem;
-  border: 1px solid #333;
-  outline: none;
-  color: #696969;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-}
-.btn-primary:hover {
-  border-color: transparent;
-  background-color: #610b0b;
-  color: #fff;
-}
-.btn-primary::before, .btn-primary::after {
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: solid #696969;
-  content: "";
-  transition: all 0.4s ease-in-out;
-}
-.btn-primary::before {
-  top: -6px;
-  left: -6px;
-  border-width: 1px 0 0 1px;
-}
-.btn-primary::after {
-  right: -6px;
-  bottom: -6px;
-  border-width: 0 1px 1px 0;
-}
-.btn-primary:hover::before, .btn-primary:hover::after {
-  width: calc(100% + 11px);
-  height: calc(100% + 11px);
-  border-color: #610b0b;
 }
 
 /* GALLERY ================================= */
