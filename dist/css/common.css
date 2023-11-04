@@ -1153,8 +1153,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   line-height: 2;
   text-align: center;
 }
-
-.gallery {
+.gallery-content .gallery {
   -ms-grid-columns: (25vw)[3];
   -ms-grid-rows: (25vw)[6];
   display: -ms-grid;
@@ -1165,8 +1164,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin: 0 auto;
   gap: 2vw;
 }
-
-.gallery-item {
+.gallery-content .gallery-item {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   -webkit-transition-timing-function: ease-in-out;
@@ -1174,26 +1172,24 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   transition: 0.4s;
           transition-timing-function: ease-in-out;
 }
-.gallery-item img {
+.gallery-content .gallery-item img {
   width: 100%;
   height: auto;
 }
-.gallery-item .caption {
+.gallery-content .gallery-item .caption {
   display: none;
 }
-.gallery-item:hover {
+.gallery-content .gallery-item:hover {
   -webkit-transform: scale(1.1, 1.1);
       -ms-transform: scale(1.1, 1.1);
   z-index: 10;
           transform: scale(1.1, 1.1);
 }
-
-.gallery-title {
+.gallery-content .gallery-item .gallery-title {
   display: block;
   text-align: center;
 }
-
-.gallery-item .is-loading {
+.gallery-content .gallery-item .is-loading {
   opacity: 0;
 }
 

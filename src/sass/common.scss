@@ -1000,15 +1000,6 @@ header {
   }
 }
 
-/////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ////////////////////////////////////////////////
-/// /////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-//
-
 /* GALLERY ================================= */
 .gallery-content {
   margin: $space_60_90px auto;
@@ -1018,40 +1009,46 @@ header {
     margin-bottom: $space_30-45px;
     line-height: 2;
   }
+  & .gallery {
+    width: 80vw;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: repeat(6, 25vw);
+    margin: 0 auto;
+  }
+  & .gallery-item {
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+    & img {
+      width: 100%;
+      height: auto;
+    }
+    & .caption {
+      display: none;
+    }
+    &:hover {
+      transform: scale(1.1, 1.1);
+      z-index: 10;
+    }
+    & .gallery-title {
+      display: block;
+      text-align: center;
+    }
+    & .is-loading {
+      opacity: 0;
+    }
+  }
 }
 
-.gallery {
-  width: 80vw;
-  display: grid;
-  gap: 2vw;
-  grid-template-columns: repeat(3, 25vw);
-  grid-template-rows: repeat(6, 25vw);
-  margin: 0 auto;
-}
-
-.gallery-item {
-  transition: 0.4s;
-  transition-timing-function: ease-in-out;
-  & img {
-    width: 100%;
-    height: auto;
-  }
-
-  & .caption {
-    display: none;
-  }
-  &:hover {
-    transform: scale(1.1, 1.1);
-    z-index: 10;
-  }
-}
-.gallery-title {
-  display: block;
-  text-align: center;
-}
-.gallery-item .is-loading {
-  opacity: 0;
-}
+/////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ////////////////////////////////////////////////
+/// /////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+//
 
 /* NEWS ==================================== */
 .news {
