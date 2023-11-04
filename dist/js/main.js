@@ -43,15 +43,6 @@ $(function () {
   $("#gallery").each(function () {
     var $container = $(this);
 
-    /*
-        Masonry
-        */
-    // $container.masonry({
-    //   columnWidth: 230,
-    //   itemSelector: ".gallery-item",
-    //   gutter: 120,
-    // });
-
     // JSONを取得
     $.getJSON("../../src/data/content.json", function (data) {
       var elements = [];
