@@ -1026,19 +1026,23 @@ header {
     }
     & .caption {
       display: none;
+      & .inner {
+      }
+    }
+    & .is-loading {
+      opacity: 0;
     }
     &:hover {
       transform: scale(1.1, 1.1);
       z-index: 10;
     }
-    & .gallery-title {
-      display: block;
-      text-align: center;
-    }
-    & .is-loading {
-      opacity: 0;
-    }
   }
+}
+
+#cboxTitle {
+  font-size: $font_16-18px;
+  padding: $space_16-18px;
+  background-color: $red3;
 }
 
 /////////////////////////////////////////////////

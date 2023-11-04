@@ -57,9 +57,9 @@ $(function () {
           '" alt="">' +
           '<span class="caption">' +
           '<span class="inner">' +
-          '<b class="gallery-title">' +
+          "<span>" + // id="cboxTitle"
           item.title +
-          "</b>" +
+          "</span>" +
           "</span>" +
           "</span>" +
           "</a>" +

@@ -1179,18 +1179,20 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 .gallery-content .gallery-item .caption {
   display: none;
 }
+.gallery-content .gallery-item .is-loading {
+  opacity: 0;
+}
 .gallery-content .gallery-item:hover {
   -webkit-transform: scale(1.1, 1.1);
       -ms-transform: scale(1.1, 1.1);
   z-index: 10;
           transform: scale(1.1, 1.1);
 }
-.gallery-content .gallery-item .gallery-title {
-  display: block;
-  text-align: center;
-}
-.gallery-content .gallery-item .is-loading {
-  opacity: 0;
+
+#cboxTitle {
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  background-color: #610b0b;
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 /* NEWS ==================================== */
