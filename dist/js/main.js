@@ -43,21 +43,12 @@ $(function () {
   $("#gallery").each(function () {
     var $container = $(this);
 
-    /*
-        Masonry
-        */
-    $container.masonry({
-      columnWidth: 230,
-      itemSelector: ".gallery-item",
-      gutter: 120,
-    });
-
     // JSONを取得
     $.getJSON("../../src/data/content.json", function (data) {
       var elements = [];
       $.each(data, function (i, item) {
         var itemHTML =
-          '<li class="gallery-item is-loading scroll-fadeup">' +
+          '<li class="gallery-item is-loading scroll-fadeUp">' +
           '<a href="' +
           item.images.large +
           '">' +
@@ -66,9 +57,9 @@ $(function () {
           '" alt="">' +
           '<span class="caption">' +
           '<span class="inner">' +
-          '<b class="gallery-title">' +
+          "<span>" + // id="cboxTitle"
           item.title +
-          "</b>" +
+          "</span>" +
           "</span>" +
           "</span>" +
           "</a>" +
