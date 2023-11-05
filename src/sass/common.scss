@@ -1043,30 +1043,32 @@ header {
   background-color: $red3;
 }
 
-/////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ////////////////////////////////////////////////
-/// /////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-//
-
 /* NEWS ==================================== */
 .news {
-  text-decoration: none;
-  color: $black;
   background-color: $white;
-  width: 1000px;
+  width: 80vw;
   display: flex;
-  padding: 2rem;
-  margin: 4rem auto;
+  padding: $space_20-30px;
+  margin: $space_40-60px auto;
   border: 1px solid $lightGray;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
   transition: background-color 0.5s;
   & img {
     object-fit: cover;
     transition: transform 0.5s;
+  }
+  & .news-text {
+    margin: 1rem 0 0 2rem;
+    & h2 {
+      margin-bottom: 1rem;
+    }
+    & .news-time {
+      margin-bottom: 1rem;
+      color: $gray;
+    }
+    & .news-desc {
+      font-size: $font_16-18px;
+    }
   }
   &:hover {
     background-color: $smoke;
@@ -1075,16 +1077,15 @@ header {
     }
   }
 }
-.news-text {
-  margin: 1rem 0 0 2rem;
-  & h2 {
-    margin-bottom: 1rem;
-  }
-}
-.news-time {
-  margin-bottom: 1rem;
-  color: $gray;
-}
+
+/////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ////////////////////////////////////////////////
+/// /////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+//
 
 /* PRICE =================================== */
 .price-text {

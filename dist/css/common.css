@@ -1204,14 +1204,12 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem;
+  width: 80vw;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) auto;
+  padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   border: 1px solid #bbb;
   background-color: #fff;
           box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
-  color: #000;
-  text-decoration: none;
   transition: background-color 0.5s;
 }
 .news img {
@@ -1223,6 +1221,19 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
+.news .news-text {
+  margin: 1rem 0 0 2rem;
+}
+.news .news-text h2 {
+  margin-bottom: 1rem;
+}
+.news .news-text .news-time {
+  margin-bottom: 1rem;
+  color: #696969;
+}
+.news .news-text .news-desc {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
 .news:hover {
   background-color: #dcdcdc;
 }
@@ -1230,18 +1241,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.news-text {
-  margin: 1rem 0 0 2rem;
-}
-.news-text h2 {
-  margin-bottom: 1rem;
-}
-
-.news-time {
-  margin-bottom: 1rem;
-  color: #696969;
 }
 
 /* PRICE =================================== */
