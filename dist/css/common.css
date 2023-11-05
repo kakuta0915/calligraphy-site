@@ -1196,7 +1196,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 /* NEWS ==================================== */
-.news {
+.news-item {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
   -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
@@ -1204,44 +1207,45 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem;
+          justify-content: space-between;
+  width: 80vw;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) auto;
+  padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   border: 1px solid #bbb;
   background-color: #fff;
           box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
-  color: #000;
-  text-decoration: none;
   transition: background-color 0.5s;
 }
-.news img {
-  -o-object-fit: cover;
+.news-item img {
   -webkit-transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
-     object-fit: cover;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
-.news:hover {
+.news-item .news-text {
+  width: 100%;
+  margin-left: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+}
+.news-item .news-text h2 {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+}
+.news-item .news-text .news-time {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  color: #696969;
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
+.news-item .news-text .news-desc {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
+.news-item:hover {
   background-color: #dcdcdc;
 }
-.news:hover img {
+.news-item:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.news-text {
-  margin: 1rem 0 0 2rem;
-}
-.news-text h2 {
-  margin-bottom: 1rem;
-}
-
-.news-time {
-  margin-bottom: 1rem;
-  color: #696969;
 }
 
 /* PRICE =================================== */
