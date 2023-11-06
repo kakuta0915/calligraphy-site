@@ -1513,25 +1513,28 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 
 /* FOOTER =========================================== */
 footer {
+  padding-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: #000;
   color: #fff;
   text-align: center;
 }
-
-.footer-policy {
-  margin: 0 auto;
-  background-color: #000;
-}
-.footer-policy a {
+footer a {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   display: block;
-  padding: 2rem;
+  padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   color: #fff;
-  text-align: center;
-  text-decoration: none;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.9);
+  transition: 400ms;
 }
-
-/* .footer-link */
-.footer-link {
+footer a:hover {
+  background-color: #0b3b0b;
+  color: #fff;
+}
+footer .wrapper {
+  margin: 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
+}
+footer .wrapper .footer-nav {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1540,27 +1543,44 @@ footer {
   display: -ms-flexbox;
   display: flex;
           justify-content: center;
-  margin: 0 auto;
-  padding: 2rem;
+  padding-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  border-bottom: 1px solid #fff;
 }
-.footer-link li {
-  list-style-type: none;
+footer .wrapper .footer-nav a {
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
-.footer-link li a {
+footer .wrapper .footer-nav a span {
   display: block;
+  margin-top: calc(clamp(10px, 2vw, 15px) * 0.4);
+  color: #696969;
+}
+footer .wrapper .footer-link {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+          justify-content: center;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+}
+footer .wrapper .footer-link li a {
   position: relative;
   width: 3rem;
   height: 3rem;
-  margin: 0;
-  padding: 1rem;
+  padding: clamp(10px, 2vw, 15px);
   border-radius: 10%;
   color: #fff;
 }
-.footer-link li a .fab {
+footer .wrapper .footer-link li a .fab {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
   font-size: 2rem;
+}
+footer p {
+  margin-top: clamp(10px, 2vw, 15px);
 }
 
 /* ページトップに戻るボタン */
@@ -1604,36 +1624,6 @@ footer {
   color: #3f98ef;
   font-size: 0.9rem;
   text-align: center;
-}
-
-.footer-nav {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-          justify-content: center;
-  margin: 0;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #fff;
-  list-style: none;
-}
-.footer-nav a {
-  display: block;
-  padding: 1rem 2.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-.footer-nav a span {
-  display: block;
-  margin-top: 0.25rem;
-  color: #696969;
-}
-
-.copy {
-  margin: 0;
 }
 
 /* =============================================================

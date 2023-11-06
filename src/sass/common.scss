@@ -1318,15 +1318,6 @@ header {
   }
 }
 
-/////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ////////////////////////////////////////////////
-/// /////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-//
-
 /* POLICY =========================================== */
 .policy-text {
   & h3 {
@@ -1341,48 +1332,72 @@ header {
 
 /* FOOTER =========================================== */
 footer {
+  color: $white;
   text-align: center;
   background-color: $black;
-  color: $white;
-}
-.footer-policy {
-  margin: 0 auto;
-  background-color: $black;
+  padding-bottom: $space_30-45px;
   & a {
-    text-align: center;
-    display: block;
-    padding: 2rem;
+    font-size: calc($font_16-18px * 0.9);
     color: $white;
-    text-decoration: none;
-  }
-}
-
-/* .footer-link */
-.footer-link {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 2rem;
-  & li {
-    list-style-type: none;
-    & a {
-      display: block;
-      border-radius: 10%;
-      width: 3rem;
-      height: 3rem;
-      margin: 0;
-      padding: 1rem;
+    display: block;
+    padding: $space_20-30px;
+    transition: 400ms;
+    &:hover {
       color: $white;
-      position: relative;
-      & .fab {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        font-size: 2rem;
+      background-color: $green;
+    }
+  }
+  & .wrapper {
+    margin: 0 $space_60_90px;
+    & .footer-nav {
+      display: flex;
+      justify-content: center;
+      padding-bottom: $space_30-45px;
+      border-bottom: 1px solid $white;
+      & a {
+        padding: $space_16-18px $space_20-30px;
+        & span {
+          display: block;
+          margin-top: calc($space_10-15px * 0.4);
+          color: $gray;
+        }
+      }
+    }
+    & .footer-link {
+      display: flex;
+      justify-content: center;
+      padding: $space_30-45px;
+      & li {
+        & a {
+          color: $white;
+          border-radius: 10%;
+          width: 3rem;
+          height: 3rem;
+          padding: $space_10-15px;
+          position: relative;
+          & .fab {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 2rem;
+          }
+        }
       }
     }
   }
+  & p {
+    margin-top: $space_10-15px;
+  }
 }
+
+/////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ///////////////////////////////////////////////
+/// ////////////////////////////////////////////////
+/// /////////////////////////////////////////////////
+/// //////////////////////////////////////////////
+//
 
 /* ページトップに戻るボタン */
 .back-to-top {
@@ -1427,29 +1442,6 @@ footer {
       color: #3f98ef;
     }
   }
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid $white;
-  & a {
-    padding: 1rem 2.5rem;
-    display: block;
-    text-decoration: none;
-    color: $white;
-    & span {
-      display: block;
-      margin-top: 0.25rem;
-      color: $gray;
-    }
-  }
-}
-.copy {
-  margin: 0;
 }
 
 /* =============================================================

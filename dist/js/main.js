@@ -84,24 +84,24 @@ $(function () {
   /*
     footer-link ホバー時のエフェクト
     */
-  $(".footer-link a").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#610B0B",
-        color: "#fff",
-      },
-      duration
-    );
-  });
-  $(".footer-link a").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-        color: "#fff",
-      },
-      duration
-    );
-  });
+  // $(".footer-link a").on("mouseover", function () {
+  //   $(this).stop(true).animate(
+  //     {
+  //       backgroundColor: "#610B0B",
+  //       color: "#fff",
+  //     },
+  //     duration
+  //   );
+  // });
+  // $(".footer-link a").on("mouseout", function () {
+  //   $(this).stop(true).animate(
+  //     {
+  //       backgroundColor: "#000",
+  //       color: "#fff",
+  //     },
+  //     duration
+  //   );
+  // });
 
   /*
    * Sticky header =====================================================================
