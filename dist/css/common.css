@@ -1313,9 +1313,9 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   text-align: left;
 }
 
-.price-hosoku {
-  margin: 0 auto;
-  padding-left: -1rem;
+.price-desc {
+  margin-bottom: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.5);
+  padding-left: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   text-indent: -1rem;
 }
 

@@ -1175,10 +1175,10 @@ header {
   }
 }
 
-.price-hosoku {
-  margin: 0 auto;
-  padding-left: -1rem;
+.price-desc {
   text-indent: -1rem;
+  padding-left: $space_16-18px;
+  margin-bottom: calc($space_16-18px * 0.5);
 }
 
 .price-table2 {
