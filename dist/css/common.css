@@ -149,6 +149,27 @@ img {
   background-image: url("../../dist/images/bg4.jpeg");
 }
 
+.content {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 4) auto;
+  padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
+  background-color: #fff;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-title {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
+  text-align: center;
+}
+.content-title h2 {
+  font-size: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+}
+.content-title p {
+  margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
+}
+
 .btn-box {
   margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
   text-align: center;
@@ -1384,106 +1405,80 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 /* CONTACT ================================= */
-.contact-text p {
-  margin: 0.5rem 0;
+.content .contact-desc * {
+  margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
-
-.small-text {
-  margin-bottom: 2rem;
-  font-size: 0.8rem;
+.content .policy-btn {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  padding: clamp(10px, 2vw, 15px) clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
 }
-
-/* Table */
-.contact-table {
-  width: 100%;
-  margin-bottom: 2rem;
+.content .contact-table {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   border: 1px solid #bbb;
   border-spacing: 0;
 }
-.contact-table th,
-.contact-table td {
+.content .contact-table th,
+.content .contact-table td {
   display: table-cell;
-  padding: 1.3rem;
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
-.contact-table th {
-  width: 24%;
-  font-weight: normal;
-  vertical-align: middle;
+.content .contact-table th {
+  width: 25%;
 }
-.contact-table td {
-  width: 76%;
-}
-.contact-table tr:nth-child(odd) {
-  background: #dcdcdc;
-}
-.contact-table tr:nth-child(even) {
-  background: #fff;
-}
-
-.must {
+.content .contact-table th .must {
   color: #ff0000;
 }
-
-/* FORM */
-input[type=text],
-input[type=email],
-input[type=tel],
-textarea {
+.content .contact-table td {
+  width: 75%;
+}
+.content input[type=text],
+.content input[type=email],
+.content input[type=tel],
+.content textarea {
   width: 100%;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: clamp(10px, 2vw, 15px);
   border: 1px solid #bbb;
   background-color: #fff;
 }
-
-input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+.content input[type=text]::-webkit-input-placeholder, .content input[type=email]::-webkit-input-placeholder, .content input[type=tel]::-webkit-input-placeholder, .content textarea::-webkit-input-placeholder {
   color: #bbb;
 }
-
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, textarea::-moz-placeholder {
+.content input[type=text]::-moz-placeholder, .content input[type=email]::-moz-placeholder, .content input[type=tel]::-moz-placeholder, .content textarea::-moz-placeholder {
   color: #bbb;
 }
-
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+.content input[type=text]:-ms-input-placeholder, .content input[type=email]:-ms-input-placeholder, .content input[type=tel]:-ms-input-placeholder, .content textarea:-ms-input-placeholder {
   color: #bbb;
 }
-
-input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+.content input[type=text]::-ms-input-placeholder, .content input[type=email]::-ms-input-placeholder, .content input[type=tel]::-ms-input-placeholder, .content textarea::-ms-input-placeholder {
   color: #bbb;
 }
-
-input[type=text]::placeholder,
-input[type=email]::placeholder,
-input[type=tel]::placeholder,
-textarea::placeholder {
+.content input[type=text]::placeholder,
+.content input[type=email]::placeholder,
+.content input[type=tel]::placeholder,
+.content textarea::placeholder {
   color: #bbb;
 }
-
-textarea {
+.content textarea {
   height: 10rem;
 }
-
-#postcode1,
-#postcode2 {
+.content #postcode1,
+.content #postcode2 {
   width: 30%;
+  margin: 0 clamp(10px, 2vw, 15px);
 }
-
-.select-box {
+.content .prefecture {
   width: 50%;
-  padding: 0.5rem;
+  padding: clamp(10px, 2vw, 15px);
   text-align: center;
+  cursor: pointer;
 }
-
-.btn-send {
-  background-color: #b22222;
-  color: #fff;
-}
-
-/* チェックボックスの非表示 */
-input[type=checkbox] {
+.content input[type=checkbox] {
   display: none;
-  /* チェックボックスを変更 */
 }
-input[type=checkbox] + span::before {
+.content input[type=checkbox] + span::before {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -1495,13 +1490,17 @@ input[type=checkbox] + span::before {
   font-weight: 900;
   font-size: 1.5rem;
   line-height: 1.5;
-  /* Font Awesome */
   font-family: "Font Awesome 5 Free";
   vertical-align: middle;
 }
-
-input[type=checkbox]:checked + span::before {
+.content input[type=checkbox]:checked + span::before {
   content: "\f00c";
+}
+.content .btn-box .form-btn {
+  margin: 0 clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
+  cursor: pointer;
 }
 
 /* POLICY =========================================== */
