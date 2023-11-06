@@ -204,23 +204,25 @@ img {
 }
 
 //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
-.content {
-  max-width: 1000px;
-  padding: $space_60_90px;
-  background-color: $white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: $space_80_120px auto;
-  & .content-title {
-    text-align: center;
-    margin-bottom: $space_60_90px;
-    & h2 {
-      font-size: $space_20-30px;
-    }
-    & p {
-      margin-top: calc($space_10-15px * 0.8);
-    }
-  }
-}
+// .content {
+//   max-width: 1000px;
+//   padding: $space_60_90px;
+//   background-color: $white;
+//   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+//   margin: $space_80_120px auto;
+
+//   // ポリシーに使用中
+//   & .content-title {
+//     text-align: center;
+//     margin-bottom: $space_60_90px;
+//     & h2 {
+//       font-size: $space_20-30px;
+//     }
+//     & p {
+//       margin-top: calc($space_10-15px * 0.8);
+//     }
+//   }
+// }
 
 /* TOPページのボタン */
 .index-btn {
@@ -1091,53 +1093,69 @@ header {
 //
 
 /* PRICE =================================== */
-.price-text {
-  margin-bottom: 2rem;
-}
-
-.price-design-title {
-  font-weight: bold;
-}
-.price-design {
-  border: 1px solid $lightGray;
-  background-color: $whiteSmoke;
-  box-sizing: border-box;
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 4rem;
-  & img {
-    width: 400px;
-    height: 300px;
+.price-content {
+  max-width: 1000px;
+  padding: $space_60_90px;
+  background-color: $white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: $space_80_120px auto;
+  .price-title {
+    margin-bottom: $space_40-60px;
+    & h3 {
+      text-align: center;
+      font-size: $font_19-22px;
+      margin-bottom: $space_16-18px;
+    }
   }
-}
-.price-design-text {
-  margin-left: 3rem;
-  & ul {
-    list-style-type: none;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    & li {
-      background-color: $gray;
-      color: $white;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
+  & .price-design-title {
+    font-size: $font_18-20px;
+    font-weight: bold;
+    margin-bottom: $space_16-18px;
+  }
+  & .price-design {
+    border: 1px solid $lightGray;
+    background-color: $whiteSmoke;
+    box-sizing: border-box;
+    display: flex;
+    padding: $space_20-30px;
+    margin-bottom: $space_40-60px;
+    & img {
+      width: 35vw;
+      height: auto;
+    }
+    & .price-design-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: $space_40-60px;
+      & ul {
+        width: 70%;
+        & li {
+          font-size: $font_18-20px;
+          background-color: $gray;
+          color: $white;
+          margin: calc($space_16-18px * 0.5) 0;
+          padding: calc($space_16-18px * 0.8) $space_16-18px;
+          border-radius: 30px;
+        }
+      }
+      & .price-design-btn {
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        width: auto;
+        color: $white;
+        background-color: $black;
+        margin: 2rem 0 0 2rem;
+        text: {
+          align: center;
+          decoration: none;
+        }
+      }
     }
   }
 }
-.price-design-btn {
-  display: inline-block;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  width: auto;
-  color: $white;
-  background-color: $black;
-  margin: 2rem 0 0 2rem;
-  text: {
-    align: center;
-    decoration: none;
-  }
-}
+
 .price-hosoku {
   margin: 0 auto;
   padding-left: -1rem;
