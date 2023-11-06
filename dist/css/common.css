@@ -1288,9 +1288,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
-.price-content .price-design .price-design-box .price-btn {
-  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-}
 .price-content .price-table, .price-content .price-table2 {
   margin-bottom: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   border: 1px solid #bbb;
@@ -1312,59 +1309,36 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #f5f5f5;
   text-align: left;
 }
+.price-content .price-table2 td:first-child {
+  width: 50%;
+}
 .price-content .price-desc {
   margin-bottom: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.5);
   padding-left: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   text-indent: -1rem;
 }
-
-.price-table2 td:first-child {
-  width: 50%;
+.price-content .timeline {
+  margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
 }
-
-/* Timeline */
-.timeline-item {
+.price-content .timeline li {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-
-.timeline-title {
+.price-content .timeline h3 {
   width: 24%;
   padding: 3.5rem 4rem 2rem 0;
   font-size: 1.5rem;
   text-align: right;
 }
-
-.timeline-content {
+.price-content .timeline p {
   position: relative;
   width: 76%;
   margin: 0;
   border-left: 5px solid #bbb;
 }
-
-.timeline1 {
-  padding: 2.5rem 0 2.5rem 4rem;
-}
-
-.timeline2 {
-  padding: 1.5rem 0 1.5rem 4rem;
-}
-
-.timeline3 {
-  padding: 2rem 0 3.5rem 4rem;
-}
-
-.timeline4 {
-  padding: 2.5rem 0 1.5rem 4rem;
-}
-
-.timeline5 {
-  padding: 3.5rem 0 3.5rem 4rem;
-}
-
-.timeline-content::before {
+.price-content .timeline p::before {
   display: block;
   position: absolute;
   top: 2.5rem;
@@ -1383,25 +1357,38 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-family: "Font Awesome 5 Free";
   text-align: center;
 }
-
-.icon-file::before {
+.price-content .timeline .timeline1 {
+  padding: 2.5rem 0 2.5rem 4rem;
+}
+.price-content .timeline .timeline2 {
+  padding: 1.5rem 0 1.5rem 4rem;
+}
+.price-content .timeline .timeline3 {
+  padding: 2rem 0 3.5rem 4rem;
+}
+.price-content .timeline .timeline4 {
+  padding: 2.5rem 0 1.5rem 4rem;
+}
+.price-content .timeline .timeline5 {
+  padding: 3.5rem 0 3.5rem 4rem;
+}
+.price-content .timeline .icon-file::before {
   content: "\f044";
 }
-
-.icon-meeting::before {
+.price-content .timeline .icon-meeting::before {
   content: "\f086";
 }
-
-.icon-payment::before {
+.price-content .timeline .icon-payment::before {
   content: "\f157";
 }
-
-.icon-production::before {
+.price-content .timeline .icon-production::before {
   content: "\f1fc";
 }
-
-.icon-complete::before {
+.price-content .timeline .icon-complete::before {
   content: "\f4df";
+}
+.price-content .price-btn {
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
 /* CONTACT ================================= */
