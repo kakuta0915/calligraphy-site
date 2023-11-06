@@ -193,75 +193,78 @@ img {
 }
 
 // お問い合わせのみ使用中（いらないかも）
-.btn {
-  width: auto;
-  display: inline-block;
-  font-size: $font_24-27px;
-  padding: $space_16-18px $space_40-60px;
-  text: {
-    decoration: none;
-  }
-}
+// .btn {
+//   width: auto;
+//   display: inline-block;
+//   font-size: $font_24-27px;
+//   padding: $space_16-18px $space_40-60px;
+//   text: {
+//     decoration: none;
+//   }
+// }
 
 //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
-.content {
-  max-width: 1000px;
-  padding: $space_60_90px;
-  background-color: $white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: $space_80_120px auto;
-  & .content-title {
-    text-align: center;
-    margin-bottom: $space_60_90px;
-    & h2 {
-      font-size: $space_20-30px;
-    }
-    & p {
-      margin-top: calc($space_10-15px * 0.8);
-    }
-  }
-}
+// .content {
+//   max-width: 1000px;
+//   padding: $space_60_90px;
+//   background-color: $white;
+//   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+//   margin: $space_80_120px auto;
 
-/* TOPページのボタン */
-.index-btn {
+//   // ポリシーに使用中
+//   & .content-title {
+//     text-align: center;
+//     margin-bottom: $space_60_90px;
+//     & h2 {
+//       font-size: $space_20-30px;
+//     }
+//     & p {
+//       margin-top: calc($space_10-15px * 0.8);
+//     }
+//   }
+// }
+
+// ボタンの共通レイアウト
+.btn-box {
   text-align: center;
   margin: $space_20-30px auto;
-  & a {
-    position: relative;
-    font-size: $font_19-22px;
-    color: $gray;
-    display: inline-block;
-    padding: calc($space_16-18px * 1.5) $space_20-30px;
-    border: 1px solid $gray;
+}
+
+.btn {
+  text-align: center;
+  background-color: $white;
+  color: $gray;
+  display: inline-block;
+  position: relative;
+  border: 1px solid $gray;
+  transition: all 0.4s ease-in-out;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid $gray;
     transition: all 0.4s ease-in-out;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border: solid $gray;
-      transition: all 0.4s ease-in-out;
-    }
-    &::before {
-      top: -6px;
-      left: -6px;
-      border-width: 1px 0 0 1px;
-    }
-    &::after {
-      bottom: -6px;
-      right: -6px;
-      border-width: 0 1px 1px 0;
-    }
-    &:hover {
-      color: $white;
-      background-color: $red3;
-      &:hover::before,
-      &:hover::after {
-        width: calc(100% + 11px);
-        height: calc(100% + 11px);
-        border-color: $red3;
-      }
+  }
+  &::before {
+    top: -6px;
+    left: -6px;
+    border-width: 1px 0 0 1px;
+  }
+  &::after {
+    bottom: -6px;
+    right: -6px;
+    border-width: 0 1px 1px 0;
+  }
+  &:hover {
+    color: $white;
+    background-color: $red3;
+    &:hover::before,
+    &:hover::after {
+      width: calc(100% + 11px);
+      height: calc(100% + 11px);
+      border-color: $red3;
     }
   }
 }
@@ -714,6 +717,12 @@ header {
   background-color: $blue;
 }
 
+// TOPページのボタン
+.index-btn {
+  font-size: $font_19-22px;
+  padding: calc($space_16-18px * 1.5) $space_20-30px;
+}
+
 /* TOP NEWS  =========================================== */
 .index-news-content {
   margin: $space_40-60px;
@@ -1081,6 +1090,149 @@ header {
   }
 }
 
+/* PRICE =================================== */
+.price-content {
+  max-width: 1000px;
+  padding: $space_60_90px;
+  background-color: $white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: $space_80_120px auto;
+  .price-title {
+    margin-bottom: $space_40-60px;
+    & h3 {
+      text-align: center;
+      font-size: $font_19-22px;
+      margin-bottom: $space_16-18px;
+    }
+  }
+  & .price-design-title {
+    font-size: $font_18-20px;
+    font-weight: bold;
+    margin-bottom: $space_16-18px;
+  }
+  & .price-design {
+    border: 1px solid $lightGray;
+    background-color: $whiteSmoke;
+    box-sizing: border-box;
+    display: flex;
+    padding: $space_20-30px;
+    margin-bottom: $space_40-60px;
+    & img {
+      width: 35vw;
+      height: auto;
+    }
+    & .price-design-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: $space_40-60px;
+      & ul {
+        width: 70%;
+        margin-bottom: $space_20-30px;
+        & li {
+          font-size: $font_18-20px;
+          background-color: $gray;
+          color: $white;
+          margin: calc($space_16-18px * 0.5) 0;
+          padding: calc($space_16-18px * 0.8) $space_16-18px;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+  & .price-table {
+    font-size: $font_16-18px;
+    margin-bottom: $space_20-30px;
+    border-collapse: collapse;
+    border: 1px solid $lightGray;
+    & th {
+      background-color: $whiteSmoke;
+    }
+    & th,
+    td {
+      width: 35vw;
+      text-align: center;
+      padding: $space_16-18px $space_20-30px;
+      border: 1px solid $lightGray;
+    }
+    & td:first-child {
+      text-align: left;
+      background-color: $whiteSmoke;
+    }
+  }
+  & .price-table2 {
+    @extend .price-table;
+    & td:first-child {
+      width: 50%;
+    }
+  }
+  & .price-desc {
+    text-indent: -1rem;
+    padding-left: $space_16-18px;
+    margin-bottom: calc($space_16-18px * 0.5);
+  }
+  & .timeline {
+    margin-bottom: $space_60_90px;
+    & li {
+      display: flex;
+      align-items: center;
+    }
+    & h3 {
+      width: 25%;
+      font-size: $font_19-22px;
+      padding-right: $space_60_90px;
+      text-align: right;
+    }
+    & p {
+      width: 75%;
+      padding: $space_30-45px 0 $space_30-45px $space_40-60px;
+      border-left: 5px solid $lightGray;
+      position: relative;
+      &::before {
+        display: block;
+        background-color: $whiteSmoke;
+        color: $black;
+        text-align: center;
+        padding: 0.5rem 0.5rem 0;
+        border-radius: 10px;
+        position: absolute;
+        top: 3rem;
+        left: -2.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        content: "";
+        /* Font Awesome */
+        font: {
+          family: "Font Awesome 5 Free";
+          size: $font_24-27px;
+          weight: 900;
+        }
+      }
+    }
+    & .icon-file::before {
+      content: "\f044";
+    }
+    & .icon-meeting::before {
+      content: "\f086";
+    }
+    & .icon-payment::before {
+      content: "\f157";
+    }
+    & .icon-production::before {
+      content: "\f1fc";
+    }
+    & .icon-complete {
+      padding-bottom: $space_60_90px;
+      &::before {
+        content: "\f4df";
+      }
+    }
+  }
+  & .price-btn {
+    padding: $space_16-18px $space_20-30px;
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -1089,160 +1241,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* PRICE =================================== */
-.price-text {
-  margin-bottom: 2rem;
-}
-
-.price-design-title {
-  font-weight: bold;
-}
-.price-design {
-  border: 1px solid $lightGray;
-  background-color: $whiteSmoke;
-  box-sizing: border-box;
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 4rem;
-  & img {
-    width: 400px;
-    height: 300px;
-  }
-}
-.price-design-text {
-  margin-left: 3rem;
-  & ul {
-    list-style-type: none;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    & li {
-      background-color: $gray;
-      color: $white;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
-    }
-  }
-}
-.price-design-btn {
-  display: inline-block;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  width: auto;
-  color: $white;
-  background-color: $black;
-  margin: 2rem 0 0 2rem;
-  text: {
-    align: center;
-    decoration: none;
-  }
-}
-.price-hosoku {
-  margin: 0 auto;
-  padding-left: -1rem;
-  text-indent: -1rem;
-}
-.price-table {
-  width: 100%;
-  margin-bottom: 1rem;
-  border-collapse: collapse;
-  border: 1px solid $lightGray;
-  & th {
-    background-color: $whiteSmoke;
-  }
-  & th,
-  td {
-    width: 35vw;
-    padding: 1rem 2rem;
-    text-align: center;
-    border: 1px solid $lightGray;
-  }
-  & td:first-child {
-    text-align: left;
-    background-color: $whiteSmoke;
-  }
-}
-.price-table2 {
-  @extend .price-table;
-  & td:first-child {
-    width: 50%;
-  }
-}
-
-/* Timeline */
-.timeline-item {
-  display: flex;
-}
-.timeline-title {
-  font-size: 1.5rem;
-  width: 24%;
-  padding: 3.5rem 4rem 2rem 0;
-  text-align: right;
-}
-.timeline-content {
-  margin: 0;
-  width: 76%;
-  //padding: 1.5rem 0 1.5rem 4rem;
-  position: relative;
-  border-left: 5px solid $lightGray;
-}
-.timeline1 {
-  padding: 2.5rem 0 2.5rem 4rem;
-}
-.timeline2 {
-  padding: 1.5rem 0 1.5rem 4rem;
-}
-.timeline3 {
-  padding: 2rem 0 3.5rem 4rem;
-}
-.timeline4 {
-  padding: 2.5rem 0 1.5rem 4rem;
-}
-.timeline5 {
-  padding: 3.5rem 0 3.5rem 4rem;
-}
-.timeline-content::before {
-  display: block;
-  position: absolute;
-  top: 2.5rem;
-  left: -2.5rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  content: "";
-  background-color: $whiteSmoke;
-  text-align: center;
-  /* Font Awesome */
-  font: {
-    family: "Font Awesome 5 Free";
-    size: 1.7rem;
-    weight: 900;
-  }
-  line-height: 1.5;
-  color: $black;
-  padding: 0.8rem 0.5rem 0 0.5rem;
-  border-radius: 10px;
-}
-.icon-file::before {
-  content: "\f044";
-}
-.icon-meeting::before {
-  content: "\f086";
-}
-.icon-payment::before {
-  content: "\f157";
-}
-.icon-production::before {
-  content: "\f1fc";
-}
-.icon-complete::before {
-  content: "\f4df";
-}
-.price-btn {
-  background-color: $red2;
-  color: $white;
-  margin-top: 3rem;
-}
 
 /* CONTACT ================================= */
 .contact-text p {
