@@ -1185,55 +1185,39 @@ header {
     margin-bottom: $space_60_90px;
     & li {
       display: flex;
+      align-items: center;
     }
     & h3 {
-      font-size: 1.5rem;
-      width: 24%;
-      padding: 3.5rem 4rem 2rem 0;
+      width: 25%;
+      font-size: $font_19-22px;
+      padding-right: $space_60_90px;
       text-align: right;
     }
     & p {
-      margin: 0;
-      width: 76%;
-      //padding: 1.5rem 0 1.5rem 4rem;
-      position: relative;
+      width: 75%;
+      padding: $space_30-45px 0 $space_30-45px $space_40-60px;
       border-left: 5px solid $lightGray;
+      position: relative;
       &::before {
         display: block;
+        background-color: $whiteSmoke;
+        color: $black;
+        text-align: center;
+        padding: 0.5rem 0.5rem 0;
+        border-radius: 10px;
         position: absolute;
-        top: 2.5rem;
+        top: 3rem;
         left: -2.5rem;
         width: 3.5rem;
         height: 3.5rem;
         content: "";
-        background-color: $whiteSmoke;
-        text-align: center;
         /* Font Awesome */
         font: {
           family: "Font Awesome 5 Free";
-          size: 1.7rem;
+          size: $font_24-27px;
           weight: 900;
         }
-        line-height: 1.5;
-        color: $black;
-        padding: 0.8rem 0.5rem 0 0.5rem;
-        border-radius: 10px;
       }
-    }
-    & .timeline1 {
-      padding: 2.5rem 0 2.5rem 4rem;
-    }
-    & .timeline2 {
-      padding: 1.5rem 0 1.5rem 4rem;
-    }
-    & .timeline3 {
-      padding: 2rem 0 3.5rem 4rem;
-    }
-    & .timeline4 {
-      padding: 2.5rem 0 1.5rem 4rem;
-    }
-    & .timeline5 {
-      padding: 3.5rem 0 3.5rem 4rem;
     }
     & .icon-file::before {
       content: "\f044";
@@ -1247,12 +1231,15 @@ header {
     & .icon-production::before {
       content: "\f1fc";
     }
-    & .icon-complete::before {
-      content: "\f4df";
+    & .icon-complete {
+      padding-bottom: $space_60_90px;
+      &::before {
+        content: "\f4df";
+      }
     }
   }
   & .price-btn {
-    padding: $space_16-18px;
+    padding: $space_16-18px $space_20-30px;
   }
 }
 
