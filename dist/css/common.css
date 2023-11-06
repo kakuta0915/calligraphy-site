@@ -150,30 +150,15 @@ img {
 }
 
 .btn {
-  display: inline-block;
-  width: auto;
-  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
-  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
-  text-decoration: none;
-}
-
-/* TOPページのボタン */
-.index-btn {
-  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
-  text-align: center;
-}
-.index-btn a {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   display: inline-block;
   position: relative;
-  padding: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   border: 1px solid #696969;
   color: #696969;
-  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
   transition: all 0.4s ease-in-out;
 }
-.index-btn a::before, .index-btn a::after {
+.btn::before, .btn::after {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   position: absolute;
@@ -183,21 +168,21 @@ img {
   content: "";
   transition: all 0.4s ease-in-out;
 }
-.index-btn a::before {
+.btn::before {
   top: -6px;
   left: -6px;
   border-width: 1px 0 0 1px;
 }
-.index-btn a::after {
+.btn::after {
   right: -6px;
   bottom: -6px;
   border-width: 0 1px 1px 0;
 }
-.index-btn a:hover {
+.btn:hover {
   background-color: #610b0b;
   color: #fff;
 }
-.index-btn a:hover:hover::before, .index-btn a:hover:hover::after {
+.btn:hover:hover::before, .btn:hover:hover::after {
   width: calc(100% + 11px);
   height: calc(100% + 11px);
   border-color: #610b0b;
@@ -718,6 +703,15 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   top: -12rem;
   left: 8rem;
   background-color: #0b0b61;
+}
+
+.index-btn-box {
+  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
+  text-align: center;
+}
+.index-btn-box .index-btn {
+  padding: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
 
 /* TOP NEWS  =========================================== */
@@ -1291,17 +1285,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   color: #fff;
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
-.price-content .price-design .price-design-box .price-design-btn {
-  display: inline-block;
-  width: auto;
-  margin: 2rem 0 0 2rem;
-  padding: 1rem 2rem;
-  background-color: #000;
-  color: #fff;
-  font-size: 1.2rem;
-  text-align: center;
-  text-decoration: none;
-}
 
 .price-hosoku {
   margin: 0 auto;
@@ -1415,12 +1398,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 
 .icon-complete::before {
   content: "\f4df";
-}
-
-.price-btn {
-  margin-top: 3rem;
-  background-color: #b22222;
-  color: #fff;
 }
 
 /* CONTACT ================================= */

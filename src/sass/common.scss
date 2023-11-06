@@ -193,15 +193,15 @@ img {
 }
 
 // お問い合わせのみ使用中（いらないかも）
-.btn {
-  width: auto;
-  display: inline-block;
-  font-size: $font_24-27px;
-  padding: $space_16-18px $space_40-60px;
-  text: {
-    decoration: none;
-  }
-}
+// .btn {
+//   width: auto;
+//   display: inline-block;
+//   font-size: $font_24-27px;
+//   padding: $space_16-18px $space_40-60px;
+//   text: {
+//     decoration: none;
+//   }
+// }
 
 //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
 // .content {
@@ -224,46 +224,40 @@ img {
 //   }
 // }
 
-/* TOPページのボタン */
-.index-btn {
-  text-align: center;
-  margin: $space_20-30px auto;
-  & a {
-    position: relative;
-    font-size: $font_19-22px;
-    color: $gray;
-    display: inline-block;
-    padding: calc($space_16-18px * 1.5) $space_20-30px;
-    border: 1px solid $gray;
+// ボタンの共通レイアウト
+.btn {
+  position: relative;
+  color: $gray;
+  display: inline-block;
+  border: 1px solid $gray;
+  transition: all 0.4s ease-in-out;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid $gray;
     transition: all 0.4s ease-in-out;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border: solid $gray;
-      transition: all 0.4s ease-in-out;
-    }
-    &::before {
-      top: -6px;
-      left: -6px;
-      border-width: 1px 0 0 1px;
-    }
-    &::after {
-      bottom: -6px;
-      right: -6px;
-      border-width: 0 1px 1px 0;
-    }
-    &:hover {
-      color: $white;
-      background-color: $red3;
-      &:hover::before,
-      &:hover::after {
-        width: calc(100% + 11px);
-        height: calc(100% + 11px);
-        border-color: $red3;
-      }
+  }
+  &::before {
+    top: -6px;
+    left: -6px;
+    border-width: 1px 0 0 1px;
+  }
+  &::after {
+    bottom: -6px;
+    right: -6px;
+    border-width: 0 1px 1px 0;
+  }
+  &:hover {
+    color: $white;
+    background-color: $red3;
+    &:hover::before,
+    &:hover::after {
+      width: calc(100% + 11px);
+      height: calc(100% + 11px);
+      border-color: $red3;
     }
   }
 }
@@ -716,6 +710,18 @@ header {
   background-color: $blue;
 }
 
+// TOPページのボタン
+.index-btn-box {
+  text-align: center;
+  margin: $space_20-30px auto;
+  & {
+    .index-btn {
+      font-size: $font_19-22px;
+      padding: calc($space_16-18px * 1.5) $space_20-30px;
+    }
+  }
+}
+
 /* TOP NEWS  =========================================== */
 .index-news-content {
   margin: $space_40-60px;
@@ -1139,19 +1145,6 @@ header {
           border-radius: 30px;
         }
       }
-      & .price-design-btn {
-        display: inline-block;
-        font-size: 1.2rem;
-        padding: 1rem 2rem;
-        width: auto;
-        color: $white;
-        background-color: $black;
-        margin: 2rem 0 0 2rem;
-        text: {
-          align: center;
-          decoration: none;
-        }
-      }
     }
   }
 }
@@ -1255,11 +1248,6 @@ header {
 }
 .icon-complete::before {
   content: "\f4df";
-}
-.price-btn {
-  background-color: $red2;
-  color: $white;
-  margin-top: 3rem;
 }
 
 /* CONTACT ================================= */
