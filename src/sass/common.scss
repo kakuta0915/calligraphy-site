@@ -225,6 +225,11 @@ img {
 // }
 
 // ボタンの共通レイアウト
+.btn-box {
+  text-align: center;
+  margin: $space_20-30px auto;
+}
+
 .btn {
   text-align: center;
   background-color: $white;
@@ -713,15 +718,9 @@ header {
 }
 
 // TOPページのボタン
-.index-btn-box {
-  text-align: center;
-  margin: $space_20-30px auto;
-  & {
-    .index-btn {
-      font-size: $font_19-22px;
-      padding: calc($space_16-18px * 1.5) $space_20-30px;
-    }
-  }
+.index-btn {
+  font-size: $font_19-22px;
+  padding: calc($space_16-18px * 1.5) $space_20-30px;
 }
 
 /* TOP NEWS  =========================================== */

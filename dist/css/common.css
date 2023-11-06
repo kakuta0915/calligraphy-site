@@ -149,6 +149,11 @@ img {
   background-image: url("../../dist/images/bg4.jpeg");
 }
 
+.btn-box {
+  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
+  text-align: center;
+}
+
 .btn {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -707,11 +712,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #0b0b61;
 }
 
-.index-btn-box {
-  margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto;
-  text-align: center;
-}
-.index-btn-box .index-btn {
+.index-btn {
   padding: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
