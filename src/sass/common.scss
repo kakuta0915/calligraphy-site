@@ -1153,6 +1153,26 @@ header {
       }
     }
   }
+  & .price-table {
+    font-size: $font_16-18px;
+    margin-bottom: $space_20-30px;
+    border-collapse: collapse;
+    border: 1px solid $lightGray;
+    & th {
+      background-color: $whiteSmoke;
+    }
+    & th,
+    td {
+      width: 35vw;
+      text-align: center;
+      padding: $space_16-18px $space_20-30px;
+      border: 1px solid $lightGray;
+    }
+    & td:first-child {
+      text-align: left;
+      background-color: $whiteSmoke;
+    }
+  }
 }
 
 .price-hosoku {
@@ -1160,26 +1180,7 @@ header {
   padding-left: -1rem;
   text-indent: -1rem;
 }
-.price-table {
-  width: 100%;
-  margin-bottom: 1rem;
-  border-collapse: collapse;
-  border: 1px solid $lightGray;
-  & th {
-    background-color: $whiteSmoke;
-  }
-  & th,
-  td {
-    width: 35vw;
-    padding: 1rem 2rem;
-    text-align: center;
-    border: 1px solid $lightGray;
-  }
-  & td:first-child {
-    text-align: left;
-    background-color: $whiteSmoke;
-  }
-}
+
 .price-table2 {
   @extend .price-table;
   & td:first-child {

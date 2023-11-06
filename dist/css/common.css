@@ -1291,33 +1291,32 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 .price-content .price-design .price-design-box .price-btn {
   padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
+.price-content .price-table, .price-content .price-table2 {
+  margin-bottom: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  border: 1px solid #bbb;
+  border-collapse: collapse;
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
+.price-content .price-table th, .price-content .price-table2 th {
+  background-color: #f5f5f5;
+}
+.price-content .price-table th, .price-content .price-table2 th,
+.price-content .price-table td,
+.price-content .price-table2 td {
+  width: 35vw;
+  padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  border: 1px solid #bbb;
+  text-align: center;
+}
+.price-content .price-table td:first-child, .price-content .price-table2 td:first-child {
+  background-color: #f5f5f5;
+  text-align: left;
+}
 
 .price-hosoku {
   margin: 0 auto;
   padding-left: -1rem;
   text-indent: -1rem;
-}
-
-.price-table, .price-table2 {
-  width: 100%;
-  margin-bottom: 1rem;
-  border: 1px solid #bbb;
-  border-collapse: collapse;
-}
-.price-table th, .price-table2 th {
-  background-color: #f5f5f5;
-}
-.price-table th, .price-table2 th,
-.price-table td,
-.price-table2 td {
-  width: 35vw;
-  padding: 1rem 2rem;
-  border: 1px solid #bbb;
-  text-align: center;
-}
-.price-table td:first-child, .price-table2 td:first-child {
-  background-color: #f5f5f5;
-  text-align: left;
 }
 
 .price-table2 td:first-child {
