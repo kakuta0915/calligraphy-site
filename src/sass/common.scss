@@ -226,9 +226,11 @@ img {
 
 // ボタンの共通レイアウト
 .btn {
-  position: relative;
+  text-align: center;
+  background-color: $white;
   color: $gray;
   display: inline-block;
+  position: relative;
   border: 1px solid $gray;
   transition: all 0.4s ease-in-out;
   &::before,
@@ -1136,6 +1138,7 @@ header {
       margin-left: $space_40-60px;
       & ul {
         width: 70%;
+        margin-bottom: $space_20-30px;
         & li {
           font-size: $font_18-20px;
           background-color: $gray;
@@ -1144,6 +1147,9 @@ header {
           padding: calc($space_16-18px * 0.8) $space_16-18px;
           border-radius: 30px;
         }
+      }
+      & .price-btn {
+        padding: $space_16-18px;
       }
     }
   }
