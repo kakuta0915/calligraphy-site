@@ -192,37 +192,27 @@ img {
   }
 }
 
-// お問い合わせのみ使用中（いらないかも）
-// .btn {
-//   width: auto;
-//   display: inline-block;
-//   font-size: $font_24-27px;
-//   padding: $space_16-18px $space_40-60px;
-//   text: {
-//     decoration: none;
-//   }
-// }
-
 //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
-// .content {
-//   max-width: 1000px;
-//   padding: $space_60_90px;
-//   background-color: $white;
-//   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-//   margin: $space_80_120px auto;
+.content {
+  max-width: 1000px;
+  padding: $space_60_90px;
+  background-color: $white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: $space_80_120px auto;
+}
 
-//   // ポリシーに使用中
-//   & .content-title {
-//     text-align: center;
-//     margin-bottom: $space_60_90px;
-//     & h2 {
-//       font-size: $space_20-30px;
-//     }
-//     & p {
-//       margin-top: calc($space_10-15px * 0.8);
-//     }
-//   }
-// }
+// お問合せページ・ポリシーページのタイトル
+.content-title {
+  text-align: center;
+  margin-bottom: $space_60_90px;
+  & h2 {
+    font-size: $space_20-30px;
+  }
+  & p {
+    font-size: $font_18-20px;
+    margin-top: calc($space_10-15px * 0.8);
+  }
+}
 
 // ボタンの共通レイアウト
 .btn-box {
@@ -1233,6 +1223,101 @@ header {
   }
 }
 
+/* CONTACT ================================= */
+.content {
+  .contact-desc * {
+    font-size: $font_16-18px;
+    margin-bottom: $space_16-18px;
+  }
+  & .policy-btn {
+    font-size: $font_11-13px;
+    padding: $space_10-15px $space_16-18px;
+    margin-bottom: $space_30-45px;
+  }
+  & .contact-table {
+    border-spacing: 0;
+    border: 1px solid $lightGray;
+    margin-bottom: $space_40-60px;
+    padding: $space_20-30px;
+    & th,
+    td {
+      display: table-cell;
+      padding: $space_16-18px;
+    }
+    & th {
+      width: 25%;
+      & .must {
+        color: $red;
+      }
+    }
+    & td {
+      width: 75%;
+    }
+  }
+  & input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    border: 1px solid $lightGray;
+    background-color: $white;
+    padding: $space_10-15px;
+  }
+  & input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="tel"]::placeholder,
+  textarea::placeholder {
+    color: $lightGray;
+  }
+  & textarea {
+    height: 10rem;
+  }
+  & #postcode1,
+  #postcode2 {
+    width: 30%;
+    margin: 0 $space_10-15px;
+  }
+  & .prefecture {
+    width: 50%;
+    text-align: center;
+    padding: $space_10-15px;
+    cursor: pointer;
+  }
+  // チェックボックスの非表示
+  & input[type="checkbox"] {
+    display: none;
+    // チェックボックスを変更
+    & + span::before {
+      display: inline-block;
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid $lightGray;
+      background-color: $white;
+      vertical-align: middle;
+      margin: -0.25rem 0.5rem 0 1.85rem;
+      padding: 0 0 0.25rem 0.5rem;
+      line-height: 1.5;
+      font: {
+        family: "Font Awesome 5 Free";
+        size: 1.5rem;
+        weight: 900;
+      }
+    }
+  }
+  & input[type="checkbox"]:checked + span::before {
+    content: "\f00c";
+  }
+  & .btn-box {
+    & .form-btn {
+      font-size: $font_18-20px;
+      padding: $space_16-18px $space_20-30px;
+      margin: 0 $space_20-30px;
+      cursor: pointer;
+    }
+  }
+}
+
 /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 /// ///////////////////////////////////////////////
@@ -1241,106 +1326,6 @@ header {
 /// /////////////////////////////////////////////////
 /// //////////////////////////////////////////////
 //
-
-/* CONTACT ================================= */
-.contact-text p {
-  margin: 0.5rem 0;
-}
-.small-text {
-  font-size: 0.8rem;
-  margin-bottom: 2rem;
-}
-
-/* Table */
-.contact-table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid $lightGray;
-  margin-bottom: 2rem;
-  & th,
-  td {
-    display: table-cell;
-    padding: 1.3rem;
-  }
-  & th {
-    font-weight: normal;
-    width: 24%;
-    vertical-align: middle;
-  }
-  & td {
-    width: 76%;
-  }
-  & tr:nth-child(odd) {
-    background: $smoke;
-  }
-  & tr:nth-child(even) {
-    background: $white;
-  }
-}
-.must {
-  color: $red;
-}
-
-/* FORM */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  border: 1px solid $lightGray;
-  background-color: $white;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="tel"]::placeholder,
-textarea::placeholder {
-  color: $lightGray;
-}
-textarea {
-  height: 10rem;
-}
-#postcode1,
-#postcode2 {
-  width: 30%;
-}
-.select-box {
-  width: 50%;
-  text-align: center;
-  padding: 0.5rem;
-}
-.btn-send {
-  color: $white;
-  background-color: $red2;
-}
-
-/* チェックボックスの非表示 */
-input[type="checkbox"] {
-  display: none;
-
-  /* チェックボックスを変更 */
-  & + span::before {
-    display: inline-block;
-    content: "";
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid $lightGray;
-    background-color: $white;
-    vertical-align: middle;
-    margin: -0.25rem 0.5rem 0 1.85rem;
-    padding: 0 0 0.25rem 0.5rem;
-    /* Font Awesome */
-    font: {
-      family: "Font Awesome 5 Free";
-      size: 1.5rem;
-      weight: 900;
-    }
-    line-height: 1.5;
-  }
-}
-input[type="checkbox"]:checked + span::before {
-  content: "\f00c";
-}
 
 /* POLICY =========================================== */
 .policy-text {
