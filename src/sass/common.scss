@@ -1173,12 +1173,11 @@ header {
       background-color: $whiteSmoke;
     }
   }
-}
-
-.price-desc {
-  text-indent: -1rem;
-  padding-left: $space_16-18px;
-  margin-bottom: calc($space_16-18px * 0.5);
+  & .price-desc {
+    text-indent: -1rem;
+    padding-left: $space_16-18px;
+    margin-bottom: calc($space_16-18px * 0.5);
+  }
 }
 
 .price-table2 {
