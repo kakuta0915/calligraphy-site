@@ -1329,15 +1329,13 @@ header {
 
 /* POLICY =========================================== */
 .policy-text {
-  & p {
-    margin: 0.5rem 0 3rem;
-  }
   & h3 {
     font: {
-      size: 1.25rem;
-      weight: 900;
+      size: $font_18-20px;
     }
-    margin: 0;
+  }
+  & p {
+    margin: $space_10-15px 0 $space_40-60px;
   }
 }
 

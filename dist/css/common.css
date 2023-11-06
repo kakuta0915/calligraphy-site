@@ -1504,13 +1504,11 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 /* POLICY =========================================== */
-.policy-text p {
-  margin: 0.5rem 0 3rem;
-}
 .policy-text h3 {
-  margin: 0;
-  font-weight: 900;
-  font-size: 1.25rem;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
+}
+.policy-text p {
+  margin: clamp(10px, 2vw, 15px) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
 
 /* FOOTER =========================================== */
