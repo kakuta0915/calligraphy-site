@@ -1586,27 +1586,26 @@ footer p {
 /* ページトップに戻るボタン */
 .back-to-top {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 .back-to-top a {
   display: block;
   position: relative;
   width: 80px;
   height: 80px;
-  text-decoration: none;
 }
 .back-to-top a::before {
   position: absolute;
-  top: -60px;
+  top: -50px;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin: auto;
   content: "\f102";
-  color: #3f98ef;
+  color: #b22222;
   font-weight: 900;
   font-size: 3rem;
   font-family: "Font Awesome 5 Free";
@@ -1620,9 +1619,8 @@ footer p {
   left: 0;
   margin: auto;
   content: "PAGE TOP";
-  color: #fff;
-  color: #3f98ef;
-  font-size: 0.9rem;
+  color: #b22222;
+  font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
   text-align: center;
 }
 
