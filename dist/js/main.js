@@ -1,15 +1,10 @@
 $(function () {
-  /*
-   * リロード時、ページトップに移動する
-   */
+  /* リロード時、ページトップに移動する */
   $(function () {
     $("html,body").animate({ scrollTop: 0 }, "1");
   });
 
-  /*
-   * トップページ読み込み時のアニメーション ====================================================
-   */
-
+  /* トップページ読み込み時のアニメーション =============================== */
   $(".line").animate({ width: "100%" }, 1500, function () {
     $(".line").css("right", 0);
     $(".line").animate({ width: "0%" }, 500, function () {
@@ -23,10 +18,7 @@ $(function () {
     });
   });
 
-  /*
-   * スクロールダウンボタン ==================================================================
-   */
-
+  /* スクロールダウンボタン ======================================= */
   $(function () {
     $(".index-top-btn").click(function () {
       $("html, body").animate(
@@ -37,9 +29,7 @@ $(function () {
     });
   });
 
-  /*
-   * Gallery ===============================================================================
-   */
+  /* ギャラリーに画像表示する機能 ==================================== */
   $("#gallery").each(function () {
     var $container = $(this);
 
@@ -81,32 +71,7 @@ $(function () {
     });
   });
 
-  /*
-    footer-link ホバー時のエフェクト
-    */
-  // $(".footer-link a").on("mouseover", function () {
-  //   $(this).stop(true).animate(
-  //     {
-  //       backgroundColor: "#610B0B",
-  //       color: "#fff",
-  //     },
-  //     duration
-  //   );
-  // });
-  // $(".footer-link a").on("mouseout", function () {
-  //   $(this).stop(true).animate(
-  //     {
-  //       backgroundColor: "#000",
-  //       color: "#fff",
-  //     },
-  //     duration
-  //   );
-  // });
-
-  /*
-   * Sticky header =====================================================================
-   */
-
+  /* HEADER CLONE ===================================== */
   $("header").each(function () {
     var $window = $(window),
       $header = $(this),
@@ -151,9 +116,7 @@ $(function () {
     );
   });
 
-  /*
-   * スクロール時のフェード機能 ===============================================================
-   */
+  /* スクロール時のフェード機能 ===================================== */
   $(window).scroll(function () {
     $(".scroll-fadeUp").each(function () {
       var elementOffsetTop = $(this).offset().top,
