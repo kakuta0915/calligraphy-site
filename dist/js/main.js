@@ -94,28 +94,6 @@ $(function () {
     );
   });
 
-  /*
-   * hoverしたときの設定
-   */
-  $(".header-clone a").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#610B0B",
-        color: "#fff",
-      },
-      duration
-    );
-  });
-  $(".page-header-clone a").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-        color: "#fff",
-      },
-      duration
-    );
-  });
-
   /* スクロール時のフェード機能 ===================================== */
   $(window).scroll(function () {
     $(".scroll-fadeUp").each(function () {
@@ -162,39 +140,7 @@ $(function () {
     });
   });
 
-  /*
-   * トップページの画像をホバーした時のエフェクト変更 =========================================
-   */
-  $(".grid-gallery").on("mouseover", function () {
-    $(this).find(".opacity").stop(true).animate({ opacity: 1 }, 300);
-  });
-  $(".grid-gallery").on("mouseout", function () {
-    $(this).find(".opacity").stop(true).animate({ opacity: 0 }, 300);
-  });
-
-  /*
-   * policy マウスホバー時のエフェクト ======================================================
-   */
-  $("#policy").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#0B3B0B",
-      },
-      duration
-    );
-  });
-  $("#policy").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-      },
-      duration
-    );
-  });
-
-  /*
-   *  トップに戻る機能 ===================================================================
-   */
+  /* ページトップに戻る機能 ======================================= */
   $(document).ready(function () {
     var pageTop = $(".back-to-top");
     pageTop.hide();
@@ -209,60 +155,36 @@ $(function () {
   $(".back-to-top").on("click", function () {
     // Smooth Scroll プラグインを実行
     $.smoothScroll({
-      easing: "swing", // イージングの種類
-      speed: 1000, // 所要時間
+      easing: "swing",
+      speed: 1000,
     });
   });
 
-  /* ホバー時のエフェクト */
-  $(".back-to-top").on("mouseover", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#0B3B0B",
-      },
-      duration
-    );
-  });
-  $(".back-to-top").on("mouseout", function () {
-    $(this).stop(true).animate(
-      {
-        backgroundColor: "#000",
-      },
-      duration
-    );
-  });
+  //   /*===============================================================================================
+  //     * タブレット版 メニュー表示機能 ======================================================================
+  //     =============================================================================================== */
+  //   if (window.matchMedia("(max-width: 960px)").matches) {
+  //     /* メニューボタン機能 */
+  //     $(".open-btn").on("click", function () {
+  //       $(this).toggleClass("active");
+  //       $(".page-header-content").toggleClass("open-menu");
+  //     });
 
-  /*===============================================================================================
-    * タブレット版 メニュー表示機能 ======================================================================
-    =============================================================================================== */
-  if (window.matchMedia("(max-width: 960px)").matches) {
-    /* メニューボタン機能 */
-    $(".open-btn").on("click", function () {
-      $(this).toggleClass("active");
-      $(".page-header-content").toggleClass("open-menu");
-    });
+  //     /* Sticky Header */
+  //     $(".page-header").each(function () {
+  //       var $window = $(window),
+  //         $header = $(this),
+  //         headerOffsetTop = $header.offset().top;
 
-    /* Sticky Header */
-    $(".page-header").each(function () {
-      var $window = $(window),
-        $header = $(this),
-        headerOffsetTop = $header.offset().top;
-
-      $window.on("scroll", function () {
-        if ($window.scrollTop() > headerOffsetTop) {
-          $header.addClass("sticky");
-        } else {
-          $header.removeClass("sticky");
-        }
-        console.log("1");
-      });
-      $window.trigger("scroll");
-    });
-  }
-
-  /* =============================================================================================
-    * モバイル版 メニュー表示機能 ======================================================================
-    =============================================================================================== */
-  if (window.matchMedia("(max-width: 520px)").matches) {
-  }
+  //       $window.on("scroll", function () {
+  //         if ($window.scrollTop() > headerOffsetTop) {
+  //           $header.addClass("sticky");
+  //         } else {
+  //           $header.removeClass("sticky");
+  //         }
+  //         console.log("1");
+  //       });
+  //       $window.trigger("scroll");
+  //     });
+  //   }
 });
