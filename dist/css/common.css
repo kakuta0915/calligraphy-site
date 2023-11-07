@@ -2,7 +2,6 @@
 /* カラー変数宣言 ============================================= */
 /* スペース (余白・間隔) ======================================== */
 /* フォントサイズ ============================================= */
-/* フォント共通 */
 /* 各ページ共通のレイアウト ======================================== */
 * {
   margin: 0;
@@ -157,15 +156,14 @@ img {
   background-color: #fff;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
-
-.content-title {
+.content .content-title {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
   text-align: center;
 }
-.content-title h2 {
+.content .content-title h2 {
   font-size: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
-.content-title p {
+.content .content-title p {
   margin-top: calc(clamp(10px, 2vw, 15px) * 0.8);
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
@@ -738,7 +736,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
 
-/* TOP NEWS  =========================================== */
+/* TOPページ NEWS  ======================================== */
 .index-news-content {
   margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
@@ -804,7 +802,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           transform: scale(1.1);
 }
 
-/* TOP Profile, Profile ================================ */
+/* TOPページ Profile, Profile ============================= */
 .profile-content {
   margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
@@ -823,16 +821,13 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           justify-content: space-around;
 }
 .profile-content img {
-  -o-object-fit: cover;
   width: 35vw;
-     object-fit: cover;
 }
 .profile-content p {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
-
-.profile {
+.profile-content .profile {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -840,28 +835,27 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           flex-direction: row-reverse;
   margin-top: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
-.profile .profile-text {
+.profile-content .profile .profile-text {
   width: 35vw;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: rgba(255, 255, 255, 0.4);
 }
-.profile .profile-text span {
+.profile-content .profile .profile-text span {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
 }
-.profile .profile-text h2 {
+.profile-content .profile .profile-text h2 {
   margin: calc(clamp(10px, 2vw, 15px) * 0.5) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.6);
 }
-
-.message {
+.profile-content .message {
   margin-top: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3);
 }
-.message .message-text {
+.profile-content .message .message-text {
   width: 35vw;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: rgba(255, 255, 255, 0.4);
 }
-.message .message-text .message-title {
+.profile-content .message .message-text .message-title {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
 }
@@ -887,7 +881,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   line-height: 2;
 }
 
-/* TOP GALLERY ========================================= */
+/* TOPページ GALLERY ====================================== */
 .index-gallery-content {
   -ms-grid-columns: (26vw)[3];
   -ms-grid-rows: (26vw)[3];
@@ -1030,7 +1024,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
     opacity: 1;
   }
 }
-/* TOP PRICE =========================================== */
+/* TOPページ PRICE ======================================== */
 .index-job-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1142,7 +1136,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
-/* GALLERY ================================= */
+/* GALLERY ============================================= */
 .gallery-content {
   margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 3) auto;
 }
@@ -1194,7 +1188,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 }
 
-/* NEWS ==================================== */
+/* NEWS ================================================ */
 .news-item {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -1247,7 +1241,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
           transform: scale(1.1);
 }
 
-/* PRICE =================================== */
+/* PRICE =============================================== */
 .price-content {
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   max-width: 1000px;
@@ -1404,7 +1398,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
 
-/* CONTACT ================================= */
+/* CONTACT ============================================= */
 .content .contact-desc * {
   margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
@@ -1503,7 +1497,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   cursor: pointer;
 }
 
-/* POLICY =========================================== */
+/* POLICY ============================================== */
 .policy-text h3 {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
 }
@@ -1511,7 +1505,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin: clamp(10px, 2vw, 15px) 0 calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
 
-/* FOOTER =========================================== */
+/* FOOTER ============================================== */
 footer {
   padding-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   background-color: #000;
@@ -1583,7 +1577,6 @@ footer p {
   margin-top: clamp(10px, 2vw, 15px);
 }
 
-/* ページトップに戻るボタン */
 .back-to-top {
   position: fixed;
   right: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
@@ -1627,119 +1620,4 @@ footer p {
 /* =============================================================
 ===========================タブレット版 ============================
   =============================================================== */
-
-@media screen and (max-width: 960px) {
-  * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .page-header-clone,
-.scroll-down-btn,
-.footer-nav,
-.grid {
-    display: none;
-  }
-  /* HEADER ====================================*/
-  .page-header {
-    z-index: 100;
-  }
-  .page-header .inner {
-    display: block;
-  }
-  .page-header .inner .header-title {
-    padding: 1rem;
-  }
-  .page-header .inner .open-btn {
-    display: inline-block !important;
-    position: absolute;
-    top: 13px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #000;
-    cursor: pointer;
-  }
-  .page-header .inner .open-btn span {
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    display: inline-block;
-    position: absolute;
-    left: 15px;
-    width: 45%;
-    height: 5px;
-    border-radius: 2px;
-    background-color: #fff;
-    transition: all 0.5s;
-  }
-  .page-header .inner .open-btn span:nth-of-type(1) {
-    top: 15px;
-  }
-  .page-header .inner .open-btn span:nth-of-type(2) {
-    top: 23px;
-  }
-  .page-header .inner .open-btn span:nth-of-type(3) {
-    top: 31px;
-  }
-  .page-header .inner .open-btn.active span:nth-of-type(1) {
-    -webkit-transform: translateY(6px) rotate(-45deg);
-        -ms-transform: translateY(6px) rotate(-45deg);
-    top: 18px;
-    left: 18px;
-    width: 30%;
-            transform: translateY(6px) rotate(-45deg);
-  }
-  .page-header .inner .open-btn.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-  .page-header .inner .open-btn.active span:nth-of-type(3) {
-    -webkit-transform: translateY(-6px) rotate(45deg);
-        -ms-transform: translateY(-6px) rotate(45deg);
-    top: 30px;
-    left: 18px;
-    width: 30%;
-            transform: translateY(-6px) rotate(45deg);
-  }
-  .page-header .inner .page-header-content {
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    display: block;
-    z-index: 20;
-    position: absolute;
-    top: 75.59px;
-    right: 0;
-    width: 0;
-    overflow: hidden;
-    background-color: #000;
-    transition: 0.5s;
-  }
-  .page-header .inner .page-header-content.open-menu {
-    width: 100%;
-  }
-  .page-header .inner .page-header-content .header-nav {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  .page-header .inner .page-header-content .header-link {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-            justify-content: center;
-    margin: 1rem 0;
-    padding: 0;
-  }
-  .page-header.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.8;
-  }
-}
 /*# sourceMappingURL=common.css.map */
