@@ -31,7 +31,7 @@ $font_24-27px: calc($font_16-18px * 1.5); // 24-27px
 $font_32-64px: clamp(2rem, 1.3rem + 3vw, 4rem); // 32-64px
 $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
 
-/* フォント共通 */
+// フォント共通
 @mixin notoSerf {
   font-family: "Noto Serif JP", sans-serif;
 }
@@ -71,7 +71,7 @@ img {
   object-fit: cover;
 }
 
-// トップコンテンツ (一番上の画像)
+// ページトップのコンテンツ (一番上の画像)
 .page-top-content {
   width: 100%;
   height: 100%;
@@ -199,18 +199,17 @@ img {
   background-color: $white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   margin: $space_80_120px auto;
-}
-
-// お問合せページ・ポリシーページのタイトル
-.content-title {
-  text-align: center;
-  margin-bottom: $space_60_90px;
-  & h2 {
-    font-size: $space_20-30px;
-  }
-  & p {
-    font-size: $font_18-20px;
-    margin-top: calc($space_10-15px * 0.8);
+  // お問合せページ・ポリシーページのタイトル
+  & .content-title {
+    text-align: center;
+    margin-bottom: $space_60_90px;
+    & h2 {
+      font-size: $space_20-30px;
+    }
+    & p {
+      font-size: $font_18-20px;
+      margin-top: calc($space_10-15px * 0.8);
+    }
   }
 }
 
@@ -309,7 +308,6 @@ img {
 }
 
 /* HEADER ============================================== */
-
 header {
   background-color: $black;
   padding: $space_10-15px;
@@ -458,7 +456,6 @@ header {
 }
 
 /* TOPページ 【index】======================================= */
-
 // トップページ読み込み時のアニメーション 【JSで制御】
 // .line {
 //   width: 0%;
@@ -713,7 +710,7 @@ header {
   padding: calc($space_16-18px * 1.5) $space_20-30px;
 }
 
-/* TOP NEWS  =========================================== */
+/* TOPページ NEWS  ======================================== */
 .index-news-content {
   margin: $space_40-60px;
   & h2 {
@@ -759,7 +756,7 @@ header {
   }
 }
 
-/* TOP Profile, Profile ================================ */
+/* TOPページ Profile, Profile ============================= */
 .profile-content {
   margin-bottom: $space_60_90px;
   padding: $space_40-60px $space_20-30px;
@@ -769,41 +766,38 @@ header {
     justify-content: space-around;
   }
   & img {
-    object-fit: cover;
     width: 35vw;
   }
   & p {
     margin-bottom: $space_16-18px;
     font-size: $font_16-18px;
   }
-}
-
-.profile {
-  flex-direction: row-reverse;
-  margin-top: $space_20-30px;
-  & .profile-text {
-    padding: $space_60_90px $space_30-45px $space_30-45px;
-    width: 35vw;
-    background-color: rgba(255, 255, 255, 0.4);
-    & span {
-      font-size: $font_19-22px;
-    }
-    & h2 {
-      font-size: calc($font_32-64px * 0.6);
-      margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
+  & .profile {
+    flex-direction: row-reverse;
+    margin-top: $space_20-30px;
+    & .profile-text {
+      padding: $space_60_90px $space_30-45px $space_30-45px;
+      width: 35vw;
+      background-color: rgba(255, 255, 255, 0.4);
+      & span {
+        font-size: $font_19-22px;
+      }
+      & h2 {
+        font-size: calc($font_32-64px * 0.6);
+        margin: calc($space_10-15px * 0.5) 0 $space_30-45px;
+      }
     }
   }
-}
-
-.message {
-  margin-top: $space_60_90px;
-  .message-text {
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: $space_30-45px;
-    width: 35vw;
-    & .message-title {
-      font-size: $font_24-27px;
-      margin-bottom: $space_16-18px;
+  & .message {
+    margin-top: $space_60_90px;
+    .message-text {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: $space_30-45px;
+      width: 35vw;
+      & .message-title {
+        font-size: $font_24-27px;
+        margin-bottom: $space_16-18px;
+      }
     }
   }
 }
@@ -816,7 +810,7 @@ header {
     position: absolute;
     top: -18rem;
   }
-  .achievements-content {
+  & .achievements-content {
     margin-left: $space_40-60px;
     padding: $space_20-30px 0 $space_30-45px;
     & h3 {
@@ -829,8 +823,7 @@ header {
   }
 }
 
-/* TOP GALLERY ========================================= */
-
+/* TOPページ GALLERY ====================================== */
 .index-gallery-content {
   display: grid;
   width: 80vw;
@@ -921,7 +914,7 @@ header {
   }
 }
 
-/* TOP PRICE =========================================== */
+/* TOPページ PRICE ======================================== */
 .index-job-content {
   width: 70%;
   display: flex;
@@ -999,7 +992,7 @@ header {
   }
 }
 
-/* GALLERY ================================= */
+/* GALLERY ============================================= */
 .gallery-content {
   margin: $space_60_90px auto;
   & p {
@@ -1042,7 +1035,7 @@ header {
   background-color: $red3;
 }
 
-/* NEWS ==================================== */
+/* NEWS ================================================ */
 .news-item {
   background-color: $white;
   width: 80vw;
@@ -1080,7 +1073,7 @@ header {
   }
 }
 
-/* PRICE =================================== */
+/* PRICE =============================================== */
 .price-content {
   max-width: 1000px;
   padding: $space_60_90px;
@@ -1223,7 +1216,7 @@ header {
   }
 }
 
-/* CONTACT ================================= */
+/* CONTACT ============================================= */
 .content {
   .contact-desc * {
     font-size: $font_16-18px;
@@ -1318,7 +1311,7 @@ header {
   }
 }
 
-/* POLICY =========================================== */
+/* POLICY ============================================== */
 .policy-text {
   & h3 {
     font: {
@@ -1330,7 +1323,7 @@ header {
   }
 }
 
-/* FOOTER =========================================== */
+/* FOOTER ============================================== */
 footer {
   color: $white;
   text-align: center;
@@ -1390,7 +1383,7 @@ footer {
   }
 }
 
-/* ページトップに戻るボタン */
+// ページトップに戻るボタン
 .back-to-top {
   position: fixed;
   right: $space_16-18px;
@@ -1446,102 +1439,102 @@ footer {
 ===========================タブレット版 ============================
   =============================================================== */
 
-@media screen and (max-width: 960px) {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  .page-header-clone,
-  .scroll-down-btn,
-  .footer-nav,
-  .grid {
-    display: none;
-  }
-  /* HEADER ====================================*/
-  .page-header {
-    z-index: 100;
-    & .inner {
-      display: block;
-      & .header-title {
-        padding: 1rem;
-      }
-      & .open-btn {
-        display: inline-block !important;
-        position: absolute;
-        top: 13px;
-        right: 10px;
-        background-color: $black;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        border-radius: 5px;
-        & span {
-          display: inline-block;
-          transition: all 0.5s;
-          position: absolute;
-          left: 15px;
-          height: 5px;
-          border-radius: 2px;
-          background-color: $white;
-          width: 45%;
-          &:nth-of-type(1) {
-            top: 15px;
-          }
-          &:nth-of-type(2) {
-            top: 23px;
-          }
-          &:nth-of-type(3) {
-            top: 31px;
-          }
-        }
-        &.active span:nth-of-type(1) {
-          top: 18px;
-          left: 18px;
-          transform: translateY(6px) rotate(-45deg);
-          width: 30%;
-        }
-        &.active span:nth-of-type(2) {
-          opacity: 0;
-        }
-        &.active span:nth-of-type(3) {
-          top: 30px;
-          left: 18px;
-          transform: translateY(-6px) rotate(45deg);
-          width: 30%;
-        }
-      }
-      & .page-header-content {
-        display: block;
-        background-color: $black;
-        width: 0;
-        z-index: 20;
-        position: absolute;
-        top: 75.59px;
-        right: 0;
-        overflow: hidden;
-        transition: 0.5s;
-        &.open-menu {
-          width: 100%;
-        }
-        & .header-nav {
-          display: block;
-          padding: 0;
-          margin: 0;
-        }
-        & .header-link {
-          margin: 1rem 0;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-        }
-      }
-    }
-    &.sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      opacity: 0.8;
-    }
-  }
-}
+// @media screen and (max-width: 960px) {
+//   * {
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+//   }
+//   .page-header-clone,
+//   .scroll-down-btn,
+//   .footer-nav,
+//   .grid {
+//     display: none;
+//   }
+//   /* HEADER ====================================*/
+//   .page-header {
+//     z-index: 100;
+//     & .inner {
+//       display: block;
+//       & .header-title {
+//         padding: 1rem;
+//       }
+//       & .open-btn {
+//         display: inline-block !important;
+//         position: absolute;
+//         top: 13px;
+//         right: 10px;
+//         background-color: $black;
+//         cursor: pointer;
+//         width: 50px;
+//         height: 50px;
+//         border-radius: 5px;
+//         & span {
+//           display: inline-block;
+//           transition: all 0.5s;
+//           position: absolute;
+//           left: 15px;
+//           height: 5px;
+//           border-radius: 2px;
+//           background-color: $white;
+//           width: 45%;
+//           &:nth-of-type(1) {
+//             top: 15px;
+//           }
+//           &:nth-of-type(2) {
+//             top: 23px;
+//           }
+//           &:nth-of-type(3) {
+//             top: 31px;
+//           }
+//         }
+//         &.active span:nth-of-type(1) {
+//           top: 18px;
+//           left: 18px;
+//           transform: translateY(6px) rotate(-45deg);
+//           width: 30%;
+//         }
+//         &.active span:nth-of-type(2) {
+//           opacity: 0;
+//         }
+//         &.active span:nth-of-type(3) {
+//           top: 30px;
+//           left: 18px;
+//           transform: translateY(-6px) rotate(45deg);
+//           width: 30%;
+//         }
+//       }
+//       & .page-header-content {
+//         display: block;
+//         background-color: $black;
+//         width: 0;
+//         z-index: 20;
+//         position: absolute;
+//         top: 75.59px;
+//         right: 0;
+//         overflow: hidden;
+//         transition: 0.5s;
+//         &.open-menu {
+//           width: 100%;
+//         }
+//         & .header-nav {
+//           display: block;
+//           padding: 0;
+//           margin: 0;
+//         }
+//         & .header-link {
+//           margin: 1rem 0;
+//           padding: 0;
+//           display: flex;
+//           justify-content: center;
+//         }
+//       }
+//     }
+//     &.sticky {
+//       position: fixed;
+//       top: 0;
+//       width: 100%;
+//       opacity: 0.8;
+//     }
+//   }
+// }
