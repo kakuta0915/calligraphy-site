@@ -40,6 +40,7 @@ $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -586,8 +587,8 @@ header {
 .index-top-text {
   background: rgba(255, 255, 255, 0);
   display: inline-block;
-  width: 30vw;
-  height: 70vh;
+  width: 40vw;
+  height: 80vh;
   text-align: center;
   padding: $space_16-18px $space_40-60px $space_40-60px;
   position: absolute;
@@ -1443,7 +1444,7 @@ footer {
 
 /* モバイル版 =============================================== */
 @media (max-width: 414px) {
-  /* HEADER=============================================== */
+  /* HEADER================================================ */
   @mixin burgerSpan {
     display: inline-block;
     position: absolute;
@@ -1536,6 +1537,28 @@ footer {
   }
   .header-clone {
     display: none;
+  }
+
+  /* TOPページ ============================================ */
+  // トップスライダーのテキスト
+  .index-top-text {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 80%;
+    height: auto;
+    margin: $space_40-60px;
+    & h1 {
+      font-size: $font_24-27px;
+    }
+  }
+  //
+  .index-price-content {
+    overflow: hidden;
+  }
+  //
+  footer {
+    overflow: hidden;
   }
 } // モバイル版 終わり
 

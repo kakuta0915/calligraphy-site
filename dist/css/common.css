@@ -4,6 +4,8 @@
 /* フォントサイズ ============================================= */
 /* 各ページ共通のレイアウト ======================================== */
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -579,8 +581,8 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   position: absolute;
   top: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
   right: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
-  width: 30vw;
-  height: 70vh;
+  width: 40vw;
+  height: 80vh;
   padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
   background: rgba(255, 255, 255, 0);
   text-align: center;
@@ -1634,7 +1636,7 @@ header .menu__btn {
   }
 }
 @media (max-width: 414px) {
-  /* HEADER=============================================== */
+  /* HEADER================================================ */
   header {
     z-index: 1;
     position: relative;
@@ -1755,6 +1757,24 @@ header .menu__btn {
   }
   .header-clone {
     display: none;
+  }
+  /* TOPページ ============================================ */
+  .index-top-text {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 80%;
+    height: auto;
+    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  }
+  .index-top-text h1 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .index-price-content {
+    overflow: hidden;
+  }
+  footer {
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=common.css.map */
