@@ -1635,6 +1635,9 @@ header .menu__btn {
 }
 
 @media (max-width: 414px) {
+  .content {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
   /* HEADER================================================ */
   header {
     z-index: 1;
@@ -1832,6 +1835,21 @@ header .menu__btn {
     width: 100%;
     margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   }
+  .achievements {
+    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) auto;
+  }
+  .achievements .achievements-title {
+    top: -11rem;
+    left: 1rem;
+  }
+  .achievements .achievements-content {
+    margin: 0;
+  }
+  .achievements .achievements-content li {
+    margin-bottom: clamp(10px, 2vw, 15px);
+    font-size: 1rem;
+  }
+  /* TOPページ GALLERY ====================================== */
   .index-price-content {
     overflow: hidden;
   }

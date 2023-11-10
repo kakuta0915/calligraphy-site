@@ -1444,6 +1444,11 @@ footer {
 
 /* モバイル版 =============================================== */
 @media (max-width: 414px) {
+  //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
+  .content {
+    padding: $space_30-45px;
+  }
+
   /* HEADER================================================ */
   @mixin burgerSpan {
     display: inline-block;
@@ -1628,6 +1633,23 @@ footer {
       }
     }
   }
+
+  .achievements {
+    margin: $space_30-45px auto;
+    & .achievements-title {
+      top: -11rem;
+      left: 1rem;
+    }
+    & .achievements-content {
+      margin: 0;
+      & li {
+        font-size: 1rem;
+        margin-bottom: $space_10-15px;
+      }
+    }
+  }
+
+  /* TOPページ GALLERY ====================================== */
 
   //
   .index-price-content {
