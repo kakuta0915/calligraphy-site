@@ -1598,6 +1598,37 @@ footer {
     }
   }
 
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content {
+    & * {
+      display: block;
+    }
+    & img {
+      width: 100%;
+    }
+    & .profile {
+      margin: 0;
+      flex-direction: none;
+      & .profile-text {
+        width: 100%;
+        padding: $space_30-45px;
+        margin-bottom: $space_30-45px;
+        & span {
+          font-size: $font_16-18px;
+        }
+        & h2 {
+          font-size: $font_24-27px;
+        }
+      }
+    }
+    & .message {
+      & .message-text {
+        width: 100%;
+        margin-bottom: $space_30-45px;
+      }
+    }
+  }
+
   //
   .index-price-content {
     overflow: hidden;

@@ -1802,6 +1802,36 @@ header .menu__btn {
   .index-news-content .index-news-articles .index-news-item .index-news-text p {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
   }
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content * {
+    display: block;
+  }
+  .profile-content img {
+    width: 100%;
+  }
+  .profile-content .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: none;
+        -ms-flex-direction: none;
+            flex-direction: none;
+    margin: 0;
+  }
+  .profile-content .profile .profile-text {
+    width: 100%;
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .profile-content .profile .profile-text span {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  .profile-content .profile .profile-text h2 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .profile-content .message .message-text {
+    width: 100%;
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
   .index-price-content {
     overflow: hidden;
   }
