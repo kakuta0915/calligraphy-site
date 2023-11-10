@@ -1916,6 +1916,22 @@ header .menu__btn {
     width: 100%;
     height: 100%;
   }
+  /* GALLERY ============================================= */
+  .gallery-content {
+    margin-top: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  }
+  .gallery-content p {
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  .gallery-content .gallery {
+    -ms-grid-columns: (40vw)[2];
+    -ms-grid-rows: (40vw)[9];
+    grid-template-rows: repeat(9, 40vw);
+    grid-template-columns: repeat(2, 40vw);
+    width: 85vw;
+    gap: 5vw;
+  }
   /* FOOTER ============================================== */
   footer .wrapper {
     margin: 0;

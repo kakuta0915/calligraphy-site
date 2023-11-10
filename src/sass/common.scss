@@ -1711,6 +1711,21 @@ footer {
     }
   }
 
+  /* GALLERY ============================================= */
+  .gallery-content {
+    margin-top: $space_40-60px;
+    & p {
+      font-size: $font_16-18px;
+      margin-bottom: $space_40-60px;
+    }
+    & .gallery {
+      width: 85vw;
+      gap: 5vw;
+      grid-template-columns: repeat(2, 40vw);
+      grid-template-rows: repeat(9, 40vw);
+    }
+  }
+
   /* FOOTER ============================================== */
   footer {
     & .wrapper {
