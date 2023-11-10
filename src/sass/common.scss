@@ -1669,7 +1669,35 @@ footer {
       }
     }
   }
-  //
+
+  /* TOPページ PRICE ======================================== */
+  .index-job-content {
+    width: 80%;
+    display: block;
+    margin: $space_30-45px auto;
+    & .index-job-item {
+      & img {
+        height: 100%;
+      }
+      & .index-job-text {
+        height: 100%;
+        padding: $space_30-45px $space_10-15px;
+        & .text1 {
+          padding: $space_10-15px;
+        }
+        & .text2 {
+          margin: $space_16-18px $space_10-15px $space_16-18px;
+        }
+      }
+      & .number3 {
+        order: 3;
+      }
+      & .number4 {
+        order: 4;
+      }
+    }
+  }
+
   .index-price-content {
     overflow: hidden;
   }
