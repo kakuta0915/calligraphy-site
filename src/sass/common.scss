@@ -73,6 +73,8 @@ img {
 
 // ページトップのコンテンツ (一番上の画像)
 .page-top-content {
+  position: relative;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: {
@@ -1428,15 +1430,19 @@ footer {
 
 /* モバイル版 =============================================== */
 @media (max-width: 414px) {
+  /* HEADER=============================================== */
   @mixin burgerSpan {
     display: inline-block;
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #ffffff;
+    background-color: $white;
   }
 
   header {
+    width: 100%;
+    position: relative;
+    z-index: 1;
     & #menu__toggle {
       opacity: 0;
       &:checked ~ .menu__btn > span {
@@ -1445,12 +1451,12 @@ footer {
       &:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
-        background: #f06c64;
+        background: $red2;
       }
       &:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
-        background: #f06c64;
+        background: $red2;
       }
       &:checked ~ .header-nav-contents {
         visibility: visible;
@@ -1460,15 +1466,12 @@ footer {
     }
     & .menu__btn {
       transition-duration: 0.25s;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
       position: relative;
       bottom: 2px;
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
       z-index: 2;
+      cursor: pointer;
       & span {
         @include burgerSpan;
         &::before {
@@ -1487,38 +1490,41 @@ footer {
     }
     & .header-nav-contents {
       flex-direction: column;
-      position: fixed;
-      visibility: hidden;
-      top: 0px;
+      position: absolute;
+      top: 3rem;
       left: 0;
+      visibility: hidden;
+      z-index: 1;
       width: 100%;
-      height: 15rem;
-      margin: -600px 0 0 0;
-      padding: 0.6em 0;
+      height: 100%;
+      margin: -400px 0 0 0;
       text-align: center;
-      background-color: #2d303a;
       box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
-      z-index: 100;
       transition-duration: 0.5s;
+      & * {
+        background-color: $black;
+      }
       & .header-nav {
-        display: block;
         width: 100%;
+        display: block;
         & li {
-          color: #ffffff;
-          font-size: 18px;
+          font-size: $font_16-18px;
           transition-duration: 0.5s;
           & a {
             width: 100%;
-            background-color: #b22222;
-          }
-          &:hover {
-            background-color: #4f5464;
           }
         }
       }
+      & .header-link {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
-}
+  .header-clone {
+    display: none;
+  }
+} // モバイル版 終わり
 
 /* =============================================================
 ===========================タブレット版 ============================
