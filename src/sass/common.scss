@@ -1539,7 +1539,7 @@ footer {
     display: none;
   }
 
-  /* TOPページ ============================================ */
+  /* TOPページ 【index】 ============================================ */
   // トップスライダーのテキスト
   .index-top-text {
     position: absolute;
@@ -1552,6 +1552,52 @@ footer {
       font-size: $font_24-27px;
     }
   }
+
+  // TOPページの「section title」のレイアウト
+  .section-title {
+    padding: $space_40-60px $space_30-45px;
+    & h2 {
+      font-size: $font_18-20px;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .index-profile-title {
+    top: -10rem;
+    left: 1rem;
+  }
+
+  .index-gallery-title {
+  }
+
+  .index-job-title {
+  }
+
+  /* TOPページ NEWS  ======================================== */
+  .index-news-content {
+    margin: $space_40-60px 0;
+    & h2 {
+      font-size: $font_24-27px;
+    }
+    & .index-news-articles {
+      display: block;
+      & .index-news-item {
+        margin-bottom: $space_40-60px;
+        & img {
+          width: 40%;
+        }
+        & .index-news-text {
+          & h3 {
+            font-size: $font_16-18px;
+          }
+          & p {
+            font-size: $font_11-13px;
+          }
+        }
+      }
+    }
+  }
+
   //
   .index-price-content {
     overflow: hidden;

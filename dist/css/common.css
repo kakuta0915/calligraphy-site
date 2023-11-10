@@ -1757,7 +1757,7 @@ header .menu__btn {
   .header-clone {
     display: none;
   }
-  /* TOPページ ============================================ */
+  /* TOPページ 【index】 ============================================ */
   .index-top-text {
     position: absolute;
     top: 10%;
@@ -1768,6 +1768,39 @@ header .menu__btn {
   }
   .index-top-text h1 {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .section-title {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .section-title h2 {
+    margin: 0 0 0.5rem;
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
+  }
+  .index-profile-title {
+    top: -10rem;
+    left: 1rem;
+  }
+  /* TOPページ NEWS  ======================================== */
+  .index-news-content {
+    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) 0;
+  }
+  .index-news-content h2 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .index-news-content .index-news-articles {
+    display: block;
+  }
+  .index-news-content .index-news-articles .index-news-item {
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  }
+  .index-news-content .index-news-articles .index-news-item img {
+    width: 40%;
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text h3 {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text p {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7);
   }
   .index-price-content {
     overflow: hidden;
