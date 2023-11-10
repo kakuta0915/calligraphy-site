@@ -40,6 +40,7 @@ $font_72-160px: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); // 72-160px
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -586,8 +587,8 @@ header {
 .index-top-text {
   background: rgba(255, 255, 255, 0);
   display: inline-block;
-  width: 30vw;
-  height: 70vh;
+  width: 40vw;
+  height: 80vh;
   text-align: center;
   padding: $space_16-18px $space_40-60px $space_40-60px;
   position: absolute;
@@ -1443,7 +1444,12 @@ footer {
 
 /* モバイル版 =============================================== */
 @media (max-width: 414px) {
-  /* HEADER=============================================== */
+  //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
+  .content {
+    padding: $space_30-45px;
+  }
+
+  /* HEADER================================================ */
   @mixin burgerSpan {
     display: inline-block;
     position: absolute;
@@ -1537,108 +1543,175 @@ footer {
   .header-clone {
     display: none;
   }
+
+  /* TOPページ 【index】 ============================================ */
+  // トップスライダーのテキスト
+  .index-top-text {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 80%;
+    height: auto;
+    margin: $space_40-60px;
+    & h1 {
+      font-size: $font_24-27px;
+    }
+  }
+
+  // TOPページの「section title」のレイアウト
+  .section-title {
+    padding: $space_40-60px $space_30-45px;
+    & h2 {
+      font-size: $font_18-20px;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .index-profile-title {
+    top: -10rem;
+    left: 1rem;
+  }
+
+  .index-gallery-title {
+    top: -8rem;
+    right: 3rem;
+  }
+
+  .index-job-title {
+    top: -8rem;
+    left: 4rem;
+  }
+
+  /* TOPページ NEWS  ======================================== */
+  .index-news-content {
+    margin: $space_40-60px 0;
+    & h2 {
+      font-size: $font_24-27px;
+    }
+    & .index-news-articles {
+      display: block;
+      & .index-news-item {
+        margin-bottom: $space_40-60px;
+        & img {
+          width: 40%;
+        }
+        & .index-news-text {
+          & h3 {
+            font-size: $font_16-18px;
+          }
+          & p {
+            font-size: $font_11-13px;
+          }
+        }
+      }
+    }
+  }
+
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content {
+    & * {
+      display: block;
+    }
+    & img {
+      width: 100%;
+    }
+    & .profile {
+      margin: 0;
+      flex-direction: none;
+      & .profile-text {
+        width: 100%;
+        padding: $space_30-45px;
+        margin-bottom: $space_30-45px;
+        & span {
+          font-size: $font_16-18px;
+        }
+        & h2 {
+          font-size: $font_24-27px;
+        }
+      }
+    }
+    & .message {
+      & .message-text {
+        width: 100%;
+        margin-bottom: $space_30-45px;
+      }
+    }
+  }
+
+  .achievements {
+    margin: $space_30-45px auto;
+    & .achievements-title {
+      top: -11rem;
+      left: 1rem;
+    }
+    & .achievements-content {
+      margin: 0;
+      & li {
+        font-size: 1rem;
+        margin-bottom: $space_10-15px;
+      }
+    }
+  }
+
+  /* TOPページ GALLERY ====================================== */
+  .index-gallery-content {
+    margin: $space_20-30px auto $space_40-60px;
+    gap: 3vw;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(5, 40vw);
+    & .index-gallery-item {
+      & .index-gallery-text {
+        width: 80%;
+        height: 80%;
+        & * {
+          font-size: $font_16-18px;
+        }
+      }
+    }
+  }
+
+  /* TOPページ PRICE ======================================== */
+  .index-job-content {
+    width: 80%;
+    display: block;
+    margin: $space_30-45px auto;
+    & .index-job-item {
+      & img {
+        height: 100%;
+      }
+      & .index-job-text {
+        height: 100%;
+        padding: $space_30-45px $space_10-15px;
+        & .text1 {
+          padding: $space_10-15px;
+        }
+        & .text2 {
+          margin: $space_16-18px $space_10-15px $space_16-18px;
+        }
+      }
+      & .number3 {
+        order: 3;
+      }
+      & .number4 {
+        order: 4;
+      }
+    }
+  }
+
+  .index-price-content {
+    display: block;
+    padding-bottom: 0;
+    & .index-price-item {
+      width: 100%;
+      margin: 0 auto $space_30-45px;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  //
+  footer {
+    overflow: hidden;
+  }
 } // モバイル版 終わり
-
-/* =============================================================
-===========================タブレット版 ============================
-  =============================================================== */
-
-// @media screen and (max-width: 960px) {
-//   * {
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-//   }
-//   .page-header-clone,
-//   .scroll-down-btn,
-//   .footer-nav,
-//   .grid {
-//     display: none;
-//   }
-//   /* HEADER ====================================*/
-//   .page-header {
-//     z-index: 100;
-//     & .inner {
-//       display: block;
-//       & .header-title {
-//         padding: 1rem;
-//       }
-//       & .open-btn {
-//         display: inline-block !important;
-//         position: absolute;
-//         top: 13px;
-//         right: 10px;
-//         background-color: $black;
-//         cursor: pointer;
-//         width: 50px;
-//         height: 50px;
-//         border-radius: 5px;
-//         & span {
-//           display: inline-block;
-//           transition: all 0.5s;
-//           position: absolute;
-//           left: 15px;
-//           height: 5px;
-//           border-radius: 2px;
-//           background-color: $white;
-//           width: 45%;
-//           &:nth-of-type(1) {
-//             top: 15px;
-//           }
-//           &:nth-of-type(2) {
-//             top: 23px;
-//           }
-//           &:nth-of-type(3) {
-//             top: 31px;
-//           }
-//         }
-//         &.active span:nth-of-type(1) {
-//           top: 18px;
-//           left: 18px;
-//           transform: translateY(6px) rotate(-45deg);
-//           width: 30%;
-//         }
-//         &.active span:nth-of-type(2) {
-//           opacity: 0;
-//         }
-//         &.active span:nth-of-type(3) {
-//           top: 30px;
-//           left: 18px;
-//           transform: translateY(-6px) rotate(45deg);
-//           width: 30%;
-//         }
-//       }
-//       & .page-header-content {
-//         display: block;
-//         background-color: $black;
-//         width: 0;
-//         z-index: 20;
-//         position: absolute;
-//         top: 75.59px;
-//         right: 0;
-//         overflow: hidden;
-//         transition: 0.5s;
-//         &.open-menu {
-//           width: 100%;
-//         }
-//         & .header-nav {
-//           display: block;
-//           padding: 0;
-//           margin: 0;
-//         }
-//         & .header-link {
-//           margin: 1rem 0;
-//           padding: 0;
-//           display: flex;
-//           justify-content: center;
-//         }
-//       }
-//     }
-//     &.sticky {
-//       position: fixed;
-//       top: 0;
-//       width: 100%;
-//       opacity: 0.8;
-//     }
-//   }
-// }
