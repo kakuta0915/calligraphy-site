@@ -73,6 +73,8 @@ img {
 
 // ページトップのコンテンツ (一番上の画像)
 .page-top-content {
+  position: relative;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: {
@@ -325,6 +327,7 @@ header {
         weight: 900;
       }
     }
+
     & .header-nav-contents {
       & .header-nav {
         & li {
@@ -374,6 +377,12 @@ header {
           }
         }
       }
+    }
+  }
+  @media (min-width: 415px) {
+    #menu__toggle,
+    .menu__btn {
+      opacity: 0;
     }
   }
 }
@@ -452,6 +461,12 @@ header {
   // cloneの表示
   &.visible {
     top: 0;
+  }
+  @media (min-width: 415px) {
+    #menu__toggle,
+    .menu__btn {
+      opacity: 0;
+    }
   }
 }
 
@@ -1426,14 +1441,103 @@ footer {
   }
 }
 
-/////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ///////////////////////////////////////////////
-/// ////////////////////////////////////////////////
-/// /////////////////////////////////////////////////
-/// //////////////////////////////////////////////
-//
+/* モバイル版 =============================================== */
+@media (max-width: 414px) {
+  /* HEADER=============================================== */
+  @mixin burgerSpan {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+  }
+
+  header {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    & #menu__toggle {
+      opacity: 0;
+      &:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      &:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+        background: $red2;
+      }
+      &:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background: $red2;
+      }
+      &:checked ~ .header-nav-contents {
+        visibility: visible;
+        left: 0;
+        margin: 0;
+      }
+    }
+    & .menu__btn {
+      transition-duration: 0.25s;
+      position: relative;
+      bottom: 2px;
+      width: 2rem;
+      height: 2rem;
+      z-index: 2;
+      cursor: pointer;
+      & span {
+        @include burgerSpan;
+        &::before {
+          @include burgerSpan;
+          content: "";
+          top: -8px;
+          transition-duration: 0.25s;
+        }
+        &::after {
+          @include burgerSpan;
+          content: "";
+          top: 8px;
+          transition-duration: 0.25s;
+        }
+      }
+    }
+    & .header-nav-contents {
+      flex-direction: column;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      visibility: hidden;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      margin: -400px 0 0 0;
+      text-align: center;
+      box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
+      transition-duration: 0.5s;
+      & * {
+        background-color: $black;
+      }
+      & .header-nav {
+        width: 100%;
+        display: block;
+        & li {
+          font-size: $font_16-18px;
+          transition-duration: 0.5s;
+          & a {
+            width: 100%;
+          }
+        }
+      }
+      & .header-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  .header-clone {
+    display: none;
+  }
+} // モバイル版 終わり
 
 /* =============================================================
 ===========================タブレット版 ============================
