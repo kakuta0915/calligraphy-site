@@ -1932,6 +1932,20 @@ header .menu__btn {
     width: 85vw;
     gap: 5vw;
   }
+  /* NEWS ================================================ */
+  .news-item {
+    display: block;
+  }
+  .news-item img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .news-item .news-text {
+    margin: 0;
+  }
+  .news-item .news-text h2 {
+    margin-top: clamp(10px, 2vw, 15px);
+  }
   /* FOOTER ============================================== */
   footer .wrapper {
     margin: 0;
