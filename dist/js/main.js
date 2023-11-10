@@ -62,7 +62,7 @@ $(function () {
         $container.masonry("appended", elements);
       });
       $container.find("a").colorbox({
-        maxWidth: "970px",
+        maxWidth: "90%",
         maxHeight: "95%",
         title: function () {
           return $(this).find(".inner").html();
