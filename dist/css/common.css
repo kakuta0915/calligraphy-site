@@ -1783,6 +1783,14 @@ header .menu__btn {
     top: -10rem;
     left: 1rem;
   }
+  .index-gallery-title {
+    top: -8rem;
+    right: 3rem;
+  }
+  .index-job-title {
+    top: -8rem;
+    left: 4rem;
+  }
   /* TOPページ NEWS  ======================================== */
   .index-news-content {
     margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) 0;
@@ -1850,6 +1858,21 @@ header .menu__btn {
     font-size: 1rem;
   }
   /* TOPページ GALLERY ====================================== */
+  .index-gallery-content {
+    -ms-grid-columns: (40vw)[2];
+    -ms-grid-rows: (40vw)[5];
+    grid-template-rows: repeat(5, 40vw);
+    grid-template-columns: repeat(2, 40vw);
+    margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+    gap: 3vw;
+  }
+  .index-gallery-content .index-gallery-item .index-gallery-text {
+    width: 80%;
+    height: 80%;
+  }
+  .index-gallery-content .index-gallery-item .index-gallery-text * {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
   .index-price-content {
     overflow: hidden;
   }

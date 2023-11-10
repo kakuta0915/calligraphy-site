@@ -1573,9 +1573,13 @@ footer {
   }
 
   .index-gallery-title {
+    top: -8rem;
+    right: 3rem;
   }
 
   .index-job-title {
+    top: -8rem;
+    left: 4rem;
   }
 
   /* TOPページ NEWS  ======================================== */
@@ -1650,7 +1654,21 @@ footer {
   }
 
   /* TOPページ GALLERY ====================================== */
-
+  .index-gallery-content {
+    margin: $space_20-30px auto $space_40-60px;
+    gap: 3vw;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(5, 40vw);
+    & .index-gallery-item {
+      & .index-gallery-text {
+        width: 80%;
+        height: 80%;
+        & * {
+          font-size: $font_16-18px;
+        }
+      }
+    }
+  }
   //
   .index-price-content {
     overflow: hidden;
