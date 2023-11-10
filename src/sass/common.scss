@@ -1710,8 +1710,25 @@ footer {
       }
     }
   }
-  //
+
+  /* FOOTER ============================================== */
   footer {
-    overflow: hidden;
+    & .wrapper {
+      margin: 0;
+      & .footer-nav {
+        display: block;
+        width: 100%;
+      }
+      & .footer-link {
+        & li {
+          & a {
+            & .fab {
+              top: 0.5rem;
+              left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
   }
 } // モバイル版 終わり
