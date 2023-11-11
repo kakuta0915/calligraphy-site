@@ -1117,7 +1117,7 @@ header {
     padding: $space_20-30px;
     margin-bottom: $space_40-60px;
     & img {
-      width: 35vw;
+      width: 50%;
       height: auto;
     }
     & .price-design-box {
@@ -1126,7 +1126,7 @@ header {
       width: 100%;
       margin-left: $space_40-60px;
       & ul {
-        width: 70%;
+        width: 80%;
         margin-bottom: $space_20-30px;
         & li {
           font-size: $font_18-20px;
