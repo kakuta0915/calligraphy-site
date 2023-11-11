@@ -463,7 +463,7 @@ header {
   &.visible {
     top: 0;
   }
-  @media (min-width: 415px) {
+  @media (min-width: 960px) {
     #menu__toggle,
     .menu__btn {
       opacity: 0;
@@ -1440,6 +1440,10 @@ footer {
       left: 0;
     }
   }
+}
+
+/* タブレット版 ============================================== */
+@media (max-width: 960px) {
 }
 
 /* モバイル版 =============================================== */

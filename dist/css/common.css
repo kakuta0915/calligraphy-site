@@ -1621,19 +1621,20 @@ footer p {
   text-align: center;
 }
 
+/* タブレット版 ============================================== */
 /* モバイル版 =============================================== */
-
 @media (min-width: 415px) {
   header #menu__toggle,
 header .menu__btn {
     opacity: 0;
   }
+}
+@media (min-width: 960px) {
   .header-clone #menu__toggle,
 .header-clone .menu__btn {
     opacity: 0;
   }
 }
-
 @media (max-width: 414px) {
   .content {
     padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
