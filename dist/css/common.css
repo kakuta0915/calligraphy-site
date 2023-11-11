@@ -1055,7 +1055,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   height: 305px;
 }
 .index-job-content .index-job-item .index-job-text {
-  height: 220px;
+  height: 305px;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) clamp(10px, 2vw, 15px);
   background-color: #000;
   color: #fff;
