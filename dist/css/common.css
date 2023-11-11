@@ -1984,6 +1984,42 @@ header .menu__btn {
   .price-content .timeline li p::before {
     display: none;
   }
+  /* CONTACT ============================================= */
+  .content .contact-table {
+    padding: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  .content .contact-table th,
+.content .contact-table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  .content .contact-table th {
+    margin-bottom: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  .content .contact-table td {
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .content .contact-table td span {
+    display: block;
+    margin-bottom: clamp(10px, 2vw, 15px);
+  }
+  .content .contact-table td span::before {
+    margin: 0 clamp(10px, 2vw, 15px);
+  }
+  .content .price-btn-box {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+            justify-content: space-around;
+  }
+  .content .price-btn-box .form-btn {
+    margin: 0;
+  }
   /* FOOTER ============================================== */
   footer .wrapper {
     margin: 0;
