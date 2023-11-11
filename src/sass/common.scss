@@ -1117,7 +1117,7 @@ header {
     padding: $space_20-30px;
     margin-bottom: $space_40-60px;
     & img {
-      width: 35vw;
+      width: 50%;
       height: auto;
     }
     & .price-design-box {
@@ -1126,7 +1126,7 @@ header {
       width: 100%;
       margin-left: $space_40-60px;
       & ul {
-        width: 70%;
+        width: 80%;
         margin-bottom: $space_20-30px;
         & li {
           font-size: $font_18-20px;
@@ -1737,6 +1737,47 @@ footer {
       margin: 0;
       & h2 {
         margin-top: $space_10-15px;
+      }
+    }
+  }
+
+  /* PRICE =============================================== */
+  .price-content {
+    padding: $space_30-45px $space_20-30px;
+    & .price-design {
+      display: block;
+      & img {
+        width: 100%;
+      }
+      & .price-design-box {
+        margin: 0;
+        & ul {
+          width: 100%;
+        }
+      }
+    }
+    & .price-table,
+    .price-table2 {
+      font-size: calc($font_11-13px * 1.1);
+    }
+    & .timeline {
+      & li {
+        display: block;
+        margin-bottom: $space_30-45px;
+        & h3 {
+          width: 100%;
+          text-align: left;
+          padding: 0;
+          margin-bottom: $space_10-15px;
+        }
+        & p {
+          width: 100%;
+          border: none;
+          padding: 0;
+          &::before {
+            display: none;
+          }
+        }
       }
     }
   }

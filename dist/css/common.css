@@ -1280,7 +1280,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   background-color: #f5f5f5;
 }
 .price-content .price-design img {
-  width: 35vw;
+  width: 50%;
   height: auto;
 }
 .price-content .price-design .price-design-box {
@@ -1297,7 +1297,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   margin-left: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
 }
 .price-content .price-design .price-design-box ul {
-  width: 70%;
+  width: 80%;
   margin-bottom: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
 }
 .price-content .price-design .price-design-box ul li {
@@ -1945,6 +1945,44 @@ header .menu__btn {
   }
   .news-item .news-text h2 {
     margin-top: clamp(10px, 2vw, 15px);
+  }
+  /* PRICE =============================================== */
+  .price-content {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  }
+  .price-content .price-design {
+    display: block;
+  }
+  .price-content .price-design img {
+    width: 100%;
+  }
+  .price-content .price-design .price-design-box {
+    margin: 0;
+  }
+  .price-content .price-design .price-design-box ul {
+    width: 100%;
+  }
+  .price-content .price-table,
+.price-content .price-table2 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.7 * 1.1);
+  }
+  .price-content .timeline li {
+    display: block;
+    margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .price-content .timeline li h3 {
+    width: 100%;
+    margin-bottom: clamp(10px, 2vw, 15px);
+    padding: 0;
+    text-align: left;
+  }
+  .price-content .timeline li p {
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+  .price-content .timeline li p::before {
+    display: none;
   }
   /* FOOTER ============================================== */
   footer .wrapper {
