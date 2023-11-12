@@ -1829,6 +1829,14 @@ header .menu__btn {
   .achievements .achievements-title {
     top: -15rem;
   }
+  /* TOPページ GALLERY ====================================== */
+  .index-gallery-content {
+    margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  }
+  .index-gallery-content .index-gallery-item .index-gallery-text * {
+    margin: calc(clamp(10px, 2vw, 15px) * 0.4);
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.8);
+  }
 }
 @media (max-width: 430px) {
   .content {
