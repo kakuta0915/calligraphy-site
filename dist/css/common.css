@@ -1623,7 +1623,7 @@ footer p {
 
 /* タブレット版 ============================================== */
 /* モバイル版 =============================================== */
-@media (min-width: 415px) {
+@media (min-width: 961px) {
   header #menu__toggle,
 header .menu__btn {
     opacity: 0;
@@ -1635,11 +1635,8 @@ header .menu__btn {
     opacity: 0;
   }
 }
-@media (max-width: 414px) {
-  .content {
-    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  /* HEADER================================================ */
+@media (max-width: 960px) {
+  /* HEADER ================================================ */
   header {
     z-index: 1;
     position: relative;
@@ -1761,16 +1758,22 @@ header .menu__btn {
   .header-clone {
     display: none;
   }
+}
+@media (max-width: 414px) {
+  .content {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
   /* TOPページ 【index】 ============================================ */
-  .index-top-text {
+  .page-top-content .index-top-text {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
     width: 80%;
     height: auto;
     margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   }
-  .index-top-text h1 {
+  .page-top-content .index-top-text h1 {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
   }
   .section-title {
