@@ -1759,7 +1759,7 @@ header .menu__btn {
     display: none;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 430px) {
   .content {
     padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   }
