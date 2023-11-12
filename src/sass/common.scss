@@ -1546,6 +1546,23 @@ footer {
   }
 }
 
+/* TOPページ 【index】 ============================================ */
+// トップスライダーのテキスト
+.page-top-content {
+  & .index-top-text {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 50%;
+    height: auto;
+    margin: $space_40-60px auto;
+    padding: $space_20-30px;
+    & h1 {
+      font-size: calc($font_32-64px * 0.8);
+    }
+  }
+}
+
 /* モバイル版 =============================================== */
 @media (max-width: 430px) {
   //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
@@ -1654,11 +1671,9 @@ footer {
     & .index-top-text {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 80%;
-      height: auto;
-      margin: $space_40-60px;
-      padding: $space_20-30px;
+      left: 5%;
+      width: 75%;
+      padding: $space_30-45px;
       & h1 {
         font-size: $font_24-27px;
       }

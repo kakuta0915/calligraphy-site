@@ -1622,19 +1622,36 @@ footer p {
 }
 
 /* タブレット版 ============================================== */
+/* TOPページ 【index】 ============================================ */
+.page-top-content .index-top-text {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 50%;
+  height: auto;
+  margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) auto;
+  padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+}
+.page-top-content .index-top-text h1 {
+  font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.8);
+}
+
 /* モバイル版 =============================================== */
+
 @media (min-width: 961px) {
   header #menu__toggle,
 header .menu__btn {
     opacity: 0;
   }
 }
+
 @media (min-width: 960px) {
   .header-clone #menu__toggle,
 .header-clone .menu__btn {
     opacity: 0;
   }
 }
+
 @media (max-width: 960px) {
   /* HEADER ================================================ */
   header {
@@ -1759,6 +1776,7 @@ header .menu__btn {
     display: none;
   }
 }
+
 @media (max-width: 430px) {
   .content {
     padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
@@ -1767,11 +1785,9 @@ header .menu__btn {
   .page-top-content .index-top-text {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 80%;
-    height: auto;
-    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
-    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+    left: 5%;
+    width: 75%;
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   }
   .page-top-content .index-top-text h1 {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
