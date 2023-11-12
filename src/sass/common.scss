@@ -1562,7 +1562,80 @@ footer {
       }
     }
   }
-}
+
+  // TOPページの「section title」のレイアウト
+  .section-title {
+    padding: $space_40-60px $space_30-45px;
+    & h2 {
+      font-size: $font_18-20px;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .index-profile-title {
+    top: -12rem;
+    left: 1rem;
+  }
+
+  .index-gallery-title {
+    top: -10rem;
+    right: 3rem;
+  }
+
+  .index-job-title {
+    top: -10rem;
+    left: 4rem;
+  }
+
+  /* TOPページ NEWS  ======================================== */
+  .index-news-content {
+    margin: $space_40-60px 0;
+    & h2 {
+      font-size: $font_24-27px;
+    }
+    & .index-news-articles {
+      display: block;
+      & .index-news-item {
+        margin-bottom: $space_40-60px;
+        & img {
+          width: 40%;
+        }
+        & .index-news-text {
+          width: 100%;
+          margin: 0 $space_16-18px 0;
+          & h3 {
+            font-size: $font_19-22px;
+          }
+          & p {
+            font-size: $font_16-18px;
+          }
+        }
+      }
+    }
+  }
+
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content {
+    & .profile {
+      & .profile-text {
+        padding: $space_20-30px;
+        width: 40vw;
+      }
+    }
+    & .message {
+      & .message-text {
+        padding: $space_20-30px;
+        width: 40vw;
+      }
+    }
+  }
+
+  .achievements {
+    & .achievements-title {
+      top: -15rem;
+    }
+  }
+} // タブレット版終わり
 
 /* モバイル版 =============================================== */
 @media (max-width: 430px) {
@@ -1587,14 +1660,6 @@ footer {
   }
 
   // TOPページの「section title」のレイアウト
-  .section-title {
-    padding: $space_40-60px $space_30-45px;
-    & h2 {
-      font-size: $font_18-20px;
-      margin: 0 0 0.5rem;
-    }
-  }
-
   .index-profile-title {
     top: -10rem;
     left: 1rem;
@@ -1612,17 +1677,8 @@ footer {
 
   /* TOPページ NEWS  ======================================== */
   .index-news-content {
-    margin: $space_40-60px 0;
-    & h2 {
-      font-size: $font_24-27px;
-    }
     & .index-news-articles {
-      display: block;
       & .index-news-item {
-        margin-bottom: $space_40-60px;
-        & img {
-          width: 40%;
-        }
         & .index-news-text {
           & h3 {
             font-size: $font_16-18px;

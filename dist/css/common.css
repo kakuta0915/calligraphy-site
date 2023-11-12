@@ -1772,22 +1772,6 @@ header .menu__btn {
   .page-top-content .index-top-text h1 {
     font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.8);
   }
-}
-@media (max-width: 430px) {
-  .content {
-    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  /* TOPページ 【index】 ============================================ */
-  .page-top-content .index-top-text {
-    position: absolute;
-    top: 0;
-    left: 5%;
-    width: 75%;
-    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  .page-top-content .index-top-text h1 {
-    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
-  }
   .section-title {
     padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
   }
@@ -1796,15 +1780,15 @@ header .menu__btn {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
   }
   .index-profile-title {
-    top: -10rem;
+    top: -12rem;
     left: 1rem;
   }
   .index-gallery-title {
-    top: -8rem;
+    top: -10rem;
     right: 3rem;
   }
   .index-job-title {
-    top: -8rem;
+    top: -10rem;
     left: 4rem;
   }
   /* TOPページ NEWS  ======================================== */
@@ -1823,6 +1807,57 @@ header .menu__btn {
   .index-news-content .index-news-articles .index-news-item img {
     width: 40%;
   }
+  .index-news-content .index-news-articles .index-news-item .index-news-text {
+    width: 100%;
+    margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem) 0;
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text h3 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text p {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content .profile .profile-text {
+    width: 40vw;
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  }
+  .profile-content .message .message-text {
+    width: 40vw;
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  }
+  .achievements .achievements-title {
+    top: -15rem;
+  }
+}
+@media (max-width: 430px) {
+  .content {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  /* TOPページ 【index】 ============================================ */
+  .page-top-content .index-top-text {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 75%;
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .page-top-content .index-top-text h1 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .index-profile-title {
+    top: -10rem;
+    left: 1rem;
+  }
+  .index-gallery-title {
+    top: -8rem;
+    right: 3rem;
+  }
+  .index-job-title {
+    top: -8rem;
+    left: 4rem;
+  }
+  /* TOPページ NEWS  ======================================== */
   .index-news-content .index-news-articles .index-news-item .index-news-text h3 {
     font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   }
