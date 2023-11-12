@@ -1545,21 +1545,21 @@ footer {
   .header-clone {
     display: none;
   }
-}
 
-/* TOPページ 【index】 ============================================ */
-// トップスライダーのテキスト
-.page-top-content {
-  & .index-top-text {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    width: 50%;
-    height: auto;
-    margin: $space_40-60px auto;
-    padding: $space_20-30px;
-    & h1 {
-      font-size: calc($font_32-64px * 0.8);
+  /* TOPページ 【index】 ============================================ */
+  // トップスライダーのテキスト
+  .page-top-content {
+    & .index-top-text {
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 50%;
+      height: auto;
+      margin: $space_40-60px auto;
+      padding: $space_20-30px;
+      & h1 {
+        font-size: calc($font_32-64px * 0.8);
+      }
     }
   }
 }
