@@ -1781,15 +1781,15 @@ header .menu__btn {
   }
   .index-profile-title {
     top: -12rem;
-    left: 1rem;
+    left: 3rem;
   }
   .index-gallery-title {
     top: -10rem;
-    right: 3rem;
+    right: 6rem;
   }
   .index-job-title {
     top: -10rem;
-    left: 4rem;
+    left: 8rem;
   }
   /* TOPページ NEWS  ======================================== */
   .index-news-content {
