@@ -453,7 +453,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 
 /* TOPページ 【index】======================================= */
 .line {
-  z-index: 20;
+  z-index: 2000;
   position: fixed;
   top: 50%;
   width: 0%;
@@ -462,7 +462,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 .top {
-  z-index: 10;
+  z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
@@ -471,7 +471,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 
 .bottom {
-  z-index: 10;
+  z-index: 1000;
   position: fixed;
   bottom: 0;
   width: 100%;

@@ -386,12 +386,6 @@ header {
       opacity: 0;
     }
   }
-  // @media (min-width: 415px) {
-  //   #menu__toggle,
-  //   .menu__btn {
-  //     opacity: 0;
-  //   }
-  // }
 }
 
 // HEADER CLONE 【JSで制御】
@@ -485,14 +479,14 @@ header {
   background-color: $black;
   position: fixed;
   top: 50%;
-  z-index: 20;
+  z-index: 2000;
 }
 .top {
   background-color: $white;
   height: 50%;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   top: 0;
 }
 .bottom {
@@ -500,7 +494,7 @@ header {
   height: 50%;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   bottom: 0;
 }
 .bar {
