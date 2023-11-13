@@ -159,32 +159,4 @@ $(function () {
       speed: 1000,
     });
   });
-
-  //   /*===============================================================================================
-  //     * タブレット版 メニュー表示機能 ======================================================================
-  //     =============================================================================================== */
-  //   if (window.matchMedia("(max-width: 960px)").matches) {
-  //     /* メニューボタン機能 */
-  //     $(".open-btn").on("click", function () {
-  //       $(this).toggleClass("active");
-  //       $(".page-header-content").toggleClass("open-menu");
-  //     });
-
-  //     /* Sticky Header */
-  //     $(".page-header").each(function () {
-  //       var $window = $(window),
-  //         $header = $(this),
-  //         headerOffsetTop = $header.offset().top;
-
-  //       $window.on("scroll", function () {
-  //         if ($window.scrollTop() > headerOffsetTop) {
-  //           $header.addClass("sticky");
-  //         } else {
-  //           $header.removeClass("sticky");
-  //         }
-  //         console.log("1");
-  //       });
-  //       $window.trigger("scroll");
-  //     });
-  //   }
 });

@@ -479,33 +479,33 @@ header {
 
 /* TOPページ 【index】======================================= */
 // トップページ読み込み時のアニメーション 【JSで制御】
-// .line {
-//   width: 0%;
-//   height: 2px;
-//   background-color: $black;
-//   position: fixed;
-//   top: 50%;
-//   z-index: 20;
-// }
-// .top {
-//   background-color: $white;
-//   height: 50%;
-//   width: 100%;
-//   position: fixed;
-//   z-index: 10;
-//   top: 0;
-// }
-// .bottom {
-//   background-color: $white;
-//   height: 50%;
-//   width: 100%;
-//   position: fixed;
-//   z-index: 10;
-//   bottom: 0;
-// }
-// .bar {
-//   display: none;
-// }
+.line {
+  width: 0%;
+  height: 2px;
+  background-color: $black;
+  position: fixed;
+  top: 50%;
+  z-index: 20;
+}
+.top {
+  background-color: $white;
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+.bottom {
+  background-color: $white;
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+}
+.bar {
+  display: none;
+}
 
 // トップスライダー
 .index-top-slider {
