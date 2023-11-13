@@ -870,7 +870,8 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 .achievements .achievements-title {
   position: absolute;
-  top: -18rem;
+  top: -20rem;
+  left: -2rem;
   background-color: #0b0b61;
 }
 .achievements .achievements-content {
@@ -1432,6 +1433,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 .content .contact-table td {
   width: 75%;
 }
+.content .contact-table td span {
+  display: block;
+  margin-bottom: clamp(10px, 2vw, 15px);
+}
 .content input[type=text],
 .content input[type=email],
 .content input[type=tel],
@@ -1480,7 +1485,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  margin: -0.25rem 0.5rem 0 1.85rem;
+  margin: 0 clamp(10px, 2vw, 15px);
   padding: 0 0 0.25rem 0.5rem;
   border: 1px solid #bbb;
   background-color: #fff;
@@ -1827,7 +1832,8 @@ header .menu__btn {
     padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   }
   .achievements .achievements-title {
-    top: -15rem;
+    top: -16rem;
+    left: 3rem;
   }
   /* TOPページ GALLERY ====================================== */
   .index-gallery-content {
@@ -2066,13 +2072,6 @@ header .menu__btn {
   }
   .content .contact-table td {
     margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  .content .contact-table td span {
-    display: block;
-    margin-bottom: clamp(10px, 2vw, 15px);
-  }
-  .content .contact-table td span::before {
-    margin: 0 clamp(10px, 2vw, 15px);
   }
   .content .price-btn-box {
     -webkit-justify-content: space-around;

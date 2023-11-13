@@ -830,7 +830,8 @@ header {
   & .achievements-title {
     background-color: $blue;
     position: absolute;
-    top: -18rem;
+    top: -20rem;
+    left: -2rem;
   }
   & .achievements-content {
     margin-left: $space_40-60px;
@@ -1267,6 +1268,10 @@ header {
     }
     & td {
       width: 75%;
+      & span {
+        display: block;
+        margin-bottom: $space_10-15px;
+      }
     }
   }
   & input[type="text"],
@@ -1310,7 +1315,7 @@ header {
       border: 1px solid $lightGray;
       background-color: $white;
       vertical-align: middle;
-      margin: -0.25rem 0.5rem 0 1.85rem;
+      margin: 0 $space_10-15px;
       padding: 0 0 0.25rem 0.5rem;
       line-height: 1.5;
       font: {
@@ -1632,7 +1637,8 @@ footer {
 
   .achievements {
     & .achievements-title {
-      top: -15rem;
+      top: -16rem;
+      left: 3rem;
     }
   }
 
@@ -1907,13 +1913,6 @@ footer {
       }
       & td {
         margin-bottom: $space_30-45px;
-        & span {
-          display: block;
-          margin-bottom: $space_10-15px;
-          &::before {
-            margin: 0 $space_10-15px;
-          }
-        }
       }
     }
     & .price-btn-box {
