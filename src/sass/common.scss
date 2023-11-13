@@ -380,12 +380,18 @@ header {
       }
     }
   }
-  @media (min-width: 415px) {
+  @media (min-width: 961px) {
     #menu__toggle,
     .menu__btn {
       opacity: 0;
     }
   }
+  // @media (min-width: 415px) {
+  //   #menu__toggle,
+  //   .menu__btn {
+  //     opacity: 0;
+  //   }
+  // }
 }
 
 // HEADER CLONE 【JSで制御】
@@ -463,7 +469,7 @@ header {
   &.visible {
     top: 0;
   }
-  @media (min-width: 415px) {
+  @media (min-width: 960px) {
     #menu__toggle,
     .menu__btn {
       opacity: 0;
@@ -824,7 +830,8 @@ header {
   & .achievements-title {
     background-color: $blue;
     position: absolute;
-    top: -18rem;
+    top: -20rem;
+    left: -2rem;
   }
   & .achievements-content {
     margin-left: $space_40-60px;
@@ -949,7 +956,7 @@ header {
       color: $white;
       padding: $space_30-45px $space_10-15px;
       text-align: left;
-      height: 220px;
+      height: 305px;
       & .text1 {
         text-align: center;
         font-size: $font_18-20px;
@@ -1261,6 +1268,10 @@ header {
     }
     & td {
       width: 75%;
+      & span {
+        display: block;
+        margin-bottom: $space_10-15px;
+      }
     }
   }
   & input[type="text"],
@@ -1304,7 +1315,7 @@ header {
       border: 1px solid $lightGray;
       background-color: $white;
       vertical-align: middle;
-      margin: -0.25rem 0.5rem 0 1.85rem;
+      margin: 0 $space_10-15px;
       padding: 0 0 0.25rem 0.5rem;
       line-height: 1.5;
       font: {
@@ -1442,14 +1453,9 @@ footer {
   }
 }
 
-/* モバイル版 =============================================== */
-@media (max-width: 414px) {
-  //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
-  .content {
-    padding: $space_30-45px;
-  }
-
-  /* HEADER================================================ */
+/* タブレット版 ============================================== */
+@media (max-width: 960px) {
+  /* HEADER ================================================ */
   @mixin burgerSpan {
     display: inline-block;
     position: absolute;
@@ -1490,6 +1496,7 @@ footer {
       width: 2rem;
       height: 2rem;
       z-index: 2;
+      margin-right: 0.5rem;
       cursor: pointer;
       & span {
         @include burgerSpan;
@@ -1516,7 +1523,7 @@ footer {
       z-index: 1;
       width: 100%;
       height: 100%;
-      margin: -400px 0 0 0;
+      margin: -500px 0 0 0;
       text-align: center;
       box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
       transition-duration: 0.5s;
@@ -1546,15 +1553,18 @@ footer {
 
   /* TOPページ 【index】 ============================================ */
   // トップスライダーのテキスト
-  .index-top-text {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 80%;
-    height: auto;
-    margin: $space_40-60px;
-    & h1 {
-      font-size: $font_24-27px;
+  .page-top-content {
+    & .index-top-text {
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 50%;
+      height: auto;
+      margin: $space_40-60px auto;
+      padding: $space_20-30px;
+      & h1 {
+        font-size: calc($font_32-64px * 0.8);
+      }
     }
   }
 
@@ -1567,6 +1577,120 @@ footer {
     }
   }
 
+  .index-profile-title {
+    top: -12rem;
+    left: 3rem;
+  }
+
+  .index-gallery-title {
+    top: -10rem;
+    right: 6rem;
+  }
+
+  .index-job-title {
+    top: -10rem;
+    left: 8rem;
+  }
+
+  /* TOPページ NEWS  ======================================== */
+  .index-news-content {
+    margin: $space_40-60px 0;
+    & h2 {
+      font-size: $font_24-27px;
+    }
+    & .index-news-articles {
+      display: block;
+      & .index-news-item {
+        margin-bottom: $space_40-60px;
+        & img {
+          width: 40%;
+        }
+        & .index-news-text {
+          width: 100%;
+          margin: 0 $space_16-18px 0;
+          & h3 {
+            font-size: $font_19-22px;
+          }
+          & p {
+            font-size: $font_16-18px;
+          }
+        }
+      }
+    }
+  }
+
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content {
+    & .profile {
+      & .profile-text {
+        padding: $space_20-30px;
+        width: 40vw;
+      }
+    }
+    & .message {
+      & .message-text {
+        padding: $space_20-30px;
+        width: 40vw;
+      }
+    }
+  }
+
+  .achievements {
+    & .achievements-title {
+      top: -16rem;
+      left: 3rem;
+    }
+  }
+
+  /* TOPページ GALLERY ====================================== */
+  .index-gallery-content {
+    margin: $space_20-30px auto $space_40-60px;
+    & .index-gallery-item {
+      & .index-gallery-text {
+        & * {
+          font-size: calc($font_16-18px * 0.8);
+          margin: calc($space_10-15px * 0.4);
+        }
+      }
+    }
+  }
+
+  /* TOPページ PRICE ======================================== */
+  .index-job-content {
+    width: 85%;
+    & .index-job-item {
+      & .index-job-text {
+        & .text1 {
+          font-size: $font_16-18px;
+        }
+      }
+    }
+  }
+} // タブレット版終わり
+
+/* モバイル版 =============================================== */
+@media (max-width: 430px) {
+  //「プロフィール」,「料金」,「お知らせ」の用紙仕様のレイアウトに指定
+  .content {
+    padding: $space_30-45px;
+  }
+
+  /* TOPページ 【index】 ============================================ */
+  // トップスライダーのテキスト
+  .page-top-content {
+    & .index-top-text {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 75%;
+      padding: $space_30-45px;
+      & h1 {
+        font-size: $font_24-27px;
+      }
+    }
+  }
+
+  // TOPページの「section title」のレイアウト
   .index-profile-title {
     top: -10rem;
     left: 1rem;
@@ -1584,17 +1708,8 @@ footer {
 
   /* TOPページ NEWS  ======================================== */
   .index-news-content {
-    margin: $space_40-60px 0;
-    & h2 {
-      font-size: $font_24-27px;
-    }
     & .index-news-articles {
-      display: block;
       & .index-news-item {
-        margin-bottom: $space_40-60px;
-        & img {
-          width: 40%;
-        }
         & .index-news-text {
           & h3 {
             font-size: $font_16-18px;
@@ -1798,13 +1913,6 @@ footer {
       }
       & td {
         margin-bottom: $space_30-45px;
-        & span {
-          display: block;
-          margin-bottom: $space_10-15px;
-          &::before {
-            margin: 0 $space_10-15px;
-          }
-        }
       }
     }
     & .price-btn-box {

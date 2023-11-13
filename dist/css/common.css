@@ -870,7 +870,8 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 }
 .achievements .achievements-title {
   position: absolute;
-  top: -18rem;
+  top: -20rem;
+  left: -2rem;
   background-color: #0b0b61;
 }
 .achievements .achievements-content {
@@ -1055,7 +1056,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   height: 305px;
 }
 .index-job-content .index-job-item .index-job-text {
-  height: 220px;
+  height: 305px;
   padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5) clamp(10px, 2vw, 15px);
   background-color: #000;
   color: #fff;
@@ -1432,6 +1433,10 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 .content .contact-table td {
   width: 75%;
 }
+.content .contact-table td span {
+  display: block;
+  margin-bottom: clamp(10px, 2vw, 15px);
+}
 .content input[type=text],
 .content input[type=email],
 .content input[type=tel],
@@ -1480,7 +1485,7 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  margin: -0.25rem 0.5rem 0 1.85rem;
+  margin: 0 clamp(10px, 2vw, 15px);
   padding: 0 0 0.25rem 0.5rem;
   border: 1px solid #bbb;
   background-color: #fff;
@@ -1621,24 +1626,22 @@ footer p {
   text-align: center;
 }
 
+/* タブレット版 ============================================== */
 /* モバイル版 =============================================== */
-
-@media (min-width: 415px) {
+@media (min-width: 961px) {
   header #menu__toggle,
 header .menu__btn {
     opacity: 0;
   }
+}
+@media (min-width: 960px) {
   .header-clone #menu__toggle,
 .header-clone .menu__btn {
     opacity: 0;
   }
 }
-
-@media (max-width: 414px) {
-  .content {
-    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  /* HEADER================================================ */
+@media (max-width: 960px) {
+  /* HEADER ================================================ */
   header {
     z-index: 1;
     position: relative;
@@ -1679,6 +1682,7 @@ header .menu__btn {
     bottom: 2px;
     width: 2rem;
     height: 2rem;
+    margin-right: 0.5rem;
     cursor: pointer;
             transition-duration: 0.25s;
   }
@@ -1729,7 +1733,7 @@ header .menu__btn {
             flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: -400px 0 0 0;
+    margin: -500px 0 0 0;
             box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
     text-align: center;
             transition-duration: 0.5s;
@@ -1761,16 +1765,17 @@ header .menu__btn {
     display: none;
   }
   /* TOPページ 【index】 ============================================ */
-  .index-top-text {
+  .page-top-content .index-top-text {
     position: absolute;
-    top: 10%;
-    left: 0;
-    width: 80%;
+    top: 0;
+    right: 5%;
+    width: 50%;
     height: auto;
-    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+    margin: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) auto;
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
   }
-  .index-top-text h1 {
-    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  .page-top-content .index-top-text h1 {
+    font-size: calc(clamp(2rem, 1.3rem + 3vw, 4rem) * 0.8);
   }
   .section-title {
     padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2) calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
@@ -1780,16 +1785,16 @@ header .menu__btn {
     font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.1);
   }
   .index-profile-title {
-    top: -10rem;
-    left: 1rem;
+    top: -12rem;
+    left: 3rem;
   }
   .index-gallery-title {
-    top: -8rem;
-    right: 3rem;
+    top: -10rem;
+    right: 6rem;
   }
   .index-job-title {
-    top: -8rem;
-    left: 4rem;
+    top: -10rem;
+    left: 8rem;
   }
   /* TOPページ NEWS  ======================================== */
   .index-news-content {
@@ -1807,6 +1812,73 @@ header .menu__btn {
   .index-news-content .index-news-articles .index-news-item img {
     width: 40%;
   }
+  .index-news-content .index-news-articles .index-news-item .index-news-text {
+    width: 100%;
+    margin: 0 clamp(1rem, 0.95rem + 0.2vw, 1.125rem) 0;
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text h3 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.2);
+  }
+  .index-news-content .index-news-articles .index-news-item .index-news-text p {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+  /* TOPページ Profile, Profile ============================= */
+  .profile-content .profile .profile-text {
+    width: 40vw;
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  }
+  .profile-content .message .message-text {
+    width: 40vw;
+    padding: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
+  }
+  .achievements .achievements-title {
+    top: -16rem;
+    left: 3rem;
+  }
+  /* TOPページ GALLERY ====================================== */
+  .index-gallery-content {
+    margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
+  }
+  .index-gallery-content .index-gallery-item .index-gallery-text * {
+    margin: calc(clamp(10px, 2vw, 15px) * 0.4);
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 0.8);
+  }
+  /* TOPページ PRICE ======================================== */
+  .index-job-content {
+    width: 85%;
+  }
+  .index-job-content .index-job-item .index-job-text .text1 {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  }
+}
+@media (max-width: 430px) {
+  .content {
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  /* TOPページ 【index】 ============================================ */
+  .page-top-content .index-top-text {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 75%;
+    padding: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
+  }
+  .page-top-content .index-top-text h1 {
+    font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5);
+  }
+  .index-profile-title {
+    top: -10rem;
+    left: 1rem;
+  }
+  .index-gallery-title {
+    top: -8rem;
+    right: 3rem;
+  }
+  .index-job-title {
+    top: -8rem;
+    left: 4rem;
+  }
+  /* TOPページ NEWS  ======================================== */
   .index-news-content .index-news-articles .index-news-item .index-news-text h3 {
     font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   }
@@ -2000,13 +2072,6 @@ header .menu__btn {
   }
   .content .contact-table td {
     margin-bottom: calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 1.5);
-  }
-  .content .contact-table td span {
-    display: block;
-    margin-bottom: clamp(10px, 2vw, 15px);
-  }
-  .content .contact-table td span::before {
-    margin: 0 clamp(10px, 2vw, 15px);
   }
   .content .price-btn-box {
     -webkit-justify-content: space-around;
