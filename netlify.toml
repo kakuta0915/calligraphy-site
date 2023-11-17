@@ -1,12 +1,8 @@
 [build]
-  command = "gulp build"  
-  publish = "dist/html/*"           
-  publish = "dist/css/*"
-  publish = "dist/images/*"
-  publish = "dist/js/*"
+  command = "gulp build"
+  publish = "dist"
 
 [[redirects]]
   from = "/html/*"
-  to = "/html/*"
+  to = "/:splat"
   status = 200
-  force = true
