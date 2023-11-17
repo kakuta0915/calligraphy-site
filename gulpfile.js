@@ -4,8 +4,6 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const assets = require("postcss-assets");
 const flexBugsFixes = require("postcss-flexbugs-fixes");
-// const imagemin = require("gulp-imagemin");
-const imageminPngquant = require("imagemin-pngquant");
 const browserSync = require("browser-sync").create();
 const ftp = require("vinyl-ftp");
 const fancyLog = require("fancy-log");
@@ -41,20 +39,6 @@ const browserSyncOption = {
   },
 };
 
-// const imageminOption = [
-//   imageminPngquant({
-//     quality: [0.65, 0.8],
-//     speed: 1,
-//   }),
-//   imagemin.gifsicle(),
-//   imagemin.mozjpeg({
-//     quality: 70,
-//     progressive: true,
-//   }),
-//   imagemin.optipng(),
-//   imagemin.svgo(),
-// ];
-
 const autoprefixerOption = {
   grid: true,
 };
@@ -85,14 +69,6 @@ gulp.task("sass", () => {
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./dist/css"));
 });
-
-// 画像圧縮する設定
-// gulp.task("imagemin", () => {
-//   return gulp
-//     .src("./src/images/*")
-//     .pipe(imagemin(imageminOption))
-//     .pipe(gulp.dest("./dist/images"));
-// });
 
 // ローカルサーバー起動、自動更新用タスク
 gulp.task("browser-sync", (done) => {
@@ -140,7 +116,6 @@ gulp.task("watch-files", (done) => {
   gulp.watch("./src/ejs/_partial/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/ejs/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/sass/*.scss", gulp.task("sass"));
-  // gulp.watch("./src/images/*", gulp.task("imagemin"));
   done();
 });
 
