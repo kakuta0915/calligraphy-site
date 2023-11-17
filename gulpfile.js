@@ -136,9 +136,7 @@ gulp.task("ejs", () => {
 
 // 監視ファイル
 gulp.task("watch-files", (done) => {
-  gulp.watch("./dist/html/*.html", gulp.task("browser-reload"));
-  gulp.watch("./dist/css/*.css", gulp.task("browser-reload"));
-  gulp.watch("./dist/js/*.js", gulp.task("browser-reload"));
+  gulp.watch("./dist/**/*", gulp.task("browser-reload"));
   gulp.watch("./src/ejs/_partial/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/ejs/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/sass/*.scss", gulp.task("sass"));
