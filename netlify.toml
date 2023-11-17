@@ -1,18 +1,1 @@
-[build]
-  command = "gulp build"
-  
 
-[[redirects]]
-  from = "/html/*"
-  to = "/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/css/*"
-  to = "/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/js/*"
-  to = "/:splat"
-  status = 200
