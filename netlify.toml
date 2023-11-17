@@ -1,6 +1,6 @@
 [build]
   command = "gulp build"  # ビルドコマンド
-  publish = "dist/"           # ビルド結果のディレクトリ
+  publish = "dist"           # ビルド結果のディレクトリ
 
 [[redirects]]
   from = "/html/*"
