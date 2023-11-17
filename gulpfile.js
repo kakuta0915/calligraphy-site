@@ -54,25 +54,9 @@ const postcssOption = [
   // [mqpacker()]
 ];
 
-// Sassをコンパイルする設定
-// gulp.task("sass", () => {
-//   return gulp
-//     .src("./src/sass/common.scss")
-//     .pipe(
-//       plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
-//     )
-//     .pipe(sourcemaps.init())
-//     .pipe(sass({ outputStyle: "expanded" }))
-//     .pipe(postcss(postcssOption))
-//     .pipe(postcss([assets({ loadPaths: ["./dist/images/"], relative: true })]))
-//     .pipe(postcss([mqpacker()]))
-//     .pipe(sourcemaps.write("./"))
-//     .pipe(gulp.dest("./dist/css"));
-// });
-
 gulp.task("sass", () => {
   return gulp
-    .src("./src/sass/**/*.scss") // 修正: サブディレクトリも含めてSassファイルを対象にする
+    .src("./src/sass/**/*.scss")
     .pipe(
       plumber({
         errorHandler: notify.onError("Error: <%= error.message %>"),
@@ -85,7 +69,7 @@ gulp.task("sass", () => {
     .pipe(postcss([mqpacker()]))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream()); // 修正: ブラウザリロードのために追加
+    .pipe(browserSync.stream());
 });
 
 // ローカルサーバー起動、自動更新用タスク
@@ -146,13 +130,7 @@ gulp.task(
   gulp.series("build", gulp.parallel("watch-files", "browser-sync"))
 );
 
-// publishタスク
-// gulp.task("dist", (done) => {
-//   gulp.task("build");
-//   gulp.console.log("公開が実行されました");
-//   done();
-// });
-
+// デプロイ
 gulp.task(
   "dist",
   gulp.series("build", "ftp", (done) => {
