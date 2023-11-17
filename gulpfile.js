@@ -131,9 +131,8 @@ gulp.task(
 );
 
 // ビルドタスクの定義
-gulp.task(
-  "build",
-  gulp.series(gulp.parallel("ejs", "sass"), (done) => {
-    done();
-  })
-);
+gulp.task("build", () => {
+  gulp.watch("./src/ejs/_partial/*.ejs", gulp.task("ejs"));
+  gulp.watch("./src/ejs/*.ejs", gulp.task("ejs"));
+  gulp.watch("./src/sass/*.scss", gulp.task("sass"));
+});

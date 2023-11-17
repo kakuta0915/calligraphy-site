@@ -1,5 +1,5 @@
 [build]
-  command = "gulp"  # ビルドコマンド
+  command = "gulp build"  # ビルドコマンド
   publish = "/dist"           # ビルド結果のディレクトリ
 
 [[redirects]]
