@@ -133,10 +133,7 @@ gulp.task(
 // ビルドタスクの定義
 gulp.task(
   "build",
-  gulp.series(
-    gulp.parallel("watch-files", "browser-sync", "ejs", "sass"),
-    (done) => {
-      done();
-    }
-  )
+  gulp.series(gulp.parallel("watch-files", "ejs", "sass"), (done) => {
+    done();
+  })
 );
