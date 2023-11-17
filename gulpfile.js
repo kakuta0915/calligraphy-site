@@ -130,7 +130,3 @@ gulp.task(
   )
 );
 
-// ビルドタスクの定義
-gulp.task("build", gulp.parallel("ejs", "sass"), (done) => {
-  done();
-});
