@@ -34,12 +34,18 @@ const ejsSettingOption = {
 
 // ブラウザオプション
 const browserSyncOption = {
-  server: {
-    baseDir: "./",
-    index: "index.html",
-    directory: true,
-  },
+  server: "./dist",
+  //  {
+  //   baseDir: "./",
+  //   index: "index.html",
+  //   directory: true,
+  // },
 };
+
+gulp.task("serve", (done) => {
+  browserSync.init(browserSyncOption);
+  done();
+});
 
 const imageminOption = [
   imageminPngquant({
