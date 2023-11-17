@@ -3,7 +3,7 @@
   publish = "dist"           # ビルド結果のディレクトリ
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/html/*"
+  to = "/html/*"
   status = 200
   force = true
