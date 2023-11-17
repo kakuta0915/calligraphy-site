@@ -3,12 +3,4 @@
   command = "gulp build"
   publish = "publish"      
 
-# /html/* のパス以外はそのままアクセス
-[[redirects]]
-  from = "!/html/*"
-  to = "/:splat"
-  status = 200
-
-# /html/* のパスは /html/index.html にリダイレクト
-[[redirects]]
 
