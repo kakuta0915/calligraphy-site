@@ -4,6 +4,4 @@
   publish = "publish"       # HTML ファイルのディレクトリ
 
 [[redirects]]
-  from = "/*"                 # 全てのパス
-  to = "/html/index.html"     # /html/index.html にリダイレクト
-  status = 200     
+    
