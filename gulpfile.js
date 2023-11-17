@@ -34,18 +34,12 @@ const ejsSettingOption = {
 
 // ブラウザオプション
 const browserSyncOption = {
-  server: "./dist",
-  //  {
-  //   baseDir: "./",
-  //   index: "index.html",
-  //   directory: true,
-  // },
+  server: {
+    baseDir: "./",
+    index: "index.html",
+    directory: true,
+  },
 };
-
-gulp.task("serve", (done) => {
-  browserSync.init(browserSyncOption);
-  done();
-});
 
 const imageminOption = [
   imageminPngquant({
@@ -142,9 +136,7 @@ gulp.task("ejs", () => {
 
 // 監視ファイル
 gulp.task("watch-files", (done) => {
-  gulp.watch("./dist/html/*.html", gulp.task("browser-reload"));
-  gulp.watch("./dist/css/*.css", gulp.task("browser-reload"));
-  gulp.watch("./dist/js/*.js", gulp.task("browser-reload"));
+  gulp.watch("./dist/**/*", gulp.task("browser-reload"));
   gulp.watch("./src/ejs/_partial/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/ejs/*.ejs", gulp.task("ejs"));
   gulp.watch("./src/sass/*.scss", gulp.task("sass"));
