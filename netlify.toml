@@ -1,9 +1,9 @@
 
 [build]
   command = "gulp build"
-  publish = "dist/**/*"
+  publish = "dist/html"       # HTML ファイルのディレクトリ
 
 [[redirects]]
-  from = "/*"                
-  to = "/index.html"          
-  status = 200  
+  from = "/*"                 # 全てのパス
+  to = "/html/index.html"     # /html/index.html にリダイレクト
+  status = 200     
