@@ -3,6 +3,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/html/*"
+  from = "/dist/**/*"
   to = "/:splat"
   status = 200
