@@ -4,6 +4,11 @@
   publish = "publish"       # HTML ファイルのディレクトリ
 
 [[redirects]]
-  from = "/html/*"                 # 全てのパス
-  to = "/html/index.html"     # /html/index.html にリダイレクト
-  status = 200     
+  from = "!/html/*"          # /html/* のパス以外
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/html/*"           # /html/* のパス
+  to = "/html/index.html"
+  status = 200
