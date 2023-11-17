@@ -129,7 +129,7 @@ gulp.task(
 );
 
 // publishタスク
-gulp.task("publish", (done) => {
+gulp.task("dist", (done) => {
   gulp.task("build");
   gulp.console.log("公開が実行されました");
   done();
