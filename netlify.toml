@@ -2,18 +2,3 @@
 [build]
   command = "gulp build"
   publish = "dist"
-
-[[redirects]]
-  from = "/html/*"
-  to = "/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/css/*"
-  to = "/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/js/*"
-  to = "/:splat"
-  status = 200
