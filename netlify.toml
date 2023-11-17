@@ -1,6 +1,6 @@
 
 [build]
-  command = "gulp"
+  command = "gulp build"
   publish = "publish"       # HTML ファイルのディレクトリ
 
 [[redirects]]
