@@ -1,3 +1,3 @@
 module.exports = {
-  entry: "./src/ejs/*.ejs",
+  entry: "./dist/main.js",
 };
