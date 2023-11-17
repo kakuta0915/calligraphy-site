@@ -119,14 +119,18 @@ gulp.task("watch-files", (done) => {
   done();
 });
 
+// dist フォルダ内のすべてのファイルを読み込むタスク
+gulp.task("publish", function () {
+  return gulp.src("./dist/**/*").pipe(gulp.dest("publish"));
+});
+
 // タスク実行
 gulp.task(
   "default",
   gulp.series(
-    gulp.parallel("watch-files", "browser-sync", "ejs", "sass"),
+    gulp.parallel("watch-files", "browser-sync", "ejs", "sass", "publish"),
     (done) => {
       done();
     }
   )
 );
-

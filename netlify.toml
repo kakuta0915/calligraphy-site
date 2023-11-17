@@ -1,7 +1,7 @@
 
 [build]
   command = "gulp"
-  publish = "dist"       # HTML ファイルのディレクトリ
+  publish = "publish"       # HTML ファイルのディレクトリ
 
 [[redirects]]
   from = "/*"                 # 全てのパス
