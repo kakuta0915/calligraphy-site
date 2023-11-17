@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"  # ビルドコマンド
-  publish = "dist"           # ビルド結果のディレクトリ
+  command = "npm run prod"  # ビルドコマンド
+  publish = "./dist"           # ビルド結果のディレクトリ
 
 [[redirects]]
   from = "/*"
