@@ -85,7 +85,7 @@ gulp.task("browser-reload", (done) => {
 // FTPアップロードの自動化
 gulp.task("ftp", () => {
   const ftpConfig = {
-    host: "gulp.gulp.jp",
+    host: "gulp.jp",
     user: "gulp",
     password: "gulp",
     log: fancyLog,
