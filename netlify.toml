@@ -1,6 +1,6 @@
   [build]
   command = "gulp build"
-  publish = "dist"       # HTML ファイルのディレクトリ
+  publish = "html"       # HTML ファイルのディレクトリ
 
 [[redirects]]
   from = "!/html/*"          # /html/* のパス以外
