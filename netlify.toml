@@ -1,5 +1,4 @@
-
-[build]
+  [build]
   command = "gulp build"
   publish = "dist"       # HTML ファイルのディレクトリ
 
