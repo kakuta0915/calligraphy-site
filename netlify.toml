@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"  # HTML ファイルのディレクトリ
+
+  [[redirects]]
+  from = "/html/*"
+  to = "/html/index.html"
+  status = 200
