@@ -8,7 +8,7 @@
     "prod": "webpack --mode production",
     "dev": "webpack --mode development -w",
     "ejs": "ejs-cli --base-dir ejs/_partial '*.ejs' --out dist/html",
-    "build": "npm run build"
+    "build": "gulp dist"
   },
   "keywords": [],
   "author": "",
