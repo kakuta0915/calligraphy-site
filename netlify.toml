@@ -1,1 +1,14 @@
 
+[build]
+  command = "gulp build"
+  publish = "dist"       # HTML ファイルのディレクトリ
+
+[[redirects]]
+  from = "!/html/*"          # /html/* のパス以外
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/html/*"           # /html/* のパス
+  to = "/html/index.html"
+  status = 200
