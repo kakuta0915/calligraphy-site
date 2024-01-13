@@ -1,11 +1,6 @@
 [build]
   command = "gulp dist"
-  publish = "html"  # HTML ファイルのディレクトリ
-
-  from = "/html/*"
-  to = "/html/index.html"
-  status = 200
-
+  publish = "dist"  # HTML ファイルのディレクトリ
 
 [[redirects]]
   from = "/html/*"
