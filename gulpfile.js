@@ -83,25 +83,25 @@ gulp.task("browser-reload", (done) => {
 });
 
 // FTPアップロードの自動化
-// gulp.task("ftp", () => {
-//   const ftpConfig = {
-//     host: "gulp.jp",
-//     user: "gulp",
-//     password: "gulp",
-//     log: fancyLog,
-//   };
-//   const connect = ftp.create(ftpConfig);
-//   const ftpUploadFiles = "./dist/**/*";
-//   const ftpUploadConfig = {
-//     buffer: false,
-//   };
-//   const remoteDisDir = "public_html";
+gulp.task("ftp", () => {
+  const ftpConfig = {
+    host: "gulp.jp",
+    user: "gulp",
+    password: "gulp",
+    log: fancyLog,
+  };
+  const connect = ftp.create(ftpConfig);
+  const ftpUploadFiles = "./dist/**/*";
+  const ftpUploadConfig = {
+    buffer: false,
+  };
+  const remoteDisDir = "public_html";
 
-//   return gulp
-//     .src(ftpUploadFiles, ftpUploadConfig)
-//     .pipe(connect.newer(remoteDisDir))
-//     .pipe(connect.dest(remoteDisDir));
-// });
+  return gulp
+    .src(ftpUploadFiles, ftpUploadConfig)
+    .pipe(connect.newer(remoteDisDir))
+    .pipe(connect.dest(remoteDisDir));
+});
 
 // ejsをコンパイルするタスク src/*.ejsを*.htmlに変換するタスク
 gulp.task("ejs", () => {
@@ -133,7 +133,7 @@ gulp.task(
 // デプロイ
 gulp.task(
   "dist",
-  gulp.series("build", (done) => {
+  gulp.series("build", "ftp", (done) => {
     fancyLog("公開が実行されました");
     done();
   })
