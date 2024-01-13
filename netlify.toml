@@ -2,12 +2,6 @@
   command = "gulp dist"
   publish = "dist"  # HTML ファイルのディレクトリ
 
-[[redirects]]
-  from = "!/html/*"  # /html/* のパス以外
-  to = "/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/html/*"  # /html/* のパス
+  from = "/html/*"
   to = "/html/index.html"
   status = 200
