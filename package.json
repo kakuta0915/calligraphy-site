@@ -50,7 +50,7 @@
     "ie 11"
   ],
   "dependencies": {
-    "netlify-cli": "^17.5.1",
+    "netlify-cli": "^17.13.2",
     "sass": "^1.55.0"
   }
 }
