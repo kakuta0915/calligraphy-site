@@ -1,11 +1,11 @@
 [build]
   command = "gulp dist"
-  publish = "dist/"
+  publish = "dist"
 
 [[headers]]
   for = "/*"
 
 [[redirects]]
-  from = "/html/*"
+  from = "/*"
   to = "/html/index.html"
   status = 200
