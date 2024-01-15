@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/html/*"
-  to = "/html/index.html"
+  to = "/html/:spalat"
   status = 200
 
 [[redirects]]
