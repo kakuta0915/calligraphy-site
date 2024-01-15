@@ -2,6 +2,9 @@
   command = "gulp dist"
   publish = "dist"  # HTML ファイルのディレクトリ
 
+[[headers]]
+  for = "/*"
+
 [[redirects]]
   from = "/html/*"
   to = "/html/index.html"
