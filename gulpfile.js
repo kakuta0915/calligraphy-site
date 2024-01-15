@@ -40,14 +40,14 @@ const browserSyncOption = {
 };
 
 const autoprefixerOption = {
-  grid: true,
+  grid: false,
 };
 
 // PostCSSオプション
 const postcssOption = [
   flexBugsFixes,
   autoprefixer(
-    ["last 3 versions", "ie >= 8", "Android >= 4", "iOS >= 8"],
+    ["last 3 versions", "Android >= 4", "iOS >= 8"],
     autoprefixerOption
   ),
   cssdeclsort({ order: "smacss" }),
