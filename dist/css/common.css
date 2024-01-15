@@ -756,9 +756,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   font-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * 1.5 * 1.5);
 }
 .index-news-content .index-news-articles {
-  -ms-grid-columns: (1fr)[2];
-  -ms-grid-rows: (1fr)[2];
-  display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -892,9 +889,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
 
 /* TOPページ GALLERY ====================================== */
 .index-gallery-content {
-  -ms-grid-columns: (26vw)[3];
-  -ms-grid-rows: (26vw)[3];
-  display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(3, 26vw);
   grid-template-columns: repeat(3, 26vw);
@@ -1152,9 +1146,6 @@ header .header-contents .header-nav-contents .header-link li a:hover {
   text-align: center;
 }
 .gallery-content .gallery {
-  -ms-grid-columns: (25vw)[3];
-  -ms-grid-rows: (25vw)[6];
-  display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(6, 25vw);
   grid-template-columns: repeat(3, 25vw);
@@ -1921,8 +1912,6 @@ header .menu__btn {
   }
   /* TOPページ GALLERY ====================================== */
   .index-gallery-content {
-    -ms-grid-columns: (40vw)[2];
-    -ms-grid-rows: (40vw)[5];
     grid-template-rows: repeat(5, 40vw);
     grid-template-columns: repeat(2, 40vw);
     margin: clamp(1.25rem, 1rem + 0.98vw, 1.875rem) auto calc(clamp(1.25rem, 1rem + 0.98vw, 1.875rem) * 2);
@@ -1987,8 +1976,6 @@ header .menu__btn {
     font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   }
   .gallery-content .gallery {
-    -ms-grid-columns: (40vw)[2];
-    -ms-grid-rows: (40vw)[9];
     grid-template-rows: repeat(9, 40vw);
     grid-template-columns: repeat(2, 40vw);
     width: 85vw;
