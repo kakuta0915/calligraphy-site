@@ -6,4 +6,6 @@
   for = "/*"
 
 [[redirects]]
+  from = "/html/*"
+  to = "/html/index.html"
   status = 200
