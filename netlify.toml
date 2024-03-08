@@ -22,4 +22,4 @@
 
 [[edge_functions]]
 function = "hello"
-path = "/test"
+path = "/dist"
