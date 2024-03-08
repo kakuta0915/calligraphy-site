@@ -19,3 +19,7 @@
   from = "/js/*"
   to = "/js/:splat"
   status = 200
+
+[[edge_functions]]
+function = "hello"
+path = "/test"
